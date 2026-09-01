@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#79c8ef">
+  <title>Kecske, káposzta, farkas</title>
+  <style>
+    :root {
+      --ink: #253238;
+      --muted: #5e7078;
+      --cream: #fffaf0;
+      --paper: rgba(255,255,255,.92);
+      --green: #70bb52;
+      --green-dark: #3d8137;
+      --river-a: #79d0ef;
+      --river-b: #4caee0;
+      --wood: #b9672d;
+      --wood-dark: #69341d;
+      --gold: #ffcc57;
+      --danger: #d95555;
+      --shadow: 0 14px 32px rgba(27, 74, 94, .18);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-rounded, "Trebuchet MS", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 15% 8%, rgba(255,255,255,.9) 0 5%, transparent 18%),
+        linear-gradient(#b9e5f7 0 36%, #e8f7d9 36% 100%);
+      overflow-x: hidden;
+    }
+
+    button { font: inherit; }
+
+    .app {
+      width: min(1180px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 22px 0 26px;
+    }
+
+    .home {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #32666c;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .home:hover { text-decoration: underline; }
+    .home:focus-visible { outline: 4px solid rgba(255,204,87,.82); outline-offset: 3px; }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.05;
+      color: #263f44;
+      text-shadow: 0 2px #fff;
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 9px 0 0;
+      color: #455b61;
+      font-size: clamp(.94rem, 2vw, 1.06rem);
+      line-height: 1.45;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .small-button,
+    .travel-button,
+    .dialog-button {
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform .16s ease, filter .16s ease, opacity .16s ease;
+    }
+
+    .small-button {
+      padding: 9px 14px;
+      color: #38525a;
+      background: rgba(255,255,255,.82);
+      box-shadow: 0 4px 12px rgba(36, 75, 86, .12);
+    }
+
+    button:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.03); }
+    button:active:not(:disabled) { transform: translateY(0); }
+    button:focus-visible { outline: 4px solid rgba(255,204,87,.82); outline-offset: 3px; }
+    button:disabled { opacity: .42; cursor: not-allowed; }
+
+    .game {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(215px, 1fr) minmax(360px, 2.1fr) minmax(215px, 1fr);
+      min-height: 530px;
+      border: 5px solid rgba(255,255,255,.76);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #9bd36b;
+    }
+
+    .bank {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 22px 10px 26px;
+      background:
+        radial-gradient(ellipse at 30% 100%, #7fbd4c 0 9%, transparent 10%),
+        radial-gradient(ellipse at 75% 98%, #6eae43 0 12%, transparent 13%),
+        linear-gradient(90deg, #a9d96d, #84c452);
+    }
+
+    .bank.left::after,
+    .bank.right::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 42px;
+      pointer-events: none;
+    }
+
+    .bank.left::after {
+      right: -22px;
+      background: linear-gradient(90deg, #84c452, transparent);
+      clip-path: polygon(0 0, 60% 7%, 20% 16%, 85% 25%, 22% 36%, 82% 47%, 25% 59%, 88% 70%, 35% 82%, 74% 91%, 0 100%);
+    }
+
+    .bank.right::after {
+      left: -22px;
+      background: linear-gradient(270deg, #84c452, transparent);
+      clip-path: polygon(100% 0, 40% 7%, 80% 16%, 15% 25%, 78% 36%, 18% 47%, 75% 59%, 12% 70%, 65% 82%, 26% 91%, 100% 100%);
+    }
+
+    .bank-title {
+      margin: 0 0 17px;
+      padding: 7px 15px;
+      border-radius: 999px;
+      font: 800 1rem/1 Georgia, serif;
+      background: rgba(255,255,255,.76);
+      box-shadow: 0 5px 14px rgba(55,104,44,.14);
+    }
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(86px, 1fr));
+      gap: 12px;
+      width: 100%;
+      align-content: start;
+    }
+
+    .character {
+      position: relative;
+      display: grid;
+      grid-template-rows: 94px auto;
+      place-items: center;
+      min-width: 0;
+      padding: 8px 5px 10px;
+      border: 3px solid transparent;
+      border-radius: 20px;
+      color: var(--ink);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 8px 15px rgba(48,95,39,.15);
+      cursor: pointer;
+      user-select: none;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+
+    .character:hover:not(:disabled) { transform: translateY(-4px) rotate(-1deg); }
+    .character.selected {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.75), 0 10px 22px rgba(67,92,28,.2);
+      transform: translateY(-4px);
+    }
+
+    .character.selected::before {
+      content: "✓";
+      position: absolute;
+      right: -6px;
+      top: -8px;
+      display: grid;
+      place-items: center;
+      width: 27px;
+      aspect-ratio: 1;
+      border: 3px solid white;
+      border-radius: 50%;
+      color: #624711;
+      background: var(--gold);
+      font-weight: 900;
+    }
+
+    .character:disabled { cursor: default; opacity: .72; }
+    .character svg { width: 94px; height: 94px; overflow: visible; }
+    .character span { font-weight: 900; font-size: .89rem; }
+
+    .river {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 25% 16%, rgba(255,255,255,.42) 0 2%, transparent 2.4%),
+        radial-gradient(ellipse at 72% 76%, rgba(255,255,255,.25) 0 2.4%, transparent 2.8%),
+        repeating-radial-gradient(ellipse at 45% 110%, transparent 0 25px, rgba(255,255,255,.18) 27px 29px, transparent 31px 54px),
+        linear-gradient(var(--river-a), var(--river-b));
+    }
+
+    .river::before,
+    .river::after {
+      content: "";
+      position: absolute;
+      left: -15%;
+      width: 130%;
+      height: 30px;
+      border-radius: 50%;
+      border-top: 3px solid rgba(255,255,255,.22);
+      animation: water 5s linear infinite;
+    }
+    .river::before { top: 18%; }
+    .river::after { top: 69%; animation-delay: -2.1s; }
+    @keyframes water { to { transform: translateX(8%); } }
+
+    .boat-track {
+      position: absolute;
+      inset: 0 7%;
+      pointer-events: none;
+    }
+
+    .boat-wrap {
+      position: absolute;
+      z-index: 5;
+      top: 48%;
+      left: 0;
+      width: 220px;
+      transform: translate(-7%, -50%);
+      transition: left .85s cubic-bezier(.42,0,.3,1);
+      pointer-events: none;
+    }
+
+    .boat-wrap.at-right { left: calc(100% - 190px); }
+    .boat-wrap.sailing { animation: bob .42s ease-in-out infinite alternate; }
+    @keyframes bob {
+      from { margin-top: -3px; }
+      to { margin-top: 4px; }
+    }
+
+    .boat-scene { position: relative; height: 164px; }
+    .boat-svg { position: absolute; left: 0; bottom: 0; width: 220px; height: 110px; }
+
+    .farmer-in-boat,
+    .passenger-in-boat {
+      position: absolute;
+      z-index: 2;
+      bottom: 58px;
+      width: 82px;
+      height: 82px;
+    }
+    .farmer-in-boat { left: 90px; }
+    .passenger-in-boat { left: 22px; }
+    .passenger-in-boat:empty { display: none; }
+
+    .travel-area {
+      position: absolute;
+      z-index: 7;
+      left: 50%;
+      bottom: 25px;
+      width: min(92%, 360px);
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .travel-button {
+      min-width: 225px;
+      padding: 14px 23px;
+      color: #3a311d;
+      background: var(--gold);
+      border: 4px solid rgba(255,255,255,.72);
+      box-shadow: 0 8px 0 #c79029, 0 13px 22px rgba(33,72,87,.24);
+      font-size: 1.03rem;
+    }
+
+    .travel-button:active:not(:disabled) { box-shadow: 0 3px 0 #c79029, 0 8px 14px rgba(33,72,87,.2); transform: translateY(5px); }
+
+    .status {
+      min-height: 24px;
+      margin: 14px 0 0;
+      padding: 5px 11px;
+      display: inline-block;
+      border-radius: 12px;
+      color: #244b5b;
+      background: rgba(255,255,255,.77);
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .score {
+      position: absolute;
+      z-index: 7;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      background: rgba(255,255,255,.82);
+      color: #315560;
+      box-shadow: 0 5px 16px rgba(24,76,99,.13);
+      font-weight: 900;
+    }
+
+    .instructions {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.79);
+      box-shadow: 0 8px 20px rgba(47,83,72,.11);
+      line-height: 1.45;
+      color: #4b5e62;
+    }
+    .instructions strong { color: #2c4147; }
+
+    .modal {
+      position: fixed;
+      z-index: 50;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(24,46,52,.45);
+      backdrop-filter: blur(5px);
+    }
+    .modal[hidden] { display: none; }
+
+    .dialog {
+      width: min(470px, 100%);
+      padding: 28px;
+      border: 5px solid rgba(255,255,255,.82);
+      border-radius: 28px;
+      text-align: center;
+      background: var(--cream);
+      box-shadow: 0 25px 65px rgba(26,42,47,.34);
+      animation: pop .25s ease-out;
+    }
+    @keyframes pop { from { transform: scale(.82); opacity: 0; } }
+    .dialog-icon { font-size: 4rem; line-height: 1; }
+    .dialog h2 { margin: 12px 0 8px; font: 900 2rem/1.1 Georgia, serif; }
+    .dialog p { margin: 0 auto 20px; max-width: 370px; line-height: 1.45; color: var(--muted); }
+    .dialog-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .dialog-button { padding: 12px 19px; color: #26363a; background: var(--gold); }
+    .dialog-button.secondary { background: #e6edf0; }
+
+    .confetti {
+      position: fixed;
+      z-index: 49;
+      top: -30px;
+      width: 12px;
+      height: 22px;
+      border-radius: 3px;
+      animation: fall 2.8s linear forwards;
+    }
+    @keyframes fall { to { transform: translate(var(--drift), 110vh) rotate(720deg); } }
+
+    @media (max-width: 760px) {
+      header { grid-template-columns: 1fr; }
+      .toolbar { justify-content: flex-start; }
+      .game { grid-template-columns: 30% 40% 30%; min-height: 510px; border-radius: 23px; }
+      .bank { padding: 16px 5px; }
+      .bank-title { font-size: .78rem; padding: 6px 9px; }
+      .characters { grid-template-columns: 1fr; gap: 7px; }
+      .character { grid-template-rows: 61px auto; padding: 4px 2px 6px; border-radius: 15px; }
+      .character svg { width: 64px; height: 64px; }
+      .character span { font-size: .72rem; }
+      .boat-track { inset-inline: 0; }
+      .boat-wrap { width: 155px; transform: translate(-20%, -50%); }
+      .boat-wrap.at-right { left: calc(100% - 125px); }
+      .boat-scene { height: 125px; }
+      .boat-svg { width: 155px; height: 82px; }
+      .farmer-in-boat, .passenger-in-boat { width: 58px; height: 58px; bottom: 43px; }
+      .farmer-in-boat { left: 65px; }
+      .passenger-in-boat { left: 16px; }
+      .score { top: 12px; font-size: .75rem; padding: 6px 9px; }
+      .travel-area { bottom: 17px; }
+      .travel-button { min-width: 0; width: 92%; padding: 11px 8px; font-size: .78rem; }
+      .status { font-size: .7rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+      .boat-wrap { transition-duration: .01ms; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <symbol id="farmer-art" viewBox="0 0 100 100">
+        <path d="M30 92c2-25 7-36 20-37 16-1 21 13 22 37" fill="#3a7590" stroke="#263d47" stroke-width="3"/>
+        <circle cx="51" cy="38" r="20" fill="#f5bf82" stroke="#674432" stroke-width="3"/>
+        <path d="M34 37c2-18 31-22 37 0-10-6-27-6-37 0Z" fill="#f3c94f" stroke="#6b4b26" stroke-width="3"/>
+        <path d="M27 31h49" stroke="#6b4b26" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="44" cy="40" r="2.7" fill="#263238"/><circle cx="59" cy="40" r="2.7" fill="#263238"/>
+        <path d="M47 50q5 4 10 0M37 46q-6 1-8 6M65 46q6 1 8 6" fill="none" stroke="#8d4e36" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M49 56v10M28 72l13-6M75 73l-14-7" stroke="#f5bf82" stroke-width="9" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="goat-art" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="63" rx="31" ry="23" fill="#fff8e5" stroke="#5a5144" stroke-width="3"/>
+        <circle cx="50" cy="39" r="21" fill="#fff8e5" stroke="#5a5144" stroke-width="3"/>
+        <path d="M34 28Q23 7 19 25M66 28Q77 7 81 25" fill="none" stroke="#b37c37" stroke-width="6" stroke-linecap="round"/>
+        <path d="M31 34 14 27q-3 16 17 17M69 34l17-7q3 16-17 17" fill="#f2d7aa" stroke="#5a5144" stroke-width="3"/>
+        <ellipse cx="43" cy="39" rx="3" ry="4" fill="#263238"/><ellipse cx="57" cy="39" rx="3" ry="4" fill="#263238"/>
+        <path d="M45 50q5 5 10 0M48 46h4" fill="none" stroke="#7b5a53" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M43 58q7 17 14 0" fill="#ead6bd" stroke="#5a5144" stroke-width="2"/>
+        <path d="M28 79v13M72 79v13" stroke="#5a5144" stroke-width="5" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="cabbage-art" viewBox="0 0 100 100">
+        <circle cx="50" cy="55" r="37" fill="#75bf4b" stroke="#315e2d" stroke-width="3"/>
+        <path d="M50 88Q25 75 24 48q20 4 26 40ZM50 88q25-13 26-40-20 4-26 40ZM50 88Q30 54 50 22q20 32 0 66Z" fill="#8fd15b" stroke="#3e7e38" stroke-width="3"/>
+        <path d="M19 58q16-10 31 0 16-10 31 0M28 34q10 9 22 8 12 1 22-8" fill="none" stroke="#4b913d" stroke-width="3"/>
+        <circle cx="40" cy="53" r="5" fill="#fff"/><circle cx="61" cy="53" r="5" fill="#fff"/>
+        <circle cx="41" cy="54" r="2.5" fill="#263238"/><circle cx="60" cy="54" r="2.5" fill="#263238"/>
+        <path d="M43 66q7 7 14 0" fill="none" stroke="#315e2d" stroke-width="3" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="wolf-art" viewBox="0 0 100 100">
+        <path d="M25 36 20 10l22 16M75 36l5-26-22 16" fill="#798990" stroke="#34434a" stroke-width="3"/>
+        <ellipse cx="50" cy="55" rx="33" ry="31" fill="#84949b" stroke="#34434a" stroke-width="3"/>
+        <path d="M32 54q18-19 36 0L62 77H38Z" fill="#d9e1df"/>
+        <ellipse cx="40" cy="47" rx="4" ry="5" fill="#f7d95d"/><ellipse cx="60" cy="47" rx="4" ry="5" fill="#f7d95d"/>
+        <circle cx="40" cy="48" r="2"/><circle cx="60" cy="48" r="2"/>
+        <path d="M44 61q6-5 12 0l-6 6Z" fill="#29363c"/>
+        <path d="M38 73q12 9 24 0" fill="none" stroke="#34434a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M23 40 8 49l17 7M77 40l15 9-17 7" fill="#84949b" stroke="#34434a" stroke-width="3"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="app">
+    <header>
+      <div>
+        <a class="home" href="../../index.html">← Minden játék</a>
+        <h1>Kecske–káposzta–farkas</h1>
+        <p class="lead">Juttasd át mindhármukat a túlsó partra! A csónakba a révész mellé csak egy utas fér, és senkit sem hagyhatsz veszélyben.</p>
+      </div>
+      <div class="toolbar">
+        <button class="small-button" id="undo" type="button" disabled>↶ Visszavonás</button>
+        <button class="small-button" id="restart" type="button">↻ Újrakezdés</button>
+      </div>
+    </header>
+
+    <section class="game" aria-label="Átkelős játék">
+      <div class="bank left" data-side="left">
+        <h2 class="bank-title">Bal part</h2>
+        <div class="characters" id="left-characters"></div>
+      </div>
+
+      <div class="river">
+        <div class="score" id="score">Átkelések: 0</div>
+        <div class="boat-track">
+          <div class="boat-wrap" id="boat">
+            <div class="boat-scene">
+              <svg class="farmer-in-boat" viewBox="0 0 100 100"><use href="#farmer-art"/></svg>
+              <div class="passenger-in-boat" id="passenger"></div>
+              <svg class="boat-svg" viewBox="0 0 240 120" aria-hidden="true">
+                <path d="M20 45q100-30 200 0l-17 50q-82 26-166 0Z" fill="#b9682e" stroke="#60311f" stroke-width="5"/>
+                <path d="M28 54q92 26 183 0M33 70q87 25 173 0M39 86q81 23 161 0" fill="none" stroke="#79401f" stroke-width="4"/>
+                <path d="M120 43 168 5" stroke="#63371f" stroke-width="7" stroke-linecap="round"/>
+                <path d="m161 7 15-4" stroke="#63371f" stroke-width="9" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="travel-area">
+          <button class="travel-button" id="travel" type="button">Átkelés utas nélkül →</button>
+          <div class="status" id="status" role="status" aria-live="polite">Válassz egy utast, vagy indulj egyedül!</div>
+        </div>
+      </div>
+
+      <div class="bank right" data-side="right">
+        <h2 class="bank-title">Jobb part</h2>
+        <div class="characters" id="right-characters"></div>
+      </div>
+    </section>
+
+    <aside class="instructions">
+      <strong>Játékszabály:</strong> kattints arra, akit magaddal vinnél, majd az <em>Átkelés</em> gombra. A farkas nem maradhat a kecskével, a kecske pedig a káposztával a révész felügyelete nélkül. A feladat legkevesebb <strong>7 átkelésből</strong> oldható meg.
+    </aside>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <div class="dialog-icon" id="dialog-icon">🎉</div>
+      <h2 id="dialog-title">Sikerült!</h2>
+      <p id="dialog-text"></p>
+      <div class="dialog-actions">
+        <button class="dialog-button secondary" id="dialog-undo" type="button">↶ Utolsó lépés vissza</button>
+        <button class="dialog-button" id="dialog-restart" type="button">↻ Új játék</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const ITEMS = {
+        goat: { name: 'Kecske', symbol: 'goat-art' },
+        cabbage: { name: 'Káposzta', symbol: 'cabbage-art' },
+        wolf: { name: 'Farkas', symbol: 'wolf-art' }
+      };
+
+      const state = {
+        farmer: 'left',
+        positions: { goat: 'left', cabbage: 'left', wolf: 'left' },
+        selected: null,
+        trips: 0,
+        sailing: false,
+        history: []
+      };
+
+      const els = {
+        left: document.getElementById('left-characters'),
+        right: document.getElementById('right-characters'),
+        boat: document.getElementById('boat'),
+        passenger: document.getElementById('passenger'),
+        travel: document.getElementById('travel'),
+        status: document.getElementById('status'),
+        score: document.getElementById('score'),
+        undo: document.getElementById('undo'),
+        restart: document.getElementById('restart'),
+        modal: document.getElementById('modal'),
+        dialogIcon: document.getElementById('dialog-icon'),
+        dialogTitle: document.getElementById('dialog-title'),
+        dialogText: document.getElementById('dialog-text'),
+        dialogUndo: document.getElementById('dialog-undo'),
+        dialogRestart: document.getElementById('dialog-restart')
+      };
+
+      function art(symbol, className = '') {
+        return `<svg class="${className}" viewBox="0 0 100 100" aria-hidden="true"><use href="#${symbol}"/></svg>`;
+      }
+
+      function characterButton(id) {
+        const item = ITEMS[id];
+        const selected = state.selected === id;
+        const available = state.positions[id] === state.farmer && !state.sailing;
+        return `<button class="character${selected ? ' selected' : ''}" type="button" data-id="${id}" aria-pressed="${selected}" ${available ? '' : 'disabled'}>
+          ${art(item.symbol)}<span>${item.name}</span>
+        </button>`;
+      }
+
+      function render() {
+        els.left.innerHTML = '';
+        els.right.innerHTML = '';
+
+        Object.keys(ITEMS).forEach(id => {
+          const target = state.positions[id] === 'left' ? els.left : els.right;
+          target.insertAdjacentHTML('beforeend', characterButton(id));
+        });
+
+        document.querySelectorAll('.character').forEach(button => {
+          button.addEventListener('click', () => selectPassenger(button.dataset.id));
+        });
+
+        els.boat.classList.toggle('at-right', state.farmer === 'right');
+        els.boat.classList.toggle('sailing', state.sailing);
+        els.passenger.innerHTML = state.selected ? art(ITEMS[state.selected].symbol) : '';
+        els.score.textContent = `Átkelések: ${state.trips}`;
+        els.undo.disabled = state.history.length === 0 || state.sailing;
+        els.restart.disabled = state.sailing;
+        els.travel.disabled = state.sailing;
+
+        const arrow = state.farmer === 'left' ? '→' : '←';
+        const passengerText = state.selected ? `${ITEMS[state.selected].name} utazik` : 'Átkelés utas nélkül';
+        els.travel.textContent = `${passengerText} ${arrow}`;
+      }
+
+      function selectPassenger(id) {
+        if (state.sailing || state.positions[id] !== state.farmer) return;
+        state.selected = state.selected === id ? null : id;
+        els.status.textContent = state.selected
+          ? `${ITEMS[state.selected].name} beszállt. Indulhatunk!`
+          : 'Válassz egy utast, vagy indulj egyedül!';
+        render();
+      }
+
+      function snapshot() {
+        return {
+          farmer: state.farmer,
+          positions: { ...state.positions },
+          trips: state.trips
+        };
+      }
+
+      function unsafeBank() {
+        for (const side of ['left', 'right']) {
+          if (state.farmer === side) continue;
+          const goat = state.positions.goat === side;
+          const cabbage = state.positions.cabbage === side;
+          const wolf = state.positions.wolf === side;
+          if (wolf && goat) return { side, pair: 'wolf-goat' };
+          if (goat && cabbage) return { side, pair: 'goat-cabbage' };
+        }
+        return null;
+      }
+
+      function won() {
+        return state.farmer === 'right' && Object.values(state.positions).every(side => side === 'right');
+      }
+
+      function travel() {
+        if (state.sailing) return;
+        state.history.push(snapshot());
+        state.sailing = true;
+        els.status.textContent = 'Csobban a lapát…';
+        render();
+
+        const passenger = state.selected;
+        const destination = state.farmer === 'left' ? 'right' : 'left';
+        state.farmer = destination;
+        if (passenger) state.positions[passenger] = destination;
+        state.trips += 1;
+
+        requestAnimationFrame(() => {
+          els.boat.classList.toggle('at-right', destination === 'right');
+        });
+
+        window.setTimeout(() => {
+          state.sailing = false;
+          state.selected = null;
+          const danger = unsafeBank();
+          render();
+
+          if (danger) {
+            const bankName = danger.side === 'left' ? 'bal' : 'jobb';
+            const message = danger.pair === 'wolf-goat'
+              ? `A ${bankName} parton a farkas kettesben maradt a kecskével.`
+              : `A ${bankName} parton a kecske kettesben maradt a káposztával.`;
+            showDialog('😱', 'Jaj, baj történt!', `${message} Vond vissza az utolsó lépést, és próbálj más átkelést!`, false);
+            els.status.textContent = 'Ez a part őrizetlenül veszélyes!';
+          } else if (won()) {
+            const perfect = state.trips === 7;
+            showDialog('🎉', 'Átjutott mindenki!', perfect
+              ? 'Tökéletes: megtaláltad a 7 átkeléses legrövidebb megoldást!'
+              : `Sikerült ${state.trips} átkelésből. Vajon megoldod pontosan 7-ből is?`, true);
+            els.status.textContent = 'Mindenki biztonságban van!';
+            confetti();
+          } else {
+            els.status.textContent = 'Sikeres átkelés. Ki legyen a következő utas?';
+          }
+        }, 900);
+      }
+
+      function undo() {
+        if (!state.history.length || state.sailing) return;
+        const previous = state.history.pop();
+        state.farmer = previous.farmer;
+        state.positions = { ...previous.positions };
+        state.trips = previous.trips;
+        state.selected = null;
+        els.modal.hidden = true;
+        els.status.textContent = 'Az utolsó átkelést visszavontad.';
+        render();
+      }
+
+      function restart() {
+        state.farmer = 'left';
+        state.positions = { goat: 'left', cabbage: 'left', wolf: 'left' };
+        state.selected = null;
+        state.trips = 0;
+        state.sailing = false;
+        state.history = [];
+        els.modal.hidden = true;
+        els.status.textContent = 'Válassz egy utast, vagy indulj egyedül!';
+        render();
+      }
+
+      function showDialog(icon, title, text, isWin) {
+        els.dialogIcon.textContent = icon;
+        els.dialogTitle.textContent = title;
+        els.dialogText.textContent = text;
+        els.dialogUndo.hidden = isWin;
+        els.modal.hidden = false;
+        (isWin ? els.dialogRestart : els.dialogUndo).focus();
+      }
+
+      function confetti() {
+        const colors = ['#ffcc57', '#ff6b6b', '#4caee0', '#70bb52', '#a874cf'];
+        for (let i = 0; i < 42; i += 1) {
+          const piece = document.createElement('i');
+          piece.className = 'confetti';
+          piece.style.left = `${Math.random() * 100}vw`;
+          piece.style.background = colors[i % colors.length];
+          piece.style.setProperty('--drift', `${Math.random() * 180 - 90}px`);
+          piece.style.animationDelay = `${Math.random() * .55}s`;
+          document.body.appendChild(piece);
+          window.setTimeout(() => piece.remove(), 3500);
+        }
+      }
+
+      els.travel.addEventListener('click', travel);
+      els.undo.addEventListener('click', undo);
+      els.restart.addEventListener('click', restart);
+      els.dialogUndo.addEventListener('click', undo);
+      els.dialogRestart.addEventListener('click', restart);
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !els.modal.hidden && els.dialogUndo.hidden === false) undo();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b48">
+  <title>Éjszakai hídátkelés</title>
+  <style>
+    :root { --ink:#18212c; --night:#101a48; --gold:#ffd45d; --paper:#fffdf7; --muted:#64727a; --shadow:0 16px 44px rgba(10,19,49,.24); }
+    * { box-sizing:border-box; }
+    html,body { min-height:100%; }
+    body { margin:0; color:var(--ink); background:linear-gradient(#d9edf2,#f6f0dd); font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif; }
+    button { font:inherit; }
+    .app { width:min(1050px,calc(100% - 22px)); margin:auto; padding:18px 0 28px; }
+    header { display:grid; grid-template-columns:1fr auto; gap:16px; align-items:start; margin-bottom:14px; }
+    .home { display:inline-block; margin-bottom:8px; color:#32666c; font-weight:800; text-decoration:none; }
+    .home:hover { text-decoration:underline; }
+    h1 { margin:0; font:900 clamp(1.8rem,4.5vw,3.1rem)/1 Georgia,serif; color:#213840; }
+    .lead { max-width:760px; margin:9px 0 0; color:#52666c; line-height:1.45; }
+    .toolbar { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .plain,.cross,.modal-button { border:0; border-radius:999px; cursor:pointer; font-weight:900; transition:transform .16s ease,filter .16s ease; }
+    .plain { padding:9px 14px; color:#38535b; background:rgba(255,255,255,.84); box-shadow:0 4px 12px rgba(25,61,70,.11); }
+    button:hover:not(:disabled) { transform:translateY(-2px); filter:brightness(1.04); }
+    button:focus-visible,.home:focus-visible { outline:4px solid rgba(255,205,68,.9); outline-offset:3px; }
+    button:disabled { opacity:.4; cursor:not-allowed; }
+
+    .game { position:relative; min-height:570px; overflow:hidden; border:5px solid rgba(255,255,255,.8); border-radius:28px; background:var(--night); box-shadow:var(--shadow); }
+    .sky { position:absolute; inset:0 0 165px; overflow:hidden; background:radial-gradient(circle at 18% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 72% 18%,#fff8ae 0 1.5px,transparent 2.5px),radial-gradient(circle at 84% 50%,#fff 0 1px,transparent 2px),radial-gradient(circle at 42% 32%,#fff 0 1px,transparent 2px),linear-gradient(#101743,#182759); background-size:180px 140px,240px 180px,210px 160px,270px 190px,auto; }
+    .moon { position:absolute; top:35px; right:9%; width:64px; aspect-ratio:1; border-radius:50%; background:#fffbc5; box-shadow:0 0 25px rgba(255,249,173,.4); }
+    .moon::after { content:""; position:absolute; width:58px; aspect-ratio:1; left:-15px; top:-8px; border-radius:50%; background:#121c4b; }
+    .hill { position:absolute; left:-5%; bottom:-6px; width:110%; height:210px; background:#0a493f; clip-path:polygon(0 67%,7% 50%,12% 60%,18% 35%,26% 58%,33% 43%,42% 64%,50% 37%,60% 61%,67% 44%,74% 62%,83% 34%,91% 57%,100% 42%,100% 100%,0 100%); }
+    .water { position:absolute; z-index:1; left:0; right:0; bottom:0; height:113px; background:repeating-linear-gradient(176deg,#122f66 0 12px,#173b76 13px 24px); }
+    .water::before { content:""; position:absolute; inset:5px 0 auto; height:2px; background:linear-gradient(90deg,transparent,#83a8cc,transparent); animation:shimmer 4s linear infinite; }
+    @keyframes shimmer { to { transform:translateX(45%); } }
+
+    .bridge { position:absolute; z-index:3; left:18%; right:18%; bottom:121px; height:173px; pointer-events:none; }
+    .deck { position:absolute; left:0; right:0; bottom:22px; height:27px; border:5px solid #604534; border-radius:12px 12px 4px 4px; background:repeating-linear-gradient(90deg,#a77951 0 24px,#735139 25px 28px); transform:perspective(300px) rotateX(7deg); }
+    .arch { position:absolute; left:9%; right:9%; bottom:0; height:155px; border:18px solid #956e4f; border-bottom:0; border-radius:50% 50% 0 0; clip-path:polygon(0 0,100% 0,100% 30%,88% 29%,84% 21%,78% 14%,70% 9%,60% 6%,50% 5%,40% 6%,30% 9%,22% 14%,16% 21%,12% 29%,0 30%); }
+    .pier { position:absolute; bottom:0; width:46px; height:91px; border:5px solid #604534; background:#987052; }
+    .pier.left { left:-8px; } .pier.right { right:-8px; }
+
+    .stats { position:absolute; z-index:9; top:14px; left:50%; display:flex; gap:8px; transform:translateX(-50%); white-space:nowrap; }
+    .stat { padding:7px 12px; border-radius:999px; color:#20323b; background:rgba(255,255,255,.9); box-shadow:0 5px 16px rgba(4,13,41,.22); font-weight:900; }
+    .stat.target { color:#654b00; background:var(--gold); }
+
+    .banks { position:absolute; z-index:7; inset:auto 0 0; display:grid; grid-template-columns:1fr 1fr; min-height:170px; background:linear-gradient(90deg,#4f9c4a 0 49.8%,#438c44 50.2%); border-top:4px solid rgba(159,212,92,.6); }
+    .bank { padding:10px 12px 14px; }
+    .bank:first-child { border-right:1px dashed rgba(255,255,255,.32); }
+    .bank-title { margin:0 0 7px; color:white; font:800 .86rem Georgia,serif; text-shadow:0 2px rgba(26,72,38,.5); }
+    .people { display:flex; min-height:112px; gap:7px; align-items:flex-end; flex-wrap:wrap; }
+    .person { position:relative; display:grid; place-items:center; width:70px; padding:5px 3px 6px; border:3px solid transparent; border-radius:17px; color:#25353a; background:rgba(255,255,255,.9); box-shadow:0 7px 13px rgba(16,48,36,.19); cursor:pointer; transition:transform .16s ease,border-color .16s ease; }
+    .person:hover:not(:disabled) { transform:translateY(-4px); }
+    .person.selected { border-color:var(--gold); transform:translateY(-5px); }
+    .person.selected::after { content:"✓"; position:absolute; top:-8px; right:-7px; display:grid; place-items:center; width:24px; aspect-ratio:1; border:2px solid white; border-radius:50%; background:var(--gold); font-weight:900; }
+    .person svg { width:51px; height:67px; overflow:visible; }
+    .person b { font-size:.74rem; }
+    .person:disabled { opacity:.68; cursor:default; }
+    .torch { font-size:1rem; filter:drop-shadow(0 0 7px #ffd155); }
+
+    .walkers { position:absolute; z-index:8; left:20%; right:20%; bottom:166px; height:105px; pointer-events:none; opacity:0; }
+    .walkers.active { opacity:1; }
+    .walker-group { position:absolute; left:0; bottom:0; display:flex; align-items:flex-end; gap:0; filter:drop-shadow(0 7px 5px rgba(3,10,31,.35)); }
+    .walkers.to-right .walker-group { animation:walkRight 1.05s ease-in-out forwards; }
+    .walkers.to-left .walker-group { left:auto; right:0; animation:walkLeft 1.05s ease-in-out forwards; }
+    @keyframes walkRight { to { transform:translateX(calc(60vw - 245px)); } }
+    @keyframes walkLeft { to { transform:translateX(calc(-60vw + 245px)); } }
+    .walker { width:52px; height:70px; animation:bob .24s ease-in-out infinite alternate; }
+    .walker:nth-child(2) { animation-delay:-.12s; margin-left:-12px; }
+    @keyframes bob { to { transform:translateY(-5px); } }
+    .moving-torch { align-self:center; margin-left:-9px; font-size:1.55rem; filter:drop-shadow(0 0 10px #ffd34d); }
+
+    .control { position:absolute; z-index:10; left:50%; bottom:182px; width:min(94%,390px); transform:translateX(-50%); text-align:center; }
+    .cross { min-width:235px; padding:13px 22px; color:#463914; background:var(--gold); border:4px solid rgba(255,255,255,.72); box-shadow:0 7px 0 #c9962d,0 12px 22px rgba(2,10,39,.28); }
+    .cross:active:not(:disabled) { transform:translateY(5px); box-shadow:0 2px 0 #c9962d,0 7px 15px rgba(2,10,39,.25); }
+    .status { display:inline-block; max-width:100%; min-height:25px; margin-top:12px; padding:5px 10px; border-radius:12px; color:#e9f0ff; background:rgba(8,16,50,.78); font-weight:800; font-size:.83rem; }
+    .rules { margin-top:15px; padding:13px 17px; border-radius:18px; color:#53656a; background:rgba(255,255,255,.82); line-height:1.45; box-shadow:0 7px 20px rgba(34,67,71,.1); }
+    .rules strong { color:#293c42; }
+
+    .modal { position:fixed; z-index:50; inset:0; display:grid; place-items:center; padding:17px; background:rgba(7,14,37,.56); backdrop-filter:blur(5px); }
+    .modal[hidden] { display:none; }
+    .dialog { width:min(470px,100%); padding:28px; border:5px solid rgba(255,255,255,.8); border-radius:27px; text-align:center; background:var(--paper); box-shadow:0 25px 65px rgba(4,9,25,.4); animation:pop .24s ease-out; }
+    @keyframes pop { from { opacity:0; transform:scale(.83); } }
+    .dialog-icon { font-size:4rem; line-height:1; }
+    .dialog h2 { margin:10px 0 8px; font:900 2rem/1.1 Georgia,serif; }
+    .dialog p { margin:0 auto 19px; max-width:380px; color:var(--muted); line-height:1.45; }
+    .modal-button { padding:12px 19px; color:#413717; background:var(--gold); }
+    .confetti { position:fixed; z-index:49; top:-25px; width:11px; height:20px; border-radius:2px; animation:fall 2.8s linear forwards; }
+    @keyframes fall { to { transform:translate(var(--drift),110vh) rotate(720deg); } }
+
+    @media (max-width:700px) {
+      header { grid-template-columns:1fr; } .toolbar { justify-content:flex-start; }
+      .game { min-height:620px; border-radius:22px; }
+      .sky { bottom:245px; } .water { height:95px; }
+      .bridge { left:8%; right:8%; bottom:235px; height:145px; } .arch { height:130px; }
+      .banks { min-height:245px; } .bank { padding:9px 6px; }
+      .people { gap:5px; align-content:flex-start; align-items:flex-start; }
+      .person { width:58px; border-radius:14px; padding:3px 1px 5px; } .person svg { width:42px; height:57px; } .person b { font-size:.65rem; }
+      .control { bottom:260px; } .cross { min-width:210px; padding:11px 14px; font-size:.88rem; }
+      .walkers { left:11%; right:11%; bottom:263px; }
+      @keyframes walkRight { to { transform:translateX(calc(80vw - 170px)); } }
+      @keyframes walkLeft { to { transform:translateX(calc(-80vw + 170px)); } }
+      .stats { top:10px; gap:5px; } .stat { padding:6px 8px; font-size:.72rem; }
+    }
+    @media (max-width:390px) { .person{width:52px}.person svg{width:38px}.bank-title{font-size:.74rem}.lead{font-size:.92rem} }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important} }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <a class="home" href="../../index.html">← Minden játék</a>
+        <h1>Éjszakai hídátkelés</h1>
+        <p class="lead">Négy embernek át kell jutnia a sötét hídon. Egyetlen lámpájuk van, és egyszerre legfeljebb ketten mehetnek.</p>
+      </div>
+      <div class="toolbar">
+        <button class="plain" id="undo" type="button" disabled>↶ Visszavonás</button>
+        <button class="plain" id="restart" type="button">↻ Újrakezdés</button>
+      </div>
+    </header>
+
+    <section class="game" aria-label="Hídátkelős játék">
+      <div class="sky"><div class="moon"></div><div class="hill"></div><div class="water"></div></div>
+      <div class="stats"><span class="stat" id="time">Eltelt idő: 0 perc</span><span class="stat target">Cél: 17 perc</span></div>
+      <div class="bridge" aria-hidden="true"><div class="arch"></div><div class="deck"></div><div class="pier left"></div><div class="pier right"></div></div>
+      <div class="walkers" id="walkers"><div class="walker-group" id="walker-group"></div></div>
+      <div class="control">
+        <button class="cross" id="cross" type="button" disabled>Válassz 1 vagy 2 embert</button>
+        <div class="status" id="status" role="status" aria-live="polite">A lámpa a bal parton van.</div>
+      </div>
+      <div class="banks">
+        <div class="bank"><h2 class="bank-title">Bal part <span class="torch" id="left-torch">🔦</span></h2><div class="people" id="left-people"></div></div>
+        <div class="bank"><h2 class="bank-title">Jobb part <span class="torch" id="right-torch"></span></h2><div class="people" id="right-people"></div></div>
+      </div>
+    </section>
+
+    <aside class="rules"><strong>Szabály:</strong> kattints egy vagy két emberre, majd indítsd el őket. A lámpát minden átkelésnél vinni kell, ezért csak arról a partról indulhatnak, ahol a lámpa van. Két ember a lassabbik sebességével halad.</aside>
+  </main>
+
+  <div class="modal" id="modal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="dialog-icon">🎉</div><h2 id="dialog-title">Mindenki átért!</h2><p id="dialog-text"></p><button class="modal-button" id="again" type="button">↻ Új játék</button></div></div>
+
+  <script>
+    (() => {
+      'use strict';
+      const PEOPLE = [
+        { id:'one', name:'Anna', time:1, color:'#ee795a', hair:'#673b2d' },
+        { id:'two', name:'Bence', time:2, color:'#f2bd42', hair:'#513a27' },
+        { id:'seven', name:'Csilla', time:7, color:'#4dbb70', hair:'#803f2e' },
+        { id:'ten', name:'Dani', time:10, color:'#7182ce', hair:'#332d29' }
+      ];
+      const state = { positions:{one:'left',two:'left',seven:'left',ten:'left'}, torch:'left', selected:[], time:0, moving:false, history:[] };
+      const $ = id => document.getElementById(id);
+      const els = { left:$('left-people'),right:$('right-people'),leftTorch:$('left-torch'),rightTorch:$('right-torch'),cross:$('cross'),status:$('status'),time:$('time'),undo:$('undo'),restart:$('restart'),walkers:$('walkers'),walkerGroup:$('walker-group'),modal:$('modal'),dialogText:$('dialog-text'),again:$('again') };
+
+      function personArt(person, className='') {
+        return `<svg class="${className}" viewBox="0 0 70 90" aria-hidden="true"><path d="M13 88c1-26 4-37 22-37s21 11 22 37" fill="${person.color}" stroke="#26363c" stroke-width="3"/><circle cx="35" cy="32" r="19" fill="#efb77d" stroke="#5f4031" stroke-width="3"/><path d="M17 31Q18 6 38 11q17 1 15 21-8-10-18-9-10 0-18 8Z" fill="${person.hair}"/><circle cx="29" cy="34" r="2.5"/><circle cx="42" cy="34" r="2.5"/><path d="M30 43q5 4 10 0" fill="none" stroke="#8a503b" stroke-width="2.5" stroke-linecap="round"/><path d="M17 63 5 76M53 63l12 13" stroke="#efb77d" stroke-width="7" stroke-linecap="round"/></svg>`;
+      }
+      function button(person) {
+        const selected=state.selected.includes(person.id), available=state.positions[person.id]===state.torch&&!state.moving;
+        return `<button class="person${selected?' selected':''}" type="button" data-id="${person.id}" aria-pressed="${selected}" ${available?'':'disabled'}>${personArt(person)}<b>${person.time} perc</b></button>`;
+      }
+      function render() {
+        els.left.innerHTML=''; els.right.innerHTML='';
+        PEOPLE.forEach(person => (state.positions[person.id]==='left'?els.left:els.right).insertAdjacentHTML('beforeend',button(person)));
+        document.querySelectorAll('.person').forEach(btn=>btn.addEventListener('click',()=>select(btn.dataset.id)));
+        els.leftTorch.textContent=state.torch==='left'?'🔦':''; els.rightTorch.textContent=state.torch==='right'?'🔦':'';
+        els.time.textContent=`Eltelt idő: ${state.time} perc`;
+        els.undo.disabled=!state.history.length||state.moving; els.restart.disabled=state.moving;
+        const dir=state.torch==='left'?'→':'←';
+        if (!state.selected.length) { els.cross.textContent='Válassz 1 vagy 2 embert'; els.cross.disabled=true; }
+        else { const cost=Math.max(...state.selected.map(id=>PEOPLE.find(p=>p.id===id).time)); els.cross.textContent=`Átkelés: ${cost} perc ${dir}`; els.cross.disabled=state.moving; }
+      }
+      function select(id) {
+        if(state.moving||state.positions[id]!==state.torch)return;
+        const i=state.selected.indexOf(id);
+        if(i>=0)state.selected.splice(i,1);
+        else if(state.selected.length<2)state.selected.push(id);
+        else { els.status.textContent='Egyszerre legfeljebb ketten kelhetnek át.'; return; }
+        els.status.textContent=state.selected.length?`${state.selected.length} utazó kiválasztva.`:`A lámpa a ${state.torch==='left'?'bal':'jobb'} parton van.`;
+        render();
+      }
+      function snapshot(){return{positions:{...state.positions},torch:state.torch,time:state.time};}
+      function cross(){
+        if(!state.selected.length||state.moving)return;
+        state.history.push(snapshot()); state.moving=true;
+        const travellers=[...state.selected], from=state.torch, to=from==='left'?'right':'left';
+        const cost=Math.max(...travellers.map(id=>PEOPLE.find(p=>p.id===id).time));
+        els.walkerGroup.innerHTML=travellers.map(id=>personArt(PEOPLE.find(p=>p.id===id),'walker')).join('')+'<span class="moving-torch">🔦</span>';
+        els.walkers.className=`walkers active ${to==='right'?'to-right':'to-left'}`;
+        els.status.textContent='Léptek koppannak a hídon…'; render();
+        window.setTimeout(()=>{
+          travellers.forEach(id=>state.positions[id]=to); state.torch=to; state.time+=cost; state.selected=[]; state.moving=false;
+          els.walkers.className='walkers'; els.walkerGroup.innerHTML=''; render();
+          if(Object.values(state.positions).every(side=>side==='right'))finish();
+          else els.status.textContent=`Sikeres átkelés: +${cost} perc. A lámpa a ${to==='left'?'bal':'jobb'} parton van.`;
+        },1100);
+      }
+      function undo(){
+        if(!state.history.length||state.moving)return; const old=state.history.pop();
+        state.positions={...old.positions};state.torch=old.torch;state.time=old.time;state.selected=[];els.modal.hidden=true;els.status.textContent='Az utolsó átkelést visszavontad.';render();
+      }
+      function restart(){state.positions={one:'left',two:'left',seven:'left',ten:'left'};state.torch='left';state.selected=[];state.time=0;state.moving=false;state.history=[];els.modal.hidden=true;els.status.textContent='A lámpa a bal parton van.';render();}
+      function finish(){
+        els.dialogText.textContent=state.time===17?'Tökéletes! Pontosan 17 perc alatt oldottad meg — ez a lehető leggyorsabb.':`Sikerült ${state.time} perc alatt. Megtalálod a 17 perces megoldást is?`;
+        els.modal.hidden=false;els.again.focus();confetti();
+      }
+      function confetti(){const colors=['#ffd45d','#ef795d','#54bd71','#6e82d1','#58bfea'];for(let i=0;i<40;i++){const p=document.createElement('i');p.className='confetti';p.style.left=`${Math.random()*100}vw`;p.style.background=colors[i%colors.length];p.style.setProperty('--drift',`${Math.random()*180-90}px`);p.style.animationDelay=`${Math.random()*.5}s`;document.body.appendChild(p);setTimeout(()=>p.remove(),3400);}}
+      els.cross.addEventListener('click',cross);els.undo.addEventListener('click',undo);els.restart.addEventListener('click',restart);els.again.addEventListener('click',restart);render();
+    })();
+  </script>
+</body>
+</html>
