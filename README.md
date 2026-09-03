@@ -6,6 +6,7 @@ Mobilon és számítógépen használható, külső függőség nélküli matema
 
 - Kecske–káposzta–farkas
 - Éjszakai hídátkelés
+- Simon Tatham játékai
 
 ## Helyi futtatás
 
