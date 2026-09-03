@@ -1,0 +1,93 @@
+page:
+  id: simon-tatham-valogatas
+  title: Simon Tatham játékai
+  subtitle: "Ahány játék, annyi gondolkodás. :))"
+  teaser: >-
+    Válassz egy játékot, és próbáld megfejteni, hogyan működik!
+    A szabályok egyszerűek, de a pályák gyorsan nehezednek.
+  attribution:
+    text: >-
+      A válogatás Simon Tatham Portable Puzzle Collection
+      gyűjteményéből készült.
+    url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
+
+games:
+  - id: map
+    official_title: Map
+    title: Térképszínező
+    teaser: >-
+      Négy színed van. Ki tudod színezni a térképet úgy,
+      hogy bármely két szomszédos tartomány színe különböző legyen?
+    mathematics: >-
+      A négyszíntétel szerint minden térkép kiszínezhető négy színnel.
+      A feladványban azt kell kikövetkeztetned,
+      melyik tartomány melyik színt kapja.
+    observation_question: >-
+      Találsz olyan területet, amelynek már csak egyetlen színe maradt?
+      Ha nem, akkor kezd igazán érdekessé válni!
+      Vajon mi lehet a továbblépés nyitja?
+    launch:
+      label: Játék indítása
+      url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/map.html
+      external: true
+      new_tab: true
+
+  - id: undead
+    official_title: Undead
+    title: Szörnyek és tükrök
+    teaser: >-
+      A vámpír nem látszik a tükörben, a szellem viszont csak ott látszik.
+      El tudod helyezni az összes szörnyet úgy,
+      hogy minden nyom igaz legyen?
+    mathematics: >-
+      Minden mezőnek egyszerre több látóvonal feltételeit kell teljesítenie.
+      A megoldás akkor bukkan elő,
+      amikor különböző nyomokat kapcsolsz össze.
+    observation_question: >-
+      Van olyan mező, ahol egy bizonyos típusú szörny biztosan nem állhat?
+      Ha több lehetőség maradt, jelöld meg mindet — később pontosíthatod.
+    launch:
+      label: Játék indítása
+      url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/undead.html
+      external: true
+      new_tab: true
+
+  - id: mines
+    official_title: Mines
+    title: Aknakereső
+    teaser: >-
+      Minden szám elárulja, hány akna rejtőzik körülötte.
+      Végig tudsz menni a pályán úgy,
+      hogy egyszer se kelljen találgatnod?
+    mathematics: >-
+      Egy szám egyszerre több szomszédos mezőről ad információt.
+      Két közeli szám összehasonlítása gyakran olyan titkot árul el,
+      amelyet külön-külön egyik sem mutatott meg.
+    observation_question: >-
+      Találsz biztosan aknás vagy biztosan biztonságos mezőt?
+      Ha nem, melyik két szám mond együtt többet, mint külön-külön?
+    launch:
+      label: Játék indítása
+      url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/mines.html
+      external: true
+      new_tab: true
+
+  - id: flood
+    official_title: Flood
+    title: Színáradat
+    teaser: >-
+      A bal felső sarokból induló színfolt
+      minden lépéssel egyre nagyobbra nő.
+      Be tudod kebelezni az egész táblát,
+      mielőtt elfogynak a lépéseid?
+    mathematics: >-
+      Nem mindig az a legjobb döntés, amely most a legtöbb mezőt szerzi meg.
+      Olyan színsorrendet kell keresned,
+      amely a későbbi lépéseid előtt is megnyitja az utat.
+    observation_question: >-
+      Melyik szín nyitja meg a legtöbb jó folytatást?
+    launch:
+      label: Játék indítása
+      url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/flood.html
+      external: true
+      new_tab: true

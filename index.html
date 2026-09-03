@@ -19,6 +19,8 @@
     .card:focus-visible { outline:4px solid #f4c95d; outline-offset:4px; }
     .icon { display:grid; place-items:center; width:64px; height:64px; margin-bottom:30px; border-radius:18px; font-size:2.15rem; background:#edf6e9; }
     .card:nth-child(2) .icon { background:#e9f2fb; }
+    .collection { grid-column:1 / -1; min-height:210px; }
+    .collection .icon { background:#fff1c7; }
     h2 { margin:auto 0 8px; font:800 1.45rem/1.15 Georgia,serif; }
     .card p { margin:0; color:var(--muted); line-height:1.45; }
     .go { margin-top:18px; color:var(--accent); font-weight:800; }
@@ -46,10 +48,18 @@
         <p>Négy ember, egy lámpa és összesen 17 perc. Megtalálod a leggyorsabb tervet?</p>
         <span class="go">Játék indítása →</span>
       </a>
+      <a class="card collection" href="jatekok/simon-tatham-jatekai/index.html">
+        <span class="icon" aria-hidden="true">🧩</span>
+        <h2>Simon Tatham játékai</h2>
+        <p>Ahány játék, annyi gondolkodás. 
+          A szabályok egyszerűek, de a pályák gyorsan nehezednek.
+        </p>
+        <span class="go">Válogatás megnyitása →</span>
+      </a>
     </section>
-    <footer><b>Próbáld ki, hibázz, javíts!</b><br/>
-      Tudtad, hogy a legnagyobb felfedezők sem találtak el mindent elsőre? 
-      Ha valami nem sikerül, az nem hiba, hanem egy újabb értékes nyom. Minden rontott próbálkozás közelebb 
+    <footer><b>Próbáld ki, hibázz, javíts!</b><br>
+      Tudtad, hogy a legnagyobb felfedezők sem találtak el mindent elsőre?
+      Ha valami nem sikerül, az nem hiba, hanem egy újabb értékes nyom. Minden rontott próbálkozás közelebb
       visz a megoldáshoz. Induljon a kísérletezés!
     </footer>
   </main>

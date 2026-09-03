@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Négy gondolkodtató játék Simon Tatham puzzle-gyűjteményéből, magyar ajánlóval.">
+  <title>Simon Tatham játékai</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f292d;
+      --muted: #68747a;
+      --paper: #fff;
+      --line: #e4e2db;
+      --accent: #16695f;
+      --accent-dark: #0f514a;
+      --focus: #f4c95d;
+      --wash: #f7f5ef;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 92% 2%, rgba(244, 201, 93, .19), transparent 24rem),
+        var(--wash);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    a { color: inherit; }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: auto;
+      padding: clamp(26px, 6vw, 68px) 0 40px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: clamp(28px, 5vw, 52px);
+      color: var(--accent-dark);
+      font-size: .95rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    .back:focus-visible,
+    .launch:focus-visible,
+    .source:focus-visible {
+      outline: 4px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 8px;
+    }
+
+    header {
+      max-width: 780px;
+      margin-bottom: clamp(34px, 6vw, 58px);
+    }
+
+    .eyebrow {
+      margin: 0 0 13px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font: 800 clamp(2.5rem, 8vw, 5.3rem)/.94 Georgia, serif;
+      letter-spacing: -.05em;
+    }
+
+    .subtitle {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font: 800 clamp(1.18rem, 3vw, 1.55rem)/1.25 Georgia, serif;
+    }
+
+    .lead {
+      max-width: 690px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.3vw, 1.15rem);
+      line-height: 1.58;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: flex;
+      min-width: 0;
+      min-height: 470px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--paper);
+      box-shadow: 0 8px 25px rgba(30, 39, 42, .06);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 24px 0;
+    }
+
+    .icon {
+      display: grid;
+      width: 62px;
+      height: 62px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 18px;
+      background: #edf6e9;
+      font-size: 2rem;
+    }
+
+    .card:nth-child(2) .icon { background: #f1eafb; }
+    .card:nth-child(3) .icon { background: #fbe9e7; }
+    .card:nth-child(4) .icon { background: #e8f3fb; }
+
+    .official {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font: 800 clamp(1.35rem, 3vw, 1.62rem)/1.1 Georgia, serif;
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px 24px 24px;
+    }
+
+    .teaser {
+      margin: 0 0 20px;
+      color: #48575d;
+      line-height: 1.5;
+    }
+
+    .insight {
+      margin: 0 0 16px;
+      padding: 16px;
+      border-radius: 15px;
+      background: #f5f7f5;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-dark);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .insight p,
+    .question p {
+      margin: 0;
+      line-height: 1.47;
+    }
+
+    .question {
+      margin: 0 0 22px;
+      padding-left: 15px;
+      border-left: 4px solid var(--focus);
+    }
+
+    .launch {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+      padding: 12px 18px;
+      border-radius: 13px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 850;
+      text-decoration: none;
+      transition: transform .16s ease, background .16s ease;
+    }
+
+    .launch:hover {
+      transform: translateY(-2px);
+      background: var(--accent-dark);
+    }
+
+    .launch span { margin-left: 8px; }
+
+    footer {
+      margin-top: 34px;
+      color: #7d888d;
+      font-size: .9rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .source {
+      color: var(--accent-dark);
+      font-weight: 750;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 720px) {
+      main { width: min(100% - 22px, 500px); padding-top: 22px; }
+      .games { grid-template-columns: 1fr; gap: 14px; }
+      .card { min-height: 0; }
+      .card-top { padding: 20px 20px 0; }
+      .card-body { padding: 18px 20px 20px; }
+      .launch { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .launch { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../../index.html" aria-label="Vissza a Matematikai játékok főoldalára">← Vissza a játékokhoz</a>
+
+    <header>
+      <p class="eyebrow">Puzzle-válogatás</p>
+      <h1>Simon Tatham játékai</h1>
+      <p class="subtitle">Ahány játék, annyi gondolkodás. :))</p>
+      <p class="lead">Válassz egy játékot, és próbáld megfejteni, hogyan működik! A szabályok egyszerűek, de a pályák gyorsan nehezednek.</p>
+    </header>
+
+    <section class="games" aria-label="Ajánlott puzzle-játékok">
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">🗺️</span>
+          <div>
+            <span class="official">Map</span>
+            <h2>Térképszínező</h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="teaser">Négy színed van. Ki tudod színezni a térképet úgy, hogy bármely két szomszédos tartomány színe különböző legyen?</p>
+          <div class="insight">
+            <span class="label">Mi benne a matematika?</span>
+            <p>A négyszíntétel szerint minden térkép kiszínezhető négy színnel. A feladványban azt kell kikövetkeztetned, melyik tartomány melyik színt kapja.</p>
+          </div>
+          <div class="question">
+            <span class="label">Figyeld meg!</span>
+            <p>Találsz olyan területet, amelynek már csak egyetlen színe maradt? Ha nem, akkor kezd igazán érdekessé válni! Vajon mi lehet a továbblépés nyitja?</p>
+          </div>
+          <a class="launch" href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/map.html" target="_blank" rel="noopener noreferrer">Játék indítása <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">🧛</span>
+          <div>
+            <span class="official">Undead</span>
+            <h2>Szörnyek és tükrök</h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="teaser">A vámpír nem látszik a tükörben, a szellem viszont csak ott látszik. El tudod helyezni az összes szörnyet úgy, hogy minden nyom igaz legyen?</p>
+          <div class="insight">
+            <span class="label">Mi benne a matematika?</span>
+            <p>Minden mezőnek egyszerre több látóvonal feltételeit kell teljesítenie. A megoldás akkor bukkan elő, amikor különböző nyomokat kapcsolsz össze. EASY típussal érdemes kezdeni.</p>
+          </div>
+          <div class="question">
+            <span class="label">Figyeld meg!</span>
+            <p>Van olyan mező, ahol egy bizonyos típusú szörny biztosan nem állhat? Ha több lehetőség maradt, jelöld meg mindet — később pontosíthatod.</p>
+          </div>
+          <a class="launch" href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/undead.html" target="_blank" rel="noopener noreferrer">Játék indítása <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">💣</span>
+          <div>
+            <span class="official">Mines</span>
+            <h2>Aknakereső</h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="teaser">Minden szám elárulja, hány akna rejtőzik körülötte. Végig tudsz menni a pályán úgy, hogy egyszer se kelljen találgatnod?</p>
+          <div class="insight">
+            <span class="label">Mi benne a matematika?</span>
+            <p>Egy szám egyszerre több szomszédos mezőről ad információt. Két közeli szám összehasonlítása gyakran olyan titkot árul el, amelyet külön-külön egyik sem mutatott meg.</p>
+          </div>
+          <div class="question">
+            <span class="label">Figyeld meg!</span>
+            <p>Találsz biztosan aknás vagy biztosan biztonságos mezőt? Ha nem, melyik két szám mond együtt többet, mint külön-külön?</p>
+          </div>
+          <a class="launch" href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/mines.html" target="_blank" rel="noopener noreferrer">Játék indítása <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">🌈</span>
+          <div>
+            <span class="official">Flood</span>
+            <h2>Színáradat</h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="teaser">A bal felső sarokból induló színfolt minden lépéssel egyre nagyobbra nő. Be tudod kebelezni az egész táblát, mielőtt elfogynak a lépéseid?</p>
+          <div class="insight">
+            <span class="label">Mi benne a matematika?</span>
+            <p>Nem mindig az a legjobb döntés, amely most a legtöbb mezőt szerzi meg. Olyan színsorrendet kell keresned, amely a későbbi lépéseid előtt is megnyitja az utat.</p>
+          </div>
+          <div class="question">
+            <span class="label">Figyeld meg!</span>
+            <p>Melyik szín nyitja meg a legtöbb jó folytatást?</p>
+          </div>
+          <a class="launch" href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/flood.html" target="_blank" rel="noopener noreferrer">Játék indítása <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <a class="source" href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/" target="_blank" rel="noopener noreferrer">A válogatás Simon Tatham Portable Puzzle Collection gyűjteményéből készült.</a>
+    </footer>
+  </main>
+</body>
+</html>
