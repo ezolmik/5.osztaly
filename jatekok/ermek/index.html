@@ -227,6 +227,7 @@
 
     .finish { padding: clamp(22px, 5vw, 38px); text-align: center; }
     .finish-mark { display: grid; width: 62px; height: 62px; margin: 0 auto 14px; place-items: center; border-radius: 50%; color: #fff; background: var(--accent); font-size: 1.8rem; }
+    .finish-mark.loss-mark { background: var(--copper); }
     .reasoning { width: min(540px, 100%); margin: 18px auto; padding: 15px; border-radius: 15px; text-align: left; background: #f2f1eb; line-height: 1.55; }
     .finish-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; }
 
@@ -271,7 +272,7 @@
       <div class="setup-head">
         <div>
           <h2 id="setup-title">Állítsd össze a feladatot!</h2>
-          <p class="small">Helgának és Ildinek <strong>összesen ugyanannyi érméje van</strong>. Add meg, hány tízforintosuk van! Az ötvenforintosok száma rejtve marad.</p>
+          <p class="small">Kaptál egy véletlen feladatot. Elindíthatod így, kérhetsz másikat, vagy átírhatod a számokat.</p>
         </div>
       </div>
 
@@ -288,14 +289,17 @@
         <p id="setupPreview" class="setup-preview-text"></p>
       </div>
 
-      <div class="setup-actions"><button id="startGame" class="primary" type="button">Feladat indítása</button></div>
+      <div class="setup-actions">
+        <button id="startGame" class="primary" type="button">Feladat indítása</button>
+        <button id="randomizeSetup" type="button">Másik véletlen feladat</button>
+      </div>
       <p id="setupError" class="setup-error" aria-live="polite"></p>
       <p class="source">Alapfeladat: Kalmár László Matematikaverseny, 2022, 5. osztály, országos döntő, 6. feladat.</p>
     </section>
 
     <section id="game" class="game" hidden>
       <div class="game-top">
-        <button id="editTask" type="button">Új feladat</button>
+        <button id="editTask" type="button">Feladat módosítása</button>
       </div>
 
       <details id="problemDetails" class="problem card">
@@ -373,7 +377,17 @@
         <p class="small">Újabb mérés nélkül, pusztán logikával találtad meg a keresett tömeget.</p>
         <div class="finish-actions">
           <button id="restartGame" class="primary" type="button">Ugyanez újra</button>
-          <button id="newTask" type="button">Másik feladat</button>
+          <button id="newTask" type="button">Új feladat</button>
+        </div>
+      </section>
+
+      <section id="loss" class="finish card" hidden>
+        <span class="finish-mark loss-mark" aria-hidden="true">×</span>
+        <h2>Ez a kör most véget ért.</h2>
+        <p class="small">Új feladatot kérsz, vagy újrapróbálod ugyanazt?</p>
+        <div class="finish-actions">
+          <button id="retryAfterLoss" class="primary" type="button">Ugyanez újra</button>
+          <button id="randomAfterLoss" type="button">Új feladat</button>
         </div>
       </section>
     </section>
@@ -410,6 +424,61 @@
       const names = { H: "Helga", I: "Ildi", equal: "Egyenlő" };
       const dative = { H: "Helgának", I: "Ildinek" };
       const other = (owner) => owner === "H" ? "I" : "H";
+      const randomInt = (minimum, maximum) => Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+      const randomItem = (items) => items[randomInt(0, items.length - 1)];
+
+      function shuffled(items) {
+        const result = [...items];
+        for (let index = result.length - 1; index > 0; index -= 1) {
+          const swapIndex = randomInt(0, index);
+          [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+        }
+        return result;
+      }
+
+      function taskSignature(task = state) {
+        return [task.h10, task.i10, task.gap, task.knownOwner, task.knownMass].join("|");
+      }
+
+      function generateRandomTask() {
+        const previousSignature = [
+          $("helgaTens").value,
+          $("ildiTens").value,
+          $("massGap").value,
+          $("knownOwner").value,
+          $("knownMass").value
+        ].join("|");
+        let task;
+
+        do {
+          const difference = randomItem([6, 8, 10, 12, 15, 18, 20, 24, 25, 30]);
+          const smallerTensPile = randomInt(14, 52);
+          const moreTensOwner = randomItem(["H", "I"]);
+          const h10 = moreTensOwner === "H" ? smallerTensPile + difference : smallerTensPile;
+          const i10 = moreTensOwner === "I" ? smallerTensPile + difference : smallerTensPile;
+          const totalCoins = Math.max(h10, i10) + randomInt(4, 18);
+          const h50 = totalCoins - h10;
+          const i50 = totalCoins - i10;
+          const tenCoinMass = randomInt(4, 8);
+          const gap = randomInt(1, 4);
+          const hMass = totalCoins * tenCoinMass + h50 * gap;
+          const iMass = totalCoins * tenCoinMass + i50 * gap;
+          const knownOwner = randomItem(["H", "I"]);
+
+          task = {
+            h10,
+            i10,
+            gap,
+            knownOwner,
+            knownMass: knownOwner === "H" ? hMass : iMass,
+            unknownMass: knownOwner === "H" ? iMass : hMass
+          };
+        } while (taskSignature(task) === previousSignature);
+
+        Object.assign(state, task);
+        $("setupError").textContent = "";
+        loadInputs();
+      }
 
       function problemMarkup({ h10, i10, gap, knownOwner, knownMass }) {
         const knownName = names[knownOwner];
@@ -531,6 +600,7 @@
         $("differenceBadge").hidden = true;
         $("solutionSummary").hidden = true;
         $("finish").hidden = true;
+        $("loss").hidden = true;
         $("questionCard").hidden = false;
         renderScene();
         renderQuestion();
@@ -689,7 +759,7 @@
       function selectableOptions(boxId, options, stateKey) {
         const box = $(boxId);
         box.innerHTML = "";
-        options.forEach(({ value, label }) => {
+        shuffled(options).forEach(({ value, label }) => {
           const button = document.createElement("button");
           button.type = "button";
           button.textContent = label;
@@ -732,15 +802,24 @@
       }
 
       function tensCancellationOptions(f) {
-        const wrongAmount = [f.difference, Math.max(state.h10, state.i10), f.commonTens + 1, 1]
-          .find((value) => value > 0 && value !== f.commonTens);
-        const correctLabel = f.commonTens === 0
-          ? "0 darabot — nincs közös tízforintos"
-          : `${f.commonTens} darabot mindkettőjüktől`;
+        if (state.h10 === state.i10) {
+          return [
+            { value: "none", label: "Semennyit, mert a tömegkülönbség megváltozna" },
+            { value: "cancelTens", label: `${f.commonTens} darabot mindkettőjüktől` },
+            { value: "wrongAmount", label: `${f.commonTens + 1} darabot mindkettőjüktől` }
+          ];
+        }
+
         return [
-          { value: "none", label: "Semennyit, mert megváltozna a különbség" },
-          { value: "cancelTens", label: correctLabel },
-          { value: "wrongAmount", label: `${wrongAmount} darabot mindkettőjüktől` }
+          { value: "none", label: "Semennyit, mert a tömegkülönbség megváltozna" },
+          {
+            value: state.h10 === f.commonTens ? "cancelTens" : "wrongAmountH",
+            label: `${state.h10} darabot mindkettőjüktől`
+          },
+          {
+            value: state.i10 === f.commonTens ? "cancelTens" : "wrongAmountI",
+            label: `${state.i10} darabot mindkettőjüktől`
+          }
         ];
       }
 
@@ -840,16 +919,11 @@
         }
         const f = facts();
         if (state.selectedDifference !== "diff-correct") {
-          setFeedback(`${f.difference} érme maradt mindkét oldalon, és minden pár között ${state.gap} gramm a különbség.`, "bad");
+          loseGame();
           return;
         }
         if (state.selectedMass !== "mass-correct") {
-          const action = f.massDifference === 0
-            ? "A két eredeti tömeg egyforma."
-            : f.unknownOwner === f.heavyOwner
-              ? `A keresett erszény nehezebb, ezért adj hozzá ${f.massDifference} grammot.`
-              : `A keresett erszény könnyebb, ezért vonj ki ${f.massDifference} grammot.`;
-          setFeedback(`A tömegkülönbség jó. ${action}`, "bad");
+          loseGame();
           return;
         }
 
@@ -868,7 +942,7 @@
         const f = facts();
         if (state.step === 0) {
           if (state.selectedFirst !== "cancelTens") {
-            setFeedback("Addig vehetünk el mindkettőjüktől, amíg a kisebb tízforintos kupac el nem fogy.", "bad");
+            loseGame();
             return;
           }
           state.tensCancelled = true;
@@ -877,7 +951,7 @@
           return;
         } else if (state.step === 1) {
           if (state.selectedFirst !== "cancelFifties") {
-            setFeedback("Az ötvenforintosok pontos számát nem kell tudnunk: itt is a kisebb kupac szab határt.", "bad");
+            loseGame();
             return;
           }
           state.fiftyOwnerRevealed = true;
@@ -888,7 +962,7 @@
           return;
         } else {
           if (state.selectedFirst !== f.heavyOwner) {
-            setFeedback(`Az egyik oldalon ${f.difference} tízforintos, a másikon ugyanennyi ötvenforintos maradt. Melyik érme nehezebb?`, "bad");
+            loseGame();
             return;
           }
           revealBalance();
@@ -902,6 +976,7 @@
         $("questionCard").hidden = true;
         $("solutionSummary").hidden = false;
         $("finish").hidden = true;
+        $("loss").hidden = true;
         const lightSentence = f.difference === 0
           ? "Ugyanannyi tízforintosuk van, ezért ugyanannyi ötvenforintosuk is van."
           : `${dative[f.lightOwner]} ${f.difference} darabbal több tízforintosa van, ezért ${dative[f.heavyOwner]} ${f.difference} darabbal több ötvenforintosa van.`;
@@ -914,6 +989,7 @@
 
       function showCelebration() {
         $("solutionSummary").hidden = true;
+        $("loss").hidden = true;
         $("finish").hidden = false;
         $("finish").scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
@@ -925,10 +1001,28 @@
         $("setup").scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
+      function showRandomSetup() {
+        generateRandomTask();
+        $("game").hidden = true;
+        $("setup").hidden = false;
+        $("setup").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function loseGame() {
+        $("questionCard").hidden = true;
+        $("solutionSummary").hidden = true;
+        $("finish").hidden = true;
+        $("loss").hidden = false;
+        $("loss").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
       $("startGame").addEventListener("click", startGame);
+      $("randomizeSetup").addEventListener("click", generateRandomTask);
       $("editTask").addEventListener("click", editTask);
-      $("newTask").addEventListener("click", editTask);
+      $("newTask").addEventListener("click", showRandomSetup);
       $("restartGame").addEventListener("click", resetRound);
+      $("retryAfterLoss").addEventListener("click", resetRound);
+      $("randomAfterLoss").addEventListener("click", showRandomSetup);
       $("checkGroupedAnswer").addEventListener("click", checkGroupedAnswer);
       $("checkAnswer").addEventListener("click", checkNumber);
       $("backButton").addEventListener("click", goBack);
@@ -944,7 +1038,7 @@
         $(id).addEventListener("change", updateSetupPreview);
       });
 
-      loadInputs();
+      generateRandomTask();
     })();
   </script>
 </body>
