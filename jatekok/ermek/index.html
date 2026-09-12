@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>Érmék a mérlegen</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20292c;
+      --muted: #697579;
+      --paper: #fffefa;
+      --bg: #f7f5ef;
+      --line: #dfddd5;
+      --accent: #176d62;
+      --accent-soft: #e7f3f1;
+      --gold: #f2bf4a;
+      --gold-soft: #fff5d5;
+      --copper: #d8784e;
+      --red: #a84338;
+      --shadow: 0 14px 40px rgba(37, 43, 43, .08);
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(242, 191, 74, .15), transparent 25rem),
+        var(--bg);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    button, input, select { font: inherit; }
+    button { touch-action: manipulation; }
+
+    main {
+      width: min(900px, calc(100% - 28px));
+      margin: auto;
+      padding: 28px 0 60px;
+    }
+
+    .back {
+      display: inline-flex;
+      margin-bottom: 27px;
+      color: var(--accent);
+      font-weight: 780;
+      text-decoration: none;
+    }
+
+    .hero { max-width: 710px; margin-bottom: 26px; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-size: .76rem; font-weight: 880; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0 0 10px; font: 850 clamp(2.5rem, 8vw, 5rem)/.95 Georgia, serif; letter-spacing: -.052em; }
+    .lead { margin: 0; color: var(--muted); font-size: clamp(1rem, 2.4vw, 1.14rem); line-height: 1.55; }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 254, 250, .97);
+      box-shadow: var(--shadow);
+    }
+
+    button {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 10px 15px;
+      color: var(--ink);
+      background: white;
+      font-weight: 820;
+      cursor: pointer;
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+    }
+    button:hover:not(:disabled) { transform: translateY(-2px); border-color: #a9c9c2; }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 4px solid rgba(242, 191, 74, .55); outline-offset: 3px; }
+    button:disabled { cursor: not-allowed; opacity: .55; }
+    button.primary { border-color: var(--accent); color: white; background: var(--accent); }
+    button.gold { border-color: #dea331; color: #3c2904; background: #ffd972; }
+    button.ghost { border-color: transparent; background: transparent; }
+
+    .setup { padding: clamp(20px, 4vw, 34px); }
+    .setup-head { display: flex; justify-content: space-between; gap: 14px; align-items: start; margin-bottom: 22px; }
+    h2 { margin: 0 0 6px; font: 820 clamp(1.35rem, 3vw, 1.7rem)/1.15 Georgia, serif; }
+    .small { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.48; }
+
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+    .field { display: grid; gap: 6px; }
+    .field span { color: var(--muted); font-size: .8rem; font-weight: 750; }
+    input[type="number"], select {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 9px 11px;
+      color: var(--ink);
+      background: white;
+      font-weight: 760;
+    }
+    .setup-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+    .setup-error { min-height: 22px; margin: 12px 0 0; color: var(--red); font-weight: 730; }
+    .source { margin: 4px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+
+    .game { display: grid; gap: 14px; }
+    .game-top { display: flex; justify-content: flex-end; gap: 14px; align-items: center; }
+    .game-top button { min-height: 40px; padding: 8px 12px; }
+    .problem { padding: 0; line-height: 1.5; }
+    .problem summary { padding: 15px 19px; color: var(--accent); font-weight: 820; cursor: pointer; }
+    .problem summary:hover { background: rgba(231, 243, 241, .55); }
+    .problem[open] summary { border-bottom: 1px solid var(--line); }
+    .problem-copy { padding: 15px 19px 18px; }
+    .problem-copy b { color: var(--accent); }
+
+    .balance-card { position: relative; overflow: hidden; padding: 17px; }
+
+    .balance-stage { position: relative; min-height: 365px; }
+    .beam {
+      position: absolute;
+      left: 9%;
+      right: 9%;
+      top: 228px;
+      height: 12px;
+      border: 3px solid #574c43;
+      border-radius: 999px;
+      background: linear-gradient(#ecc76c, #b87a25);
+      transform: rotate(0deg);
+      transform-origin: center;
+      transition: transform .75s cubic-bezier(.2, .85, .25, 1.1);
+    }
+    .stand { position: absolute; left: 50%; top: 228px; width: 0; height: 118px; border-left: 14px solid #62554c; transform: translateX(-50%); }
+    .stand::before { content: ""; position: absolute; left: -23px; top: -16px; width: 32px; height: 32px; border: 5px solid #574c43; border-radius: 50%; background: var(--gold); }
+    .stand::after { content: ""; position: absolute; left: -64px; bottom: -10px; width: 114px; height: 18px; border-radius: 50% 50% 8px 8px; background: #574c43; }
+
+    .pan {
+      position: absolute;
+      top: 28px;
+      width: 42%;
+      transition: transform .75s cubic-bezier(.2, .85, .25, 1.1);
+    }
+    .pan.left { left: 0; }
+    .pan.right { right: 0; }
+    .pan::after { content: ""; display: block; width: 88%; height: 15px; margin: 9px auto 0; border: 3px solid #6b5b4e; border-top: 0; border-radius: 0 0 50% 50%; background: #d2a24c; }
+    .cords { position: absolute; left: 10%; right: 10%; top: 100%; height: 53px; border-left: 2px solid #756353; border-right: 2px solid #756353; pointer-events: none; }
+    .cords::after { content: ""; position: absolute; left: -4%; right: -4%; bottom: 0; border-top: 2px solid #756353; }
+
+    .person {
+      position: relative;
+      z-index: 2;
+      min-height: 178px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 8px 20px rgba(40, 45, 43, .08);
+    }
+    .person-head { display: flex; justify-content: space-between; gap: 8px; align-items: center; margin-bottom: 12px; }
+    .person-head strong { font: 820 1.15rem Georgia, serif; }
+    .mass-known, .mass-target { border-radius: 999px; padding: 5px 8px; font-size: .76rem; font-weight: 850; }
+    .mass-known { color: var(--accent); background: #e6f1ed; }
+    .mass-target { color: #6a4605; background: var(--gold-soft); }
+
+    .coin-line { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 9px; align-items: center; margin: 9px 0; }
+    .coin {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 3px solid rgba(86, 57, 17, .42);
+      border-radius: 50%;
+      color: #54350c;
+      background: radial-gradient(circle at 35% 28%, #fff5b7 0 8%, #f5c84d 45%, #c9861d 100%);
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .55), 0 2px 4px rgba(0, 0, 0, .12);
+      font-size: .72rem;
+      font-weight: 920;
+    }
+    .coin.fifty { color: #5e260e; background: radial-gradient(circle at 35% 28%, #ffd2ae 0 8%, #df8457 45%, #a9472f 100%); }
+    .coin-copy { min-width: 0; }
+    .coin-copy b { display: block; font-size: .96rem; }
+    .coin-copy span { display: block; color: var(--muted); font-size: .72rem; line-height: 1.3; }
+    .relation { color: var(--accent) !important; font-weight: 820; }
+
+    .mystery {
+      position: absolute;
+      left: 50%;
+      top: 201px;
+      z-index: 5;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      color: #72500f;
+      background: #ffe18c;
+      box-shadow: 0 5px 15px rgba(84, 58, 10, .2);
+      transform: translate(-50%, -50%);
+      font: 900 1.35rem Georgia, serif;
+      transition: opacity .25s, transform .25s;
+    }
+    .balance-card.revealed .mystery { opacity: 0; transform: translate(-50%, -50%) scale(.6); }
+    .difference-badge { position: absolute; left: 50%; top: 270px; z-index: 4; border-radius: 999px; padding: 7px 11px; color: white; background: var(--accent); transform: translateX(-50%); font-size: .78rem; font-weight: 880; }
+
+    .question { padding: clamp(20px, 4vw, 30px); }
+    .progress { display: flex; gap: 7px; margin-bottom: 17px; }
+    .progress span { width: 27px; height: 6px; border-radius: 999px; background: #dddcd5; }
+    .progress span.done { background: var(--accent); }
+    .progress span.current { background: var(--gold); }
+    .step-label { margin: 0 0 6px; color: var(--muted); font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .question h2 { margin-bottom: 16px; max-width: 680px; }
+    .answer-number { display: grid; gap: 16px; }
+    .answer-group { min-width: 0; margin: 0; border: 0; padding: 0; }
+    .answer-group legend { margin-bottom: 9px; padding: 0; font-weight: 820; }
+    .choices { display: flex; flex-wrap: wrap; gap: 9px; }
+    .choices button.selected { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); opacity: 1; }
+    .feedback { min-height: 24px; margin: 14px 0 0; color: var(--muted); font-weight: 760; line-height: 1.45; }
+    .feedback.good { color: var(--accent); }
+    .feedback.bad { color: var(--red); }
+    .question-actions { display: flex; justify-content: space-between; gap: 9px; margin-top: 12px; }
+
+    .finish { padding: clamp(22px, 5vw, 38px); text-align: center; }
+    .finish-mark { display: grid; width: 62px; height: 62px; margin: 0 auto 14px; place-items: center; border-radius: 50%; color: #fff; background: var(--accent); font-size: 1.8rem; }
+    .reasoning { width: min(540px, 100%); margin: 18px auto; padding: 15px; border-radius: 15px; text-align: left; background: #f2f1eb; line-height: 1.55; }
+    .finish-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; }
+
+    footer { margin-top: 25px; color: #879093; font-size: .84rem; line-height: 1.5; }
+
+    @media (max-width: 620px) {
+      main { width: min(100% - 18px, 490px); padding-top: 18px; }
+      .back { margin-bottom: 20px; }
+      .setup-head { display: block; }
+      .fields { grid-template-columns: 1fr; }
+      .game-top { align-items: start; }
+      .balance-card { padding: 11px; }
+      .balance-stage { min-height: 406px; }
+      .pan { top: 25px; width: 47%; }
+      .beam { left: 5%; right: 5%; top: 263px; }
+      .stand { top: 263px; }
+      .person { min-height: 216px; padding: 10px; }
+      .person-head { align-items: start; flex-direction: column; }
+      .coin-line { grid-template-columns: 34px minmax(0, 1fr); gap: 6px; }
+      .coin { width: 34px; height: 34px; font-size: .64rem; }
+      .mystery { top: 236px; }
+      .difference-badge { top: 304px; }
+      .choices button { flex: 1 1 42%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../../index.html">← Vissza a játékokhoz</a>
+
+    <header class="hero">
+      <p class="eyebrow">5. osztály · mérlegfeladvány</p>
+      <h1>Érmék a mérlegen</h1>
+      <p class="lead">Az egyik erszényt már megmértük. Ki tudod következtetni a másik tömegét újabb mérés nélkül, pusztán logikával?</p>
+    </header>
+
+    <section id="setup" class="setup card" aria-labelledby="setup-title">
+      <div class="setup-head">
+        <div>
+          <h2 id="setup-title">Állítsd össze a feladatot!</h2>
+          <p class="small">Helgának és Ildinek <strong>összesen ugyanannyi érméje van</strong>. Add meg, hány tízforintosuk van! Az ötvenforintosok száma rejtve marad.</p>
+        </div>
+      </div>
+
+      <div class="fields">
+        <label class="field"><span>Helga tízforintosainak száma</span><input id="helgaTens" type="number" min="0" max="999" value="34" inputmode="numeric"></label>
+        <label class="field"><span>Ildi tízforintosainak száma</span><input id="ildiTens" type="number" min="0" max="999" value="64" inputmode="numeric"></label>
+        <label class="field"><span>Az 50 Ft-os érme ennyivel nehezebb a 10 Ft-osnál (gramm)</span><input id="massGap" type="number" min="1" max="100" value="2" inputmode="numeric"></label>
+        <label class="field"><span>Kinek az érméit mértük meg?</span><select id="knownOwner"><option value="H">Helgáét</option><option value="I">Ildiét</option></select></label>
+        <label class="field"><span>A mért tömeg (gramm)</span><input id="knownMass" type="number" min="1" max="99999" value="492" inputmode="numeric"></label>
+      </div>
+
+      <div class="setup-actions"><button id="startGame" class="primary" type="button">Feladat indítása</button></div>
+      <p id="setupError" class="setup-error" aria-live="polite"></p>
+      <p class="source">Alapfeladat: Kalmár László Matematikaverseny, 2022, 5. osztály, országos döntő, 6. feladat.</p>
+    </section>
+
+    <section id="game" class="game" hidden>
+      <div class="game-top">
+        <button id="editTask" type="button">Új feladat</button>
+      </div>
+
+      <details id="problemDetails" class="problem card">
+        <summary>Feladat szövege</summary>
+        <div id="problem" class="problem-copy"></div>
+      </details>
+
+      <section id="balanceCard" class="balance-card card" aria-label="Kétkarú mérleg">
+        <div class="balance-stage">
+          <div id="beam" class="beam" aria-hidden="true"></div>
+          <div class="stand" aria-hidden="true"></div>
+          <div id="mystery" class="mystery" aria-hidden="true">?</div>
+          <div id="differenceBadge" class="difference-badge" hidden></div>
+
+          <div id="helgaPan" class="pan left">
+            <article class="person">
+              <div class="person-head"><strong>Helga</strong><span id="helgaMassLabel"></span></div>
+              <div class="coin-line"><span class="coin">10</span><span class="coin-copy"><b id="helgaTensLabel"></b><span>tízforintos</span></span></div>
+              <div class="coin-line"><span class="coin fifty">50</span><span class="coin-copy"><b id="helgaFifties">valamennyi</b><span id="helgaFiftyNote">nem tudjuk, hány darab</span></span></div>
+            </article>
+            <span class="cords" aria-hidden="true"></span>
+          </div>
+
+          <div id="ildiPan" class="pan right">
+            <article class="person">
+              <div class="person-head"><strong>Ildi</strong><span id="ildiMassLabel"></span></div>
+              <div class="coin-line"><span class="coin">10</span><span class="coin-copy"><b id="ildiTensLabel"></b><span>tízforintos</span></span></div>
+              <div class="coin-line"><span class="coin fifty">50</span><span class="coin-copy"><b id="ildiFifties">valamennyi</b><span id="ildiFiftyNote">nem tudjuk, hány darab</span></span></div>
+            </article>
+            <span class="cords" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="questionCard" class="question card" aria-labelledby="question-title">
+        <div id="progress" class="progress" aria-label="Haladás"></div>
+        <p id="stepLabel" class="step-label"></p>
+        <h2 id="question-title"></h2>
+        <div id="groupedAnswer" class="answer-number" hidden>
+          <fieldset id="firstGroup" class="answer-group">
+            <legend id="firstPrompt"></legend>
+            <div id="firstChoices" class="choices"></div>
+          </fieldset>
+          <fieldset id="secondGroup" class="answer-group">
+            <legend id="secondPrompt"></legend>
+            <div id="secondChoices" class="choices"></div>
+          </fieldset>
+          <button id="checkGroupedAnswer" class="primary" type="button">Ellenőrzés</button>
+        </div>
+        <div id="numberAnswer" class="answer-number" hidden>
+          <fieldset class="answer-group">
+            <legend>1. Mekkora a tömegkülönbség?</legend>
+            <div id="differenceChoices" class="choices"></div>
+          </fieldset>
+          <fieldset class="answer-group">
+            <legend id="massQuestion">2. Mennyi volt a keresett eredeti tömeg?</legend>
+            <div id="massChoices" class="choices"></div>
+          </fieldset>
+          <button id="checkAnswer" class="primary" type="button">Ellenőrzés</button>
+        </div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="question-actions">
+          <button id="backButton" class="ghost" type="button">← Vissza</button>
+          <button id="continueButton" class="primary" type="button" hidden>Tovább</button>
+        </div>
+      </section>
+
+      <section id="solutionSummary" class="finish card" hidden>
+        <h2>Így áll össze a megoldás</h2>
+        <div id="reasoning" class="reasoning"></div>
+        <div class="finish-actions">
+          <button id="summaryBack" type="button">← Vissza</button>
+          <button id="confirmSolution" class="primary" type="button">Értem!</button>
+        </div>
+      </section>
+
+      <section id="finish" class="finish card" hidden>
+        <span class="finish-mark" aria-hidden="true">✓</span>
+        <h2>Gratulálok!</h2>
+        <p class="small">Újabb mérés nélkül, pusztán logikával találtad meg a keresett tömeget.</p>
+        <div class="finish-actions">
+          <button id="restartGame" class="primary" type="button">Ugyanez újra</button>
+          <button id="newTask" type="button">Másik feladat</button>
+        </div>
+      </section>
+    </section>
+
+    <footer>A kérdőjel a keresett tömeget jelöli. A „valamennyi” azt jelenti, hogy az adott darabszámot nem ismerjük — de nem is kell kiszámolnunk.</footer>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const $ = (id) => document.getElementById(id);
+      const state = {
+        h10: 34,
+        i10: 64,
+        gap: 2,
+        knownOwner: "H",
+        knownMass: 492,
+        unknownMass: 432,
+        step: 0,
+        balanceRevealed: false,
+        fiftyOwnerRevealed: false,
+        fiftyDifferenceRevealed: false,
+        differenceRevealed: false,
+        tensCancelled: false,
+        fiftiesCancelled: false,
+        solutionRevealed: false,
+        selectedFirst: null,
+        selectedSecond: null,
+        selectedDifference: null,
+        selectedMass: null
+      };
+
+      const names = { H: "Helga", I: "Ildi", equal: "Egyenlő" };
+      const dative = { H: "Helgának", I: "Ildinek" };
+      const other = (owner) => owner === "H" ? "I" : "H";
+
+      function facts() {
+        const signedDifference = state.i10 - state.h10;
+        const difference = Math.abs(signedDifference);
+        const lightOwner = signedDifference === 0 ? "equal" : signedDifference > 0 ? "I" : "H";
+        const heavyOwner = lightOwner === "equal" ? "equal" : other(lightOwner);
+        const massDifference = difference * state.gap;
+        const commonTens = Math.min(state.h10, state.i10);
+        const unknownOwner = other(state.knownOwner);
+        const hMinusI = heavyOwner === "H" ? massDifference : heavyOwner === "I" ? -massDifference : 0;
+        const unknownMass = state.knownOwner === "H"
+          ? state.knownMass - hMinusI
+          : state.knownMass + hMinusI;
+        return { signedDifference, difference, lightOwner, heavyOwner, massDifference, commonTens, unknownOwner, unknownMass };
+      }
+
+      function loadInputs() {
+        $("helgaTens").value = state.h10;
+        $("ildiTens").value = state.i10;
+        $("massGap").value = state.gap;
+        $("knownOwner").value = state.knownOwner;
+        $("knownMass").value = state.knownMass;
+      }
+
+      function readSetup() {
+        const h10 = Number($("helgaTens").value);
+        const i10 = Number($("ildiTens").value);
+        const gap = Number($("massGap").value);
+        const knownOwner = $("knownOwner").value;
+        const knownMass = Number($("knownMass").value);
+        const error = $("setupError");
+
+        if (![h10, i10, gap, knownMass].every(Number.isFinite)) {
+          error.textContent = "Minden mezőbe írj egy számot!";
+          return false;
+        }
+        if (![h10, i10, gap, knownMass].every(Number.isInteger)) {
+          error.textContent = "Csak egész számokat adj meg!";
+          return false;
+        }
+        if (h10 < 0 || i10 < 0) {
+          error.textContent = "Az érmék darabszáma nem lehet negatív.";
+          return false;
+        }
+        if (h10 > 999 || i10 > 999 || gap > 100 || knownMass > 99999) {
+          error.textContent = "Az egyik megadott szám túl nagy.";
+          return false;
+        }
+        if (gap <= 0) {
+          error.textContent = "Az ötvenforintos legalább 1 grammal legyen nehezebb a tízforintosnál.";
+          return false;
+        }
+        if (knownMass <= 0) {
+          error.textContent = "A mért tömeg legyen pozitív.";
+          return false;
+        }
+
+        Object.assign(state, { h10, i10, gap, knownOwner, knownMass });
+        const f = facts();
+        const minimumTotalCoins = Math.max(h10, i10) + 1;
+        const knownTens = knownOwner === "H" ? h10 : i10;
+        const minimumKnownFifties = minimumTotalCoins - knownTens;
+        if (knownMass <= minimumKnownFifties * gap) {
+          error.textContent = `Ez az eloszlás nem lehetséges: a megmért erszényben legalább ${minimumKnownFifties} ötvenforintosnak kell lennie, de ehhez túl kicsi a megadott tömeg.`;
+          return false;
+        }
+        if (f.unknownMass <= 0) {
+          error.textContent = `Ez az eloszlás nem lehetséges: a másik erszény tömege ${f.unknownMass} gramm lenne. Növeld az ismert tömeget vagy csökkentsd a darabszámok különbségét!`;
+          return false;
+        }
+        state.unknownMass = f.unknownMass;
+        error.textContent = "";
+        return true;
+      }
+
+      function resetRound() {
+        state.step = 0;
+        state.balanceRevealed = false;
+        state.fiftyOwnerRevealed = false;
+        state.fiftyDifferenceRevealed = false;
+        state.differenceRevealed = false;
+        state.tensCancelled = false;
+        state.fiftiesCancelled = false;
+        state.solutionRevealed = false;
+        state.selectedFirst = null;
+        state.selectedSecond = null;
+        state.selectedDifference = null;
+        state.selectedMass = null;
+        $("problemDetails").open = false;
+        $("checkAnswer").disabled = false;
+        $("checkGroupedAnswer").disabled = false;
+        $("balanceCard").classList.remove("revealed");
+        $("beam").style.transform = "rotate(0deg)";
+        $("helgaPan").style.transform = "translateY(0)";
+        $("ildiPan").style.transform = "translateY(0)";
+        $("differenceBadge").hidden = true;
+        $("solutionSummary").hidden = true;
+        $("finish").hidden = true;
+        $("questionCard").hidden = false;
+        renderScene();
+        renderQuestion();
+      }
+
+      function startGame() {
+        if (!readSetup()) return;
+        $("setup").hidden = true;
+        $("game").hidden = false;
+        resetRound();
+        $("game").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function renderScene() {
+        const f = facts();
+        const knownName = names[state.knownOwner];
+        const unknownName = names[f.unknownOwner];
+        $("problem").innerHTML = `Helgának <b>${state.h10} tízforintosa</b>, Ildinek <b>${state.i10} tízforintosa</b> van. Mindkettőjüknek van még <b>valamennyi ötvenforintosa</b> is. Összesen ugyanannyi érméjük van. Egy ötvenforintos <b>${state.gap} grammal nehezebb</b> egy tízforintosnál. ${knownName} érméinek össztömege <b>${state.knownMass} gramm</b>. Mekkora ${unknownName} érméinek össztömege?`;
+
+        $("helgaTensLabel").textContent = state.tensCancelled ? `${state.h10 - f.commonTens} darab maradt` : `${state.h10} darab`;
+        $("ildiTensLabel").textContent = state.tensCancelled ? `${state.i10 - f.commonTens} darab maradt` : `${state.i10} darab`;
+
+        const originalPrefix = state.tensCancelled || state.fiftiesCancelled ? "eredetileg " : "";
+        const helgaMass = state.knownOwner === "H"
+          ? `${originalPrefix}${state.knownMass} gramm`
+          : state.solutionRevealed
+            ? `${originalPrefix}${f.unknownMass} gramm`
+            : `${originalPrefix}? gramm`;
+        const ildiMass = state.knownOwner === "I"
+          ? `${originalPrefix}${state.knownMass} gramm`
+          : state.solutionRevealed
+            ? `${originalPrefix}${f.unknownMass} gramm`
+            : `${originalPrefix}? gramm`;
+        $("helgaMassLabel").textContent = helgaMass;
+        $("ildiMassLabel").textContent = ildiMass;
+        $("helgaMassLabel").className = state.knownOwner === "H" || state.solutionRevealed ? "mass-known" : "mass-target";
+        $("ildiMassLabel").className = state.knownOwner === "I" || state.solutionRevealed ? "mass-known" : "mass-target";
+
+        if (state.fiftiesCancelled) {
+          const helgaRemainder = f.heavyOwner === "H" ? f.difference : 0;
+          const ildiRemainder = f.heavyOwner === "I" ? f.difference : 0;
+          $("helgaFifties").textContent = `${helgaRemainder} darab maradt`;
+          $("ildiFifties").textContent = `${ildiRemainder} darab maradt`;
+          $("helgaFiftyNote").textContent = "a közös ötveneseket elvettük";
+          $("ildiFiftyNote").textContent = "a közös ötveneseket elvettük";
+          $("helgaFiftyNote").className = "relation";
+          $("ildiFiftyNote").className = "relation";
+        } else if (!state.fiftyOwnerRevealed || f.difference === 0) {
+          $("helgaFifties").textContent = "valamennyi";
+          $("ildiFifties").textContent = "valamennyi";
+          $("helgaFiftyNote").textContent = f.difference === 0 && state.fiftyOwnerRevealed ? "ugyanannyi, mint Ildinek" : "nem tudjuk, hány darab";
+          $("ildiFiftyNote").textContent = f.difference === 0 && state.fiftyOwnerRevealed ? "ugyanannyi, mint Helgának" : "nem tudjuk, hány darab";
+          $("helgaFiftyNote").className = "";
+          $("ildiFiftyNote").className = "";
+        } else {
+          const hMore = f.heavyOwner === "H";
+          const amount = state.fiftyDifferenceRevealed ? `${f.difference}-cal ` : "";
+          $("helgaFifties").textContent = hMore ? `${amount}több` : `${amount}kevesebb`;
+          $("ildiFifties").textContent = hMore ? `${amount}kevesebb` : `${amount}több`;
+          $("helgaFiftyNote").textContent = "a másikukhoz képest";
+          $("ildiFiftyNote").textContent = "a másikukhoz képest";
+          $("helgaFiftyNote").className = "relation";
+          $("ildiFiftyNote").className = "relation";
+        }
+      }
+
+      function revealBalance() {
+        const f = facts();
+        state.balanceRevealed = true;
+        $("balanceCard").classList.add("revealed");
+        const angle = f.heavyOwner === "H" ? 7 : f.heavyOwner === "I" ? -7 : 0;
+        $("beam").style.transform = `rotate(${-angle}deg)`;
+        $("helgaPan").style.transform = `translateY(${angle * 2}px)`;
+        $("ildiPan").style.transform = `translateY(${-angle * 2}px)`;
+      }
+
+      function revealDifference() {
+        const f = facts();
+        state.differenceRevealed = true;
+        const badge = $("differenceBadge");
+        badge.textContent = f.massDifference === 0 ? "azonos tömeg" : `${f.massDifference} g a különbség`;
+        badge.hidden = false;
+      }
+
+      function renderProgress() {
+        const progress = $("progress");
+        progress.innerHTML = "";
+        for (let index = 0; index < 3; index += 1) {
+          const bar = document.createElement("span");
+          if (index < state.step) bar.className = "done";
+          if (index === state.step) bar.className = "current";
+          progress.appendChild(bar);
+        }
+      }
+
+      function differenceOptions(f) {
+        if (f.difference === 0) {
+          return [
+            { value: "diff-wrong-1", label: `${state.gap} gramm` },
+            { value: "diff-correct", label: "0 gramm, mert nem maradt különbség" },
+            { value: "diff-wrong-2", label: `${state.gap + 1} gramm` }
+          ];
+        }
+        const wrongCandidates = [
+          { result: f.difference, label: `${f.difference} gramm` },
+          { result: f.difference + state.gap, label: `${f.difference} + ${state.gap} = ${f.difference + state.gap} gramm` },
+          { result: Math.abs(f.difference - state.gap), label: `${f.difference} − ${state.gap} = ${Math.abs(f.difference - state.gap)} gramm` },
+          { result: f.massDifference + state.gap, label: `${f.massDifference + state.gap} gramm` },
+          { result: Math.max(0, f.massDifference - state.gap), label: `${Math.max(0, f.massDifference - state.gap)} gramm` }
+        ];
+        const used = new Set([f.massDifference]);
+        const wrong = wrongCandidates.filter(({ result }) => {
+          if (used.has(result)) return false;
+          used.add(result);
+          return true;
+        }).slice(0, 2);
+        return [
+          { value: "diff-wrong-1", label: wrong[0].label },
+          { value: "diff-correct", label: `${f.difference} · ${state.gap} = ${f.massDifference} gramm` },
+          { value: "diff-wrong-2", label: wrong[1].label }
+        ];
+      }
+
+      function massOptions(f) {
+        if (f.massDifference === 0) {
+          return [
+            { value: "mass-wrong-1", label: `${state.knownMass} + ${state.gap} = ${state.knownMass + state.gap} gramm` },
+            { value: "mass-correct", label: `${state.knownMass} gramm` },
+            { value: "mass-wrong-2", label: `${state.knownMass + state.gap + 1} gramm` }
+          ];
+        }
+        const direction = f.unknownOwner === f.heavyOwner ? 1 : -1;
+        const sign = direction > 0 ? "+" : "−";
+        const oppositeSign = direction > 0 ? "−" : "+";
+        const oppositeResult = state.knownMass - direction * f.massDifference;
+        const oneFactorResult = state.knownMass + direction * f.difference;
+        const oneGapResult = state.knownMass + direction * state.gap;
+        const wrongCandidates = [
+          { result: oppositeResult, label: `${state.knownMass} ${oppositeSign} ${f.massDifference} = ${oppositeResult} gramm` },
+          { result: oneFactorResult, label: `${state.knownMass} ${sign} ${f.difference} = ${oneFactorResult} gramm` },
+          { result: oneGapResult, label: `${state.knownMass} ${sign} ${state.gap} = ${oneGapResult} gramm` },
+          { result: state.knownMass, label: `${state.knownMass} gramm` },
+          { result: state.knownMass + f.massDifference + 1, label: `${state.knownMass + f.massDifference + 1} gramm` }
+        ];
+        const used = new Set([f.unknownMass]);
+        const wrong = wrongCandidates.filter(({ result }) => {
+          if (result <= 0 || used.has(result)) return false;
+          used.add(result);
+          return true;
+        }).slice(0, 2);
+        return [
+          { value: "mass-wrong-1", label: wrong[0].label },
+          { value: "mass-correct", label: `${state.knownMass} ${sign} ${f.massDifference} = ${f.unknownMass} gramm` },
+          { value: "mass-wrong-2", label: wrong[1].label }
+        ];
+      }
+
+      function selectableOptions(boxId, options, stateKey) {
+        const box = $(boxId);
+        box.innerHTML = "";
+        options.forEach(({ value, label }) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = label;
+          button.addEventListener("click", () => {
+            box.querySelectorAll("button").forEach((item) => item.classList.remove("selected"));
+            button.classList.add("selected");
+            state[stateKey] = value;
+            setFeedback("");
+          });
+          box.appendChild(button);
+        });
+      }
+
+      function calculationQuestion(f) {
+        $("question-title").textContent = `A közös érmék elvétele után mindkét oldalon ${f.difference} érme maradt. Az ötvenforintos ${state.gap} grammal nehezebb a tízforintosnál.`;
+        $("numberAnswer").hidden = false;
+        $("groupedAnswer").hidden = true;
+        $("massQuestion").textContent = `2. Mennyi volt ${names[f.unknownOwner]} érméinek eredeti össztömege?`;
+        state.selectedDifference = null;
+        state.selectedMass = null;
+        selectableOptions("differenceChoices", differenceOptions(f), "selectedDifference");
+        selectableOptions("massChoices", massOptions(f), "selectedMass");
+      }
+
+      function groupedQuestion(title, firstPrompt, firstOptions, secondPrompt = "", secondOptions = []) {
+        $("question-title").textContent = title;
+        $("numberAnswer").hidden = true;
+        $("groupedAnswer").hidden = false;
+        $("firstPrompt").textContent = firstPrompt;
+        state.selectedFirst = null;
+        state.selectedSecond = null;
+        selectableOptions("firstChoices", firstOptions, "selectedFirst");
+        $("secondGroup").hidden = !secondPrompt;
+        if (secondPrompt) {
+          $("secondPrompt").textContent = secondPrompt;
+          selectableOptions("secondChoices", secondOptions, "selectedSecond");
+        }
+      }
+
+      function comparisonOptions(difference, unit) {
+        if (difference === 0) {
+          return [
+            { value: "H", label: `Helgának van több ${unit}` },
+            { value: "I", label: `Ildinek van több ${unit}` },
+            { value: "equal", label: "Ugyanannyi van" }
+          ];
+        }
+        return [
+          { value: "H", label: `Helgának ${difference} darabbal` },
+          { value: "I", label: `Ildinek ${difference} darabbal` },
+          { value: "equal", label: "Ugyanannyi van" }
+        ];
+      }
+
+      function tensCancellationOptions(f) {
+        const wrongAmount = [f.difference, Math.max(state.h10, state.i10), f.commonTens + 1, 1]
+          .find((value) => value > 0 && value !== f.commonTens);
+        const correctLabel = f.commonTens === 0
+          ? "0 darabot — nincs közös tízforintos"
+          : `${f.commonTens} darabot mindkettőjüktől`;
+        return [
+          { value: "none", label: "Semennyit, mert megváltozna a különbség" },
+          { value: "cancelTens", label: correctLabel },
+          { value: "wrongAmount", label: `${wrongAmount} darabot mindkettőjüktől` }
+        ];
+      }
+
+      function fiftiesCancellationOptions() {
+        return [
+          { value: "unknown", label: "Semennyit, mert nem tudjuk a darabszámokat" },
+          { value: "cancelFifties", label: "A kisebb ötvenes kupac teljes tartalmát mindkettőjüktől" },
+          { value: "largerPile", label: "A nagyobb ötvenes kupac teljes tartalmát mindkettőjüktől" }
+        ];
+      }
+
+      function finalExpression(f) {
+        if (f.massDifference === 0) return `${state.knownMass}`;
+        const sign = f.unknownOwner === f.heavyOwner ? "+" : "−";
+        return `${state.knownMass} ${sign} ${f.massDifference}`;
+      }
+
+      function renderQuestion() {
+        const f = facts();
+        renderProgress();
+        $("stepLabel").textContent = `${state.step + 1}. lépés a 3-ból`;
+        $("feedback").textContent = "";
+        $("feedback").className = "feedback";
+        $("continueButton").hidden = true;
+        $("continueButton").textContent = "Tovább";
+        $("backButton").hidden = state.step === 0;
+        $("checkAnswer").disabled = false;
+        $("checkGroupedAnswer").disabled = false;
+
+        if (state.step === 0) {
+          groupedQuestion(
+            "Hasonlítsd össze az érméket!",
+            "1. Kinek van több tízforintosa, és mennyivel?",
+            comparisonOptions(f.difference, "tízforintosa"),
+            "2. Kinek van több ötvenforintosa, és mennyivel?",
+            comparisonOptions(f.difference, "ötvenforintosa")
+          );
+        }
+        if (state.step === 1) {
+          groupedQuestion(
+            "Egyszerűsítsük a feladatot!",
+            "1. Hány tízforintost vehetünk el maximálisan mindkettőjüktől úgy, hogy ugyanannyi érméjük maradjon, és a két erszény tömegkülönbsége se változzon?",
+            tensCancellationOptions(f),
+            "2. Hány ötvenforintost vehetünk el maximálisan mindkettőjüktől úgy, hogy ugyanannyi érméjük maradjon, és a két erszény tömegkülönbsége se változzon?",
+            fiftiesCancellationOptions()
+          );
+        }
+        if (state.step === 2) {
+          calculationQuestion(f);
+        }
+      }
+
+      function setFeedback(text, kind = "") {
+        $("feedback").textContent = text;
+        $("feedback").className = `feedback ${kind}`.trim();
+      }
+
+      function advance() {
+        state.step += 1;
+        if (state.step >= 3) finishGame();
+        else renderQuestion();
+      }
+
+      function syncSceneToStep() {
+        state.fiftyOwnerRevealed = state.step >= 1;
+        state.fiftyDifferenceRevealed = state.step >= 1;
+        state.tensCancelled = state.step >= 2;
+        state.fiftiesCancelled = state.step >= 2;
+        state.solutionRevealed = false;
+        state.balanceRevealed = false;
+        state.selectedFirst = null;
+        state.selectedSecond = null;
+        state.differenceRevealed = false;
+        state.selectedDifference = null;
+        state.selectedMass = null;
+        $("balanceCard").classList.remove("revealed");
+        $("beam").style.transform = "rotate(0deg)";
+        $("helgaPan").style.transform = "translateY(0)";
+        $("ildiPan").style.transform = "translateY(0)";
+        $("differenceBadge").hidden = true;
+        renderScene();
+        if (state.step >= 1) revealBalance();
+      }
+
+      function goBack() {
+        if (state.step === 0) return;
+        state.step -= 1;
+        syncSceneToStep();
+        renderQuestion();
+      }
+
+      function checkNumber() {
+        if (state.selectedDifference === null || state.selectedMass === null) {
+          setFeedback("Válassz egy-egy lehetőséget mindkét kérdéshez!", "bad");
+          return;
+        }
+        const f = facts();
+        if (state.selectedDifference !== "diff-correct") {
+          setFeedback(`${f.difference} érme maradt mindkét oldalon, és minden pár között ${state.gap} gramm a különbség.`, "bad");
+          return;
+        }
+        if (state.selectedMass !== "mass-correct") {
+          const action = f.massDifference === 0
+            ? "A két eredeti tömeg egyforma."
+            : f.unknownOwner === f.heavyOwner
+              ? `A keresett erszény nehezebb, ezért adj hozzá ${f.massDifference} grammot.`
+              : `A keresett erszény könnyebb, ezért vonj ki ${f.massDifference} grammot.`;
+          setFeedback(`A tömegkülönbség jó. ${action}`, "bad");
+          return;
+        }
+
+        state.solutionRevealed = true;
+        renderScene();
+        revealDifference();
+        setFeedback("Helyes!", "good");
+        $("checkAnswer").disabled = true;
+        $("differenceChoices").querySelectorAll("button").forEach((button) => { button.disabled = true; });
+        $("massChoices").querySelectorAll("button").forEach((button) => { button.disabled = true; });
+        $("continueButton").hidden = false;
+        $("continueButton").textContent = "Megoldás összefoglalása";
+      }
+
+      function checkGroupedAnswer() {
+        if (state.selectedFirst === null || state.selectedSecond === null) {
+          setFeedback("Válassz egy-egy lehetőséget mindkét kérdéshez!", "bad");
+          return;
+        }
+
+        const f = facts();
+        if (state.step === 0) {
+          if (state.selectedFirst !== f.lightOwner) {
+            setFeedback("Nézd meg újra a tízforintosok darabszámát, és vond ki a kisebbet a nagyobból!", "bad");
+            return;
+          }
+          if (state.selectedSecond !== f.heavyOwner) {
+            setFeedback("Mivel összesen ugyanannyi érméjük van, akinek több tízforintosa van, annak ugyanannyival kevesebb ötvenforintosa van.", "bad");
+            return;
+          }
+          state.fiftyOwnerRevealed = true;
+          state.fiftyDifferenceRevealed = true;
+          renderScene();
+          revealBalance();
+        } else {
+          if (state.selectedFirst !== "cancelTens") {
+            setFeedback("A tízforintosokból a kisebb kupac mondja meg, mennyit vehetünk el mindkettőjüktől.", "bad");
+            return;
+          }
+          if (state.selectedSecond !== "cancelFifties") {
+            setFeedback("Az ötvenforintosok pontos számát nem kell tudnunk: itt is a kisebb kupac szab határt.", "bad");
+            return;
+          }
+          state.tensCancelled = true;
+          state.fiftiesCancelled = true;
+          renderScene();
+          revealBalance();
+        }
+
+        setFeedback(state.step === 1
+          ? "Helyes! Mindkét érmefajtából a kisebb kupac teljes tartalmát vettük el mindkettőjüktől. Így mindkét oldalon ugyanannyi érme maradt, és ugyanakkora tömeget vettünk el: a különbség nem változott."
+          : "Helyes!", "good");
+        $("checkGroupedAnswer").disabled = true;
+        $("firstChoices").querySelectorAll("button").forEach((button) => { button.disabled = true; });
+        $("secondChoices").querySelectorAll("button").forEach((button) => { button.disabled = true; });
+        $("continueButton").hidden = false;
+      }
+
+      function finishGame() {
+        const f = facts();
+        $("questionCard").hidden = true;
+        $("solutionSummary").hidden = false;
+        $("finish").hidden = true;
+        const lightSentence = f.difference === 0
+          ? "Ugyanannyi tízforintosuk van, ezért ugyanannyi ötvenforintosuk is van."
+          : `${dative[f.lightOwner]} ${f.difference} db-vel több tízforintosa van, ezért ${dative[f.heavyOwner]} ${f.difference} db-vel több ötvenforintosa van.`;
+        const differenceSentence = f.massDifference === 0
+          ? "A két erszény tömege ezért azonos."
+          : `Mindkét oldalon ${f.difference} érme maradt. Az ötvenforintos ${state.gap} grammal nehezebb, ezért a tömegkülönbség ${f.difference} · ${state.gap} = ${f.massDifference} gramm.`;
+        $("reasoning").innerHTML = `${lightSentence}<br>Mindkettőjüktől ugyanannyi ugyanolyan érmét vettünk el, ezért a tömegkülönbség nem változott.<br>${differenceSentence}<br><b>${names[f.unknownOwner]} erszényének eredeti tömege: ${finalExpression(f)} = ${f.unknownMass} gramm.</b>`;
+        $("solutionSummary").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function showCelebration() {
+        $("solutionSummary").hidden = true;
+        $("finish").hidden = false;
+        $("finish").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function editTask() {
+        $("game").hidden = true;
+        $("setup").hidden = false;
+        loadInputs();
+        $("setup").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      $("startGame").addEventListener("click", startGame);
+      $("editTask").addEventListener("click", editTask);
+      $("newTask").addEventListener("click", editTask);
+      $("restartGame").addEventListener("click", resetRound);
+      $("checkGroupedAnswer").addEventListener("click", checkGroupedAnswer);
+      $("checkAnswer").addEventListener("click", checkNumber);
+      $("backButton").addEventListener("click", goBack);
+      $("confirmSolution").addEventListener("click", showCelebration);
+      $("summaryBack").addEventListener("click", () => {
+        $("solutionSummary").hidden = true;
+        $("questionCard").hidden = false;
+        $("questionCard").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      $("continueButton").addEventListener("click", () => {
+        $("checkAnswer").disabled = false;
+        $("checkGroupedAnswer").disabled = false;
+        advance();
+      });
+
+      loadInputs();
+    })();
+  </script>
+</body>
+</html>
