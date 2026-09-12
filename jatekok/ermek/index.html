@@ -901,7 +901,7 @@
         $("finish").hidden = true;
         const lightSentence = f.difference === 0
           ? "Ugyanannyi tízforintosuk van, ezért ugyanannyi ötvenforintosuk is van."
-          : `${dative[f.lightOwner]} ${f.difference} db-vel több tízforintosa van, ezért ${dative[f.heavyOwner]} ${f.difference} db-vel több ötvenforintosa van.`;
+          : `${dative[f.lightOwner]} ${f.difference}-al több tízforintosa van, ezért ${dative[f.heavyOwner]} ${f.difference}-al több ötvenforintosa van.`;
         const differenceSentence = f.massDifference === 0
           ? "A két erszény tömege ezért azonos."
           : `Mindkét oldalon ${f.difference} érme maradt. Az ötvenforintos ${state.gap} grammal nehezebb, ezért a tömegkülönbség ${f.difference} · ${state.gap} = ${f.massDifference} gramm.`;
