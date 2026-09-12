@@ -103,6 +103,10 @@
     .setup-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
     .setup-error { min-height: 22px; margin: 12px 0 0; color: var(--red); font-weight: 730; }
     .source { margin: 4px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+    .setup-preview { margin-top: 20px; padding: 16px 18px; border: 1px solid #c9ddd8; border-radius: 15px; background: var(--accent-soft); }
+    .setup-preview-label { margin: 0 0 7px; color: var(--accent); font-size: .76rem; font-weight: 880; letter-spacing: .08em; text-transform: uppercase; }
+    .setup-preview-text { margin: 0; line-height: 1.55; }
+    .setup-preview-text b { color: var(--accent); }
 
     .game { display: grid; gap: 14px; }
     .game-top { display: flex; justify-content: flex-end; gap: 14px; align-items: center; }
@@ -279,6 +283,11 @@
         <label class="field"><span>A mért tömeg (gramm)</span><input id="knownMass" type="number" min="1" max="99999" value="492" inputmode="numeric"></label>
       </div>
 
+      <div class="setup-preview">
+        <p class="setup-preview-label">Az összeállított feladat</p>
+        <p id="setupPreview" class="setup-preview-text"></p>
+      </div>
+
       <div class="setup-actions"><button id="startGame" class="primary" type="button">Feladat indítása</button></div>
       <p id="setupError" class="setup-error" aria-live="polite"></p>
       <p class="source">Alapfeladat: Kalmár László Matematikaverseny, 2022, 5. osztály, országos döntő, 6. feladat.</p>
@@ -406,6 +415,28 @@
       const dative = { H: "Helgának", I: "Ildinek" };
       const other = (owner) => owner === "H" ? "I" : "H";
 
+      function problemMarkup({ h10, i10, gap, knownOwner, knownMass }) {
+        const knownName = names[knownOwner];
+        const unknownName = names[other(knownOwner)];
+        return `Helgának <b>${h10} tízforintosa</b>, Ildinek <b>${i10} tízforintosa</b> van. Mindkettőjüknek van még <b>valamennyi ötvenforintosa</b> is. Összesen ugyanannyi érméjük van. Egy ötvenforintos <b>${gap} grammal nehezebb</b> egy tízforintosnál. ${knownName} érméinek össztömege <b>${knownMass} gramm</b>. Mekkora ${unknownName} érméinek össztömege?`;
+      }
+
+      function setupValue(id) {
+        const field = $(id);
+        const value = Number(field.value);
+        return field.value !== "" && Number.isFinite(value) ? value : "…";
+      }
+
+      function updateSetupPreview() {
+        $("setupPreview").innerHTML = problemMarkup({
+          h10: setupValue("helgaTens"),
+          i10: setupValue("ildiTens"),
+          gap: setupValue("massGap"),
+          knownOwner: $("knownOwner").value,
+          knownMass: setupValue("knownMass")
+        });
+      }
+
       function facts() {
         const signedDifference = state.i10 - state.h10;
         const difference = Math.abs(signedDifference);
@@ -427,6 +458,7 @@
         $("massGap").value = state.gap;
         $("knownOwner").value = state.knownOwner;
         $("knownMass").value = state.knownMass;
+        updateSetupPreview();
       }
 
       function readSetup() {
@@ -518,9 +550,7 @@
 
       function renderScene() {
         const f = facts();
-        const knownName = names[state.knownOwner];
-        const unknownName = names[f.unknownOwner];
-        $("problem").innerHTML = `Helgának <b>${state.h10} tízforintosa</b>, Ildinek <b>${state.i10} tízforintosa</b> van. Mindkettőjüknek van még <b>valamennyi ötvenforintosa</b> is. Összesen ugyanannyi érméjük van. Egy ötvenforintos <b>${state.gap} grammal nehezebb</b> egy tízforintosnál. ${knownName} érméinek össztömege <b>${state.knownMass} gramm</b>. Mekkora ${unknownName} érméinek össztömege?`;
+        $("problem").innerHTML = problemMarkup(state);
 
         $("helgaTensLabel").textContent = state.tensCancelled ? `${state.h10 - f.commonTens} darab maradt` : `${state.h10} darab`;
         $("ildiTensLabel").textContent = state.tensCancelled ? `${state.i10 - f.commonTens} darab maradt` : `${state.i10} darab`;
@@ -902,6 +932,11 @@
         $("solutionSummary").hidden = true;
         $("questionCard").hidden = false;
         $("questionCard").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+
+      ["helgaTens", "ildiTens", "massGap", "knownOwner", "knownMass"].forEach((id) => {
+        $(id).addEventListener("input", updateSetupPreview);
+        $(id).addEventListener("change", updateSetupPreview);
       });
 
       loadInputs();
