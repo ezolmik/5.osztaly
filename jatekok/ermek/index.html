@@ -343,15 +343,11 @@
         </div>
         <div id="numberAnswer" class="answer-number" hidden>
           <fieldset class="answer-group">
-            <legend>1. Melyik erszény nehezebb?</legend>
-            <div id="heavierChoices" class="choices"></div>
-          </fieldset>
-          <fieldset class="answer-group">
-            <legend>2. Mekkora a tömegkülönbség?</legend>
+            <legend>1. Mekkora a tömegkülönbség?</legend>
             <div id="differenceChoices" class="choices"></div>
           </fieldset>
           <fieldset class="answer-group">
-            <legend id="massQuestion">3. Mennyi volt a keresett eredeti tömeg?</legend>
+            <legend id="massQuestion">2. Mennyi volt a keresett eredeti tömeg?</legend>
             <div id="massChoices" class="choices"></div>
           </fieldset>
           <button id="checkAnswer" class="primary" type="button">Ellenőrzés</button>
@@ -620,7 +616,7 @@
       function renderProgress() {
         const progress = $("progress");
         progress.innerHTML = "";
-        for (let index = 0; index < 3; index += 1) {
+        for (let index = 0; index < 4; index += 1) {
           const bar = document.createElement("span");
           if (index < state.step) bar.className = "done";
           if (index === state.step) bar.className = "current";
@@ -711,11 +707,9 @@
         $("question-title").textContent = `Az egyszerűsítés után mindkét oldalon ${f.difference} érme maradt. Az ötvenforintos ${state.gap} grammal nehezebb a tízforintosnál.`;
         $("numberAnswer").hidden = false;
         $("groupedAnswer").hidden = true;
-        $("massQuestion").textContent = `3. Mennyi volt ${names[f.unknownOwner]} érméinek eredeti össztömege?`;
-        state.selectedHeavier = null;
+        $("massQuestion").textContent = `2. Mennyi volt ${names[f.unknownOwner]} érméinek eredeti össztömege?`;
         state.selectedDifference = null;
         state.selectedMass = null;
-        selectableOptions("heavierChoices", heavierOptions(), "selectedHeavier");
         selectableOptions("differenceChoices", differenceOptions(f), "selectedDifference");
         selectableOptions("massChoices", massOptions(f), "selectedMass");
       }
@@ -767,7 +761,7 @@
       function renderQuestion() {
         const f = facts();
         renderProgress();
-        $("stepLabel").textContent = `${state.step + 1}. lépés a 3-ból`;
+        $("stepLabel").textContent = `${state.step + 1}. lépés a 4-ből`;
         $("feedback").textContent = "";
         $("feedback").className = "feedback";
         $("backButton").hidden = state.step === 0;
@@ -789,6 +783,13 @@
           );
         }
         if (state.step === 2) {
+          groupedQuestion(
+            "Merre billen a mérleg?",
+            "Melyik erszény nehezebb?",
+            heavierOptions()
+          );
+        }
+        if (state.step === 3) {
           calculationQuestion(f);
         }
       }
@@ -800,7 +801,7 @@
 
       function advance() {
         state.step += 1;
-        if (state.step >= 3) finishGame();
+        if (state.step >= 4) finishGame();
         else renderQuestion();
       }
 
@@ -810,7 +811,7 @@
         state.fiftyDifferenceRevealed = state.step >= 2;
         state.fiftiesCancelled = state.step >= 2;
         state.solutionRevealed = false;
-        state.balanceRevealed = false;
+        state.balanceRevealed = state.step >= 3;
         state.selectedFirst = null;
         state.selectedHeavier = null;
         state.differenceRevealed = false;
@@ -822,6 +823,7 @@
         $("ildiPan").style.transform = "translateY(0)";
         $("differenceBadge").hidden = true;
         renderScene();
+        if (state.balanceRevealed) revealBalance();
       }
 
       function goBack() {
@@ -832,15 +834,11 @@
       }
 
       function checkNumber() {
-        if (state.selectedHeavier === null || state.selectedDifference === null || state.selectedMass === null) {
-          setFeedback("Válaszolj mindhárom kérdésre!", "bad");
+        if (state.selectedDifference === null || state.selectedMass === null) {
+          setFeedback("Válaszolj mindkét kérdésre!", "bad");
           return;
         }
         const f = facts();
-        if (state.selectedHeavier !== f.heavyOwner) {
-          setFeedback(`Az egyik oldalon ${f.difference} tízforintos, a másikon ugyanennyi ötvenforintos maradt. Melyik érme nehezebb?`, "bad");
-          return;
-        }
         if (state.selectedDifference !== "diff-correct") {
           setFeedback(`${f.difference} érme maradt mindkét oldalon, és minden pár között ${state.gap} gramm a különbség.`, "bad");
           return;
@@ -857,7 +855,6 @@
 
         state.solutionRevealed = true;
         renderScene();
-        revealBalance();
         revealDifference();
         finishGame();
       }
@@ -878,7 +875,7 @@
           renderScene();
           advance();
           return;
-        } else {
+        } else if (state.step === 1) {
           if (state.selectedFirst !== "cancelFifties") {
             setFeedback("Az ötvenforintosok pontos számát nem kell tudnunk: itt is a kisebb kupac szab határt.", "bad");
             return;
@@ -887,6 +884,14 @@
           state.fiftyDifferenceRevealed = true;
           state.fiftiesCancelled = true;
           renderScene();
+          advance();
+          return;
+        } else {
+          if (state.selectedFirst !== f.heavyOwner) {
+            setFeedback(`Az egyik oldalon ${f.difference} tízforintos, a másikon ugyanennyi ötvenforintos maradt. Melyik érme nehezebb?`, "bad");
+            return;
+          }
+          revealBalance();
           advance();
           return;
         }
