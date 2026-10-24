@@ -1,34 +1,164 @@
 <!doctype html>
 <html lang="hu">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f5ef">
   <title>Matematikai játékok</title>
   <style>
-    :root { color-scheme: light; --ink:#1f292d; --muted:#68747a; --paper:#fff; --line:#e4e2db; --accent:#16695f; }
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; color:var(--ink); background:#f7f5ef; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
-    main { width:min(920px,calc(100% - 32px)); margin:auto; padding:clamp(44px,8vw,90px) 0 56px; }
-    header { max-width:650px; margin-bottom:36px; }
-    h1 { margin:0 0 10px; font:800 clamp(2.2rem,7vw,4.5rem)/.98 Georgia,serif; letter-spacing:-.045em; }
-    .lead { margin:0; color:var(--muted); font-size:clamp(1rem,2.5vw,1.16rem); line-height:1.55; }
-    .games { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-    .card { display:flex; min-height:245px; flex-direction:column; padding:25px; border:1px solid var(--line); border-radius:22px; color:inherit; text-decoration:none; background:var(--paper); box-shadow:0 7px 24px rgba(30,39,42,.06); transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease; }
-    .card:hover { transform:translateY(-5px); border-color:#b8d0cc; box-shadow:0 16px 34px rgba(30,39,42,.11); }
-    .card:focus-visible { outline:4px solid #f4c95d; outline-offset:4px; }
-    .icon { display:grid; place-items:center; width:64px; height:64px; margin-bottom:30px; border-radius:18px; font-size:2.15rem; background:#edf6e9; }
-    .card:nth-child(2) .icon { background:#e9f2fb; }
-    .collection { grid-column:1 / -1; min-height:210px; }
-    .collection .icon { background:#fff1c7; }
-    h2 { margin:auto 0 8px; font:800 1.45rem/1.15 Georgia,serif; }
-    .card p { margin:0; color:var(--muted); line-height:1.45; }
-    .go { margin-top:18px; color:var(--accent); font-weight:800; }
-    footer { margin-top:34px; color:#8a9295; font-size:.88rem; }
-    @media (max-width:620px) { main{width:min(100% - 22px,460px);padding-top:34px}.games{grid-template-columns:1fr;gap:12px}.card{min-height:190px;padding:20px}.icon{margin-bottom:18px} }
-    @media (prefers-reduced-motion:reduce) { .card{transition:none} }
+    :root {
+      color-scheme: light;
+      --ink: #1f292d;
+      --muted: #68747a;
+      --paper: #fff;
+      --line: #e4e2db;
+      --accent: #16695f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: #f7f5ef;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: auto;
+      padding: clamp(44px, 8vw, 90px) 0 56px;
+    }
+
+    header {
+      max-width: 650px;
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font: 800 clamp(2.2rem, 7vw, 4.5rem)/.98 Georgia, serif;
+      letter-spacing: -.045em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.16rem);
+      line-height: 1.55;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: flex;
+      min-height: 245px;
+      flex-direction: column;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      color: inherit;
+      text-decoration: none;
+      background: var(--paper);
+      box-shadow: 0 7px 24px rgba(30, 39, 42, .06);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #b8d0cc;
+      box-shadow: 0 16px 34px rgba(30, 39, 42, .11);
+    }
+
+    .card:focus-visible {
+      outline: 4px solid #f4c95d;
+      outline-offset: 4px;
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 30px;
+      border-radius: 18px;
+      font-size: 2.15rem;
+      background: #edf6e9;
+    }
+
+    .card:nth-child(2) .icon {
+      background: #e9f2fb;
+    }
+
+    .collection {
+      grid-column: 1 / -1;
+      min-height: 210px;
+    }
+
+    .collection .icon {
+      background: #fff1c7;
+    }
+
+    h2 {
+      margin: auto 0 8px;
+      font: 800 1.45rem/1.15 Georgia, serif;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .go {
+      margin-top: 18px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    footer {
+      margin-top: 34px;
+      color: #8a9295;
+      font-size: .88rem;
+    }
+
+    @media (max-width:620px) {
+      main {
+        width: min(100% - 22px, 460px);
+        padding-top: 34px
+      }
+
+      .games {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .card {
+        min-height: 190px;
+        padding: 20px
+      }
+
+      .icon {
+        margin-bottom: 18px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .card {
+        transition: none
+      }
+    }
   </style>
 </head>
+
 <body>
   <main>
     <header>
@@ -54,10 +184,18 @@
         <p>Két erszény, kétféle érme és néhány trükkös feltétel. Meg tudod határozni az ismeretlen erszény súlyát?</p>
         <span class="go">Játék indítása →</span>
       </a>
+      <a class="card" href="jatekok/soma-feladatkartyak/index.html">
+        <span class="icon" aria-hidden="true">🧊</span>
+        <h2>Soma-feladatkártyák</h2>
+        <p>Építs képekből, rétegekből és nézetekből!
+          Válassz feladatsort, majd ellenőrizd az építményedet
+          a forgatható megoldással. Saját Soma-készlet szükséges.</p>
+        <span class="go">Feladatsorok megnyitása →</span>
+      </a>
       <a class="card collection" href="jatekok/simon-tatham-jatekai/index.html">
         <span class="icon" aria-hidden="true">🧩</span>
         <h2>Simon Tatham játékai</h2>
-        <p>Ahány játék, annyi gondolkodás. 
+        <p>Ahány játék, annyi gondolkodás.
           A szabályok egyszerűek, de a pályák gyorsan nehezednek.
         </p>
         <span class="go">Válogatás megnyitása →</span>
@@ -70,4 +208,5 @@
     </footer>
   </main>
 </body>
+
 </html>
