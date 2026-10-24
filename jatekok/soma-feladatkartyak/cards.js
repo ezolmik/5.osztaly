@@ -1,4 +1,4 @@
-// Soma-kártyatár — 87 kártya, 18 rendezett feladatsor.
+// Soma-kártyatár — 109 kártya, 19 rendezett feladatsor.
 // Új kártyát a cards, új feladatsort a series tömbben adj hozzá.
 // A meglévő id-ket őrizd meg: a haladás ezekhez kötődik.
 window.SOMA_CONTENT = {
@@ -16,7 +16,8 @@ window.SOMA_CONTENT = {
       "layers": "Rétegek",
       "views": "Színezett nézetek",
       "silhouettes": "Sziluettek",
-      "packing": "Kirakás"
+      "packing": "Kirakás",
+      "completion": "Kockabefejezés"
     },
     "goals": {
       "shape-recognition": "Alakfelismerés",
@@ -13563,6 +13564,4362 @@ window.SOMA_CONTENT = {
           ]
         }
       ]
+    },
+    {
+      "id": "cube-red-yellow-01",
+      "title": "Fejezd be a kockát! 01",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-02",
+      "title": "Fejezd be a kockát! 02",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-03",
+      "title": "Fejezd be a kockát! 03",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-04",
+      "title": "Fejezd be a kockát! 04",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-05",
+      "title": "Fejezd be a kockát! 05",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-06",
+      "title": "Fejezd be a kockát! 06",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a fekete Z elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-07",
+      "title": "Fejezd be a kockát! 07",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-08",
+      "title": "Fejezd be a kockát! 08",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-09",
+      "title": "Fejezd be a kockát! 09",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-10",
+      "title": "Fejezd be a kockát! 10",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-11",
+      "title": "Fejezd be a kockát! 11",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-12",
+      "title": "Fejezd be a kockát! 12",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-13",
+      "title": "Fejezd be a kockát! 13",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-14",
+      "title": "Fejezd be a kockát! 14",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-15",
+      "title": "Fejezd be a kockát! 15",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-16",
+      "title": "Fejezd be a kockát! 16",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-17",
+      "title": "Fejezd be a kockát! 17",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-18",
+      "title": "Fejezd be a kockát! 18",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-19",
+      "title": "Fejezd be a kockát! 19",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-20",
+      "title": "Fejezd be a kockát! 20",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-21",
+      "title": "Fejezd be a kockát! 21",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cube-red-yellow-22",
+      "title": "Fejezd be a kockát! 22",
+      "type": "completion",
+      "box": [
+        3,
+        3,
+        3
+      ],
+      "fixedPartIds": [
+        3,
+        5
+      ],
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+      "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
     }
   ],
   "series": [
@@ -13783,6 +18140,35 @@ window.SOMA_CONTENT = {
         "layers-depth-04",
         "layers-depth-05",
         "sample-layers-grandmaster-01"
+      ]
+    },
+    {
+      "id": "cube-red-yellow",
+      "title": "Fejezd be a kockát! — Piros és sárga",
+      "goal": "Rögzített kezdésből a maradó tér tudatos kitöltése. A tükörváltozatok páros összehasonlítása.",
+      "cardIds": [
+        "cube-red-yellow-11",
+        "cube-red-yellow-15",
+        "cube-red-yellow-21",
+        "cube-red-yellow-22",
+        "cube-red-yellow-12",
+        "cube-red-yellow-16",
+        "cube-red-yellow-03",
+        "cube-red-yellow-06",
+        "cube-red-yellow-13",
+        "cube-red-yellow-17",
+        "cube-red-yellow-05",
+        "cube-red-yellow-08",
+        "cube-red-yellow-14",
+        "cube-red-yellow-18",
+        "cube-red-yellow-04",
+        "cube-red-yellow-07",
+        "cube-red-yellow-19",
+        "cube-red-yellow-20",
+        "cube-red-yellow-09",
+        "cube-red-yellow-10",
+        "cube-red-yellow-01",
+        "cube-red-yellow-02"
       ]
     }
   ],
