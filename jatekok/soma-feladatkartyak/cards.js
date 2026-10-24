@@ -1,16 +1,6 @@
-/* Soma-kártyatár — UTF-8. Az index.html mellé másold; internet nélkül is használható.
-BŐVÍTÉS:
-- Új kártya: új, tartós id; title; type; difficulty; challenge (1, 2 vagy 3);
-  goals.primary; goals.secondary (0–2 cél); instruction; opcionális hint; parts.
-- A taxonomy azonosítóit használd. A challenge nem egyedi sorszám: sok kártyáé azonos lehet.
-- Bármelyik új rekordot a cards tömb végére írhatod. Szintenként sávok szerint rendezünk,
-  a sávokon belül a gyakorlás megnyitásakor keverünk; a sorrend utána stabil marad.
-- Rendezett feladatsor: a series cardIds listája adja a pontos sorrendet, keverés nélkül.
-- Az elemszámot, rétegszámot, méretet, kockaszámot és nézeteket a program számolja.
-- Azonosítót ne nevezz át; a legacyProgressKeys a korábbi haladás átvételéhez kell.
-- A fotózott kártyákhoz újrarajzolt ábrák készülnek, a forrásfotók nem részei az appnak.
-- A classificationStatus: provisional jelzi, hogy a nehézség kipróbálással pontosítandó.
-*/
+// Soma-kártyatár — 69 kártya, 15 rendezett feladatsor.
+// Új kártyát a cards, új feladatsort a series tömbben adj hozzá.
+// A meglévő id-ket őrizd meg: a haladás ezekhez kötődik.
 window.SOMA_CONTENT = {
   "schemaVersion": 1,
   "taxonomy": {
@@ -6878,6 +6868,3281 @@ window.SOMA_CONTENT = {
       ],
       "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
       "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "master-1-01",
+      "title": "Nyitott udvar",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 5 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A test legfeljebb két kocka magas. Forgasd felülre: keresd meg a perem bemetszését, és minden próbánál hagyd üresen ezt a helyet!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-1-02",
+      "title": "Emelkedő tömb",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 6 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Keresd meg a három kocka magas oszlopokat! Próbálj olyan elemet elhelyezni, amely két magassági szintet is összeköt, és nézd meg, mi marad mellette!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-1-03",
+      "title": "Két alacsony szárny",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 5 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Az alacsony szélső kockák fölött üresnek kell maradnia a térnek. Egy szélső elem próbáját először ezzel ellenőrizd!",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-2-01",
+      "title": "Tördelt magaslat",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 6 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Ebben a készletben nincs háromkockás V elem. Minden elem négy kockát fed le. Ha a maradék tér különálló részekre szakad, mindegyik rész kockaszámának néggyel oszthatónak kell lennie.",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-2-02",
+      "title": "Lépcsők mindenfelől",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Forgasd körbe, és válassz egy keskeny felső részt! Sorold fel, mely elemek érhetnek fel oda anélkül, hogy a céltestből kilógnának!",
+      "parts": [
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              3,
+              2
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-2-03",
+      "title": "Keskeny tető",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A tető mellett alacsonyabb oszlopok vannak. A legfelső kockákat ne külön szintként kezeld: egy térbeli elem lefelé is kapcsolódhat!",
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-3-01",
+      "title": "Bemetszett tömb",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A perem mélyedései segítenek kizárni a kilógó elhelyezéseket. Válassz egyet, és az azt határoló kockákból indulj ki!",
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-3-02",
+      "title": "Lapos fennsík",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Ez a test csak két kocka magas. Az Ágas és a két Csavar elem térbeli, ezért mindegyiknek mindkét rétegben kell kockát elfoglalnia.",
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-3-03",
+      "title": "Magas perem",
+      "type": "packing",
+      "difficulty": "master",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Keresd meg felülről a perem bemetszését! Az itt próbált elem ne csak a felső alakzathoz illeszkedjen: alul is a testben kell maradnia!",
+      "parts": [
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-1-01",
+      "title": "Hosszú gerinc",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A hosszú, három kocka magas gerinc több elemből is összeállhat. Ne rögzítsd túl korán egyetlen elemhez: próbálj kétféle felbontást!",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-1-02",
+      "title": "Szétnyíló sarkok",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Két távoli szélső részt is figyelj egyszerre! Ha az egyikre felhasználsz egy elemet, marad-e a másikhoz odaillő elem?",
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-1-03",
+      "title": "Váltakozó oldalak",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 1",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "Felülről több hiányzó peremhely látszik. Válassz egy szélső részt, és minden próbád után ellenőrizd a túloldali alacsony oszlopokat is!",
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-2-01",
+      "title": "Három magaslat",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A magas részek közötti alacsonyabb oszlopok korlátozzák az elemek átnyúlását. Ne csak a csúcsokat, a köztük üresen maradó helyeket is vizsgáld!",
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-2-02",
+      "title": "Sűrű tető",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A tömör felső rész alatt is el kell férnie a maradó elemeknek. Két elem elhelyezése után vizsgáld meg a maradék összefüggő részeit: külön-külön kirakhatók-e?",
+      "parts": [
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-2-03",
+      "title": "Kettős bemetszés",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 2",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A perem több helyen visszalép. Egyetlen ilyen sarokhoz több elem is illeszkedhet; a következő elem lehetőségeivel döntsd el, melyik próbát folytatod!",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-3-01",
+      "title": "Majdnem telt tető",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A nagy felső felület önmagában kevés támpont. Fordítsd a testet alulnézetbe, és ott keress olyan szélső részt, amelyhez kevésféle elem illeszkedik!",
+      "parts": [
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-3-02",
+      "title": "Hátsó lépcső",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A hátoldal alacsonyabb része könnyen elbújik az alapnézetben. Fordítsd körbe, és minden nagyobb részlet kirakása után ellenőrizd ezt az oldalt is!",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grandmaster-3-03",
+      "title": "Hosszú terasz",
+      "type": "packing",
+      "difficulty": "grandmaster",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 3",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "shape-recognition"
+        ]
+      },
+      "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+      "hint": "A hosszú, két kocka magas perem és a magasabb tömb együtt ad feltételt. Próbálj olyan elemet választani, amely összeköti őket, majd ellenőrizd a két oldalon maradó helyeket!",
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        }
+      ]
     }
   ],
   "series": [
@@ -6999,6 +10264,66 @@ window.SOMA_CONTENT = {
         "photo-s3-08",
         "photo-s3-09",
         "photo-s3-10"
+      ]
+    },
+    {
+      "id": "master-1",
+      "title": "Mester 1 · Színezetlen építmények",
+      "goal": "A magasságok és a perem tudatos leolvasása; a céltesten kívüli helyek kizárása.",
+      "cardIds": [
+        "master-1-01",
+        "master-1-02",
+        "master-1-03"
+      ]
+    },
+    {
+      "id": "master-2",
+      "title": "Mester 2 · Színezetlen építmények",
+      "goal": "Az elemkészlet és a felső rész feltételeinek összehangolása.",
+      "cardIds": [
+        "master-2-01",
+        "master-2-02",
+        "master-2-03"
+      ]
+    },
+    {
+      "id": "master-3",
+      "title": "Mester 3 · Színezetlen építmények",
+      "goal": "Rétegek összekapcsolása és a visszalépő peremek vizsgálata.",
+      "cardIds": [
+        "master-3-01",
+        "master-3-02",
+        "master-3-03"
+      ]
+    },
+    {
+      "id": "grandmaster-1",
+      "title": "Nagymester 1 · Színezetlen építmények",
+      "goal": "Távoli részletek együttes figyelése, több felbontás kipróbálása.",
+      "cardIds": [
+        "grandmaster-1-01",
+        "grandmaster-1-02",
+        "grandmaster-1-03"
+      ]
+    },
+    {
+      "id": "grandmaster-2",
+      "title": "Nagymester 2 · Színezetlen építmények",
+      "goal": "A maradó tér vizsgálata és a hibás részmegoldások korai elvetése.",
+      "cardIds": [
+        "grandmaster-2-01",
+        "grandmaster-2-02",
+        "grandmaster-2-03"
+      ]
+    },
+    {
+      "id": "grandmaster-3",
+      "title": "Nagymester 3 · Színezetlen építmények",
+      "goal": "Önálló keresési terv, körbeforgatás és tudatos visszalépés.",
+      "cardIds": [
+        "grandmaster-3-01",
+        "grandmaster-3-02",
+        "grandmaster-3-03"
       ]
     }
   ],
