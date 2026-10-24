@@ -1321,13 +1321,12 @@ window.SOMA_CONTENT = {
       ],
       "instruction": "Építsd meg a három színezett nézetnek megfelelő testet a megadott elemekből! A szín mindig a legközelebbi kockáé.",
       "hint": "A felülnézet megmutatja az alaprajzot. Az elölnézetből olvasd le, hol van a legmagasabb oszlop!",
-      "difficulty": "advanced",
-      "stageNote": "Haladó 1",
+      "difficulty": "beginner",
+      "stageNote": "Kezdő",
       "goals": {
         "primary": "view-integration",
         "secondary": [
-          "occlusion",
-          "construction"
+          "image-reading",
         ]
       }
     },
