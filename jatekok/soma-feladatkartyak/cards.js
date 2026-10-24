@@ -1,14 +1,15 @@
-/* Soma-kártyatár — UTF-8. Az index.html mellé másold; nincs szükség szerverre.
+/* Soma-kártyatár — UTF-8. Az index.html mellé másold; internet nélkül is használható.
 BŐVÍTÉS:
-1. Másolj egy rekordot a cards tömbben; adj neki új, tartós id-t.
-2. Add meg: title, type, difficulty, goals.primary, goals.secondary (0–2),
-   instruction, hint és parts (elemazonosító + egységkocka-koordináták).
-3. Csak a taxonomy felsorolt azonosítóit használd. A stageNote opcionális.
-4. Ha válogatásba is kerül, a series megfelelő cardIds listájába írd az id-t.
-   Egy kártya több válogatásban is szerepelhet. A sorrendet a cardIds adja.
-Az elemszámot, rétegszámot, méretet és kockaszámot NE add meg: számított adatok.
-A meglévő id-ket és a legacyProgressKeys táblát ne nevezd át: haladásmigráció.
-A feladvány és a megoldás ugyanabból a parts adatból készül.
+- Új kártya: új, tartós id; title; type; difficulty; challenge (1, 2 vagy 3);
+  goals.primary; goals.secondary (0–2 cél); instruction; opcionális hint; parts.
+- A taxonomy azonosítóit használd. A challenge nem egyedi sorszám: sok kártyáé azonos lehet.
+- Bármelyik új rekordot a cards tömb végére írhatod. Szintenként sávok szerint rendezünk,
+  a sávokon belül a gyakorlás megnyitásakor keverünk; a sorrend utána stabil marad.
+- Rendezett feladatsor: a series cardIds listája adja a pontos sorrendet, keverés nélkül.
+- Az elemszámot, rétegszámot, méretet, kockaszámot és nézeteket a program számolja.
+- Azonosítót ne nevezz át; a legacyProgressKeys a korábbi haladás átvételéhez kell.
+- A fotózott kártyákhoz újrarajzolt ábrák készülnek, a forrásfotók nem részei az appnak.
+- A classificationStatus: provisional jelzi, hogy a nehézség kipróbálással pontosítandó.
 */
 window.SOMA_CONTENT = {
   "schemaVersion": 1,
@@ -67,13 +68,14 @@ window.SOMA_CONTENT = {
       "instruction": "Állítsd a zöld V elemet a képen látható helyzetbe!",
       "hint": "Az elem két kockája a talajon van, a harmadik fölöttük.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 1",
       "goals": {
         "primary": "spatial-rotation",
         "secondary": [
           "shape-recognition"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "orient-l-01",
@@ -109,13 +111,14 @@ window.SOMA_CONTENT = {
       "instruction": "Vedd kézbe az L elemet, és állítsd a képen látható helyzetbe! A képet rögzített nézőpontból látod.",
       "hint": "Keresd meg a három kockából álló hosszú szárat: most függőlegesen áll.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 2",
       "goals": {
         "primary": "spatial-rotation",
         "secondary": [
           "shape-recognition"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "orient-screw-a-01",
@@ -151,13 +154,14 @@ window.SOMA_CONTENT = {
       "instruction": "Állítsd a fehér Csavar A elemet a képen látható helyzetbe!",
       "hint": "A fehér és a lila elem tükörpár. A feladathoz csak a fehér elemet használd; az elemet a kezedben is elfordíthatod.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 3",
       "goals": {
         "primary": "spatial-rotation",
         "secondary": [
           "shape-recognition"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "copy-t-01",
@@ -193,13 +197,14 @@ window.SOMA_CONTENT = {
       "instruction": "Másold le a sárga T elem helyzetét!",
       "hint": "A háromkockás szár vízszintes; a középső kockára kerül a negyedik.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 1",
       "goals": {
         "primary": "image-reading",
         "secondary": [
           "spatial-rotation"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "copy-small-01",
@@ -255,14 +260,15 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg a képen látható színezett építményt! A takart részekhez használd az elemek alakját.",
       "hint": "Az 1-es elem alkotja az alsó réteget. Az 5-ös elem három kockája kerül fölé.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 2",
       "goals": {
         "primary": "image-reading",
         "secondary": [
           "occlusion",
           "spatial-rotation"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "copy-three-01",
@@ -348,14 +354,15 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg a képen látható háromelemes építményt!",
       "hint": "A kék, fekete és piros elem minden kockájának helyet kell találnod. A takart részeknél az elemek ismert alakja segít.",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 3",
       "goals": {
         "primary": "image-reading",
         "secondary": [
           "occlusion",
           "spatial-rotation"
         ]
-      }
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-small-01",
@@ -411,13 +418,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Az azonos számú mezők egyetlen merev Soma-elemhez tartoznak. A lapokat ne külön kockákból másold!",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 1",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-02",
@@ -478,13 +486,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 2",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-03",
@@ -565,13 +574,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "beginner",
-      "stageNote": "Kezdő 3",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-04",
@@ -657,13 +667,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 5. elemmel (piros): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
-      "stageNote": "Haladó 1",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-05",
@@ -769,13 +780,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
-      "stageNote": "Haladó 2",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-06",
@@ -906,13 +918,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 3. elemmel (sárga): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
-      "stageNote": "Haladó 3",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-own-07",
@@ -1068,13 +1081,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
-      "stageNote": "Haladó 3",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "layers-cube-01",
@@ -1260,13 +1274,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg a 3 × 3 × 3-as kockát a rétegek szerint! Mind a hét elemet használd fel.",
       "hint": "Előbb kövesd végig, mely elemek nyúlnak át több rétegen. Az alsó rétegen az 1., 4., 5. és 7. elem szerepel.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 4",
       "goals": {
         "primary": "layer-integration",
         "secondary": [
           "image-reading"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "views-small-01",
@@ -1322,13 +1337,14 @@ window.SOMA_CONTENT = {
       "instruction": "Építsd meg a három színezett nézetnek megfelelő testet a megadott elemekből! A szín mindig a legközelebbi kockáé.",
       "hint": "A felülnézet megmutatja az alaprajzot. Az elölnézetből olvasd le, hol van a legmagasabb oszlop!",
       "difficulty": "beginner",
-      "stageNote": "Kezdő",
       "goals": {
         "primary": "view-integration",
         "secondary": [
-          "image-reading",
+          "image-reading"
         ]
-      }
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional"
     },
     {
       "id": "views-three-02",
@@ -1409,14 +1425,15 @@ window.SOMA_CONTENT = {
       "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
       "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 2",
       "goals": {
         "primary": "view-integration",
         "secondary": [
-          "occlusion",
-          "construction"
+          "image-reading",
+          "occlusion"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "views-four-03",
@@ -1527,14 +1544,15 @@ window.SOMA_CONTENT = {
       "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
       "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 3",
       "goals": {
         "primary": "view-integration",
         "secondary": [
           "occlusion",
           "construction"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "sil-small-01",
@@ -1590,14 +1608,14 @@ window.SOMA_CONTENT = {
       "instruction": "A két megadott elemből építs olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
       "hint": "A foglalt mező legalább egy kockát jelent az adott vetítősugáron. A felülnézeten az üres mezőben egyik magasságban sem lehet kocka.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 1",
       "goals": {
         "primary": "view-integration",
         "secondary": [
-          "occlusion",
-          "construction"
+          "spatial-rotation"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "sil-three-02",
@@ -1678,14 +1696,15 @@ window.SOMA_CONTENT = {
       "instruction": "Építs a megadott három elemből olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
       "hint": "Először a befoglaló méreteket olvasd le! Az üres vetületi mező a teljes vetítősugáron kizárja a kockákat.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 2",
       "goals": {
         "primary": "view-integration",
         "secondary": [
           "occlusion",
           "construction"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
     },
     {
       "id": "pack-small-01",
@@ -1741,14 +1760,14 @@ window.SOMA_CONTENT = {
       "instruction": "A megadott két elemből építsd meg az egyszínű célalakzatot! A belső elemhatárokat neked kell megtalálnod.",
       "hint": "A célalakzat 7 kis kockából áll. Próbáld meg az 1-es elemet vízszintesen elhelyezni.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 1",
       "goals": {
         "primary": "construction",
         "secondary": [
-          "spatial-rotation",
-          "occlusion"
+          "spatial-rotation"
         ]
-      }
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional"
     },
     {
       "id": "pack-three-02",
@@ -1834,14 +1853,5031 @@ window.SOMA_CONTENT = {
       "instruction": "A megadott három elemből építsd meg az egyszínű célalakzatot!",
       "hint": "Próbáld meg a kék L elemet elhelyezni! A sárga T és a fekete Z alakja korlátozza, milyen üreget hagyhatsz nekik.",
       "difficulty": "advanced",
-      "stageNote": "Haladó 2",
       "goals": {
         "primary": "construction",
         "secondary": [
           "spatial-rotation",
           "occlusion"
         ]
-      }
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional"
+    },
+    {
+      "id": "photo-s1-01",
+      "title": "S1-01 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-01",
+        "series": 1,
+        "cardNumber": 1,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-02",
+      "title": "S1-02 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-02",
+        "series": 1,
+        "cardNumber": 2,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-03",
+      "title": "S1-03 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-03",
+        "series": 1,
+        "cardNumber": 3,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-04",
+      "title": "S1-04 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-04",
+        "series": 1,
+        "cardNumber": 4,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-05",
+      "title": "S1-05 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-05",
+        "series": 1,
+        "cardNumber": 5,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-06",
+      "title": "S1-06 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-06",
+        "series": 1,
+        "cardNumber": 6,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-07",
+      "title": "S1-07 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-07",
+        "series": 1,
+        "cardNumber": 7,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-08",
+      "title": "S1-08 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-08",
+        "series": 1,
+        "cardNumber": 8,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-09",
+      "title": "S1-09 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-09",
+        "series": 1,
+        "cardNumber": 9,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s1-10",
+      "title": "S1-10 · Számozott rétegek",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading",
+          "spatial-rotation"
+        ]
+      },
+      "source": {
+        "label": "S1-10",
+        "series": 1,
+        "cardNumber": 10,
+        "taskPhoto": "soma-1.jpeg",
+        "solutionPhoto": "soma-1.megoldas.jpeg",
+        "pieceIdsRemapped": true,
+        "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+    },
+    {
+      "id": "photo-s2-01",
+      "title": "S2-01 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "beginner",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-01",
+        "series": 2,
+        "cardNumber": 1,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 6. elem (fehér): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-02",
+      "title": "S2-02 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-02",
+        "series": 2,
+        "cardNumber": 2,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-03",
+      "title": "S2-03 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-03",
+        "series": 2,
+        "cardNumber": 3,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-04",
+      "title": "S2-04 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-04",
+        "series": 2,
+        "cardNumber": 4,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-05",
+      "title": "S2-05 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-05",
+        "series": 2,
+        "cardNumber": 5,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-06",
+      "title": "S2-06 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-06",
+        "series": 2,
+        "cardNumber": 6,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-07",
+      "title": "S2-07 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-07",
+        "series": 2,
+        "cardNumber": 7,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-08",
+      "title": "S2-08 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-08",
+        "series": 2,
+        "cardNumber": 8,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "A zöld V elem egyik nézeten sem látszik, de azt is fel kell használnod. A látható elemek között keress számára megfelelő helyet!"
+    },
+    {
+      "id": "photo-s2-09",
+      "title": "S2-09 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-09",
+        "series": 2,
+        "cardNumber": 9,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s2-10",
+      "title": "S2-10 · Kisebb készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "S2-10",
+        "series": 2,
+        "cardNumber": 10,
+        "taskPhoto": "soma-2.jpeg",
+        "solutionPhoto": "soma-2.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-01",
+      "title": "S3-01 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-01",
+        "series": 3,
+        "cardNumber": 1,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              4,
+              1
+            ],
+            [
+              0,
+              5,
+              1
+            ],
+            [
+              0,
+              5,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              4,
+              2
+            ],
+            [
+              1,
+              4,
+              2
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              1,
+              5,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              1,
+              5,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-02",
+      "title": "S3-02 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-02",
+        "series": 3,
+        "cardNumber": 2,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              3,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-03",
+      "title": "S3-03 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-03",
+        "series": 3,
+        "cardNumber": 3,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-04",
+      "title": "S3-04 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-04",
+        "series": 3,
+        "cardNumber": 4,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-05",
+      "title": "S3-05 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-05",
+        "series": 3,
+        "cardNumber": 5,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-06",
+      "title": "S3-06 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-06",
+        "series": 3,
+        "cardNumber": 6,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-07",
+      "title": "S3-07 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-07",
+        "series": 3,
+        "cardNumber": 7,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              4
+            ],
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              2,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-08",
+      "title": "S3-08 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-08",
+        "series": 3,
+        "cardNumber": 8,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              3
+            ],
+            [
+              1,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+    },
+    {
+      "id": "photo-s3-09",
+      "title": "S3-09 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-09",
+        "series": 3,
+        "cardNumber": 9,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg.",
+        "note": "A forrásfotón kézírásos X látszik a fekete elem alatt. Az import a nyomtatott, hét elemet felsoroló készletet követi. Fekete elem nélkül a megadott nézeteknek több összeállítás is megfelel."
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "A fekete Z elem mindhárom nézetből takarásban marad, de ezt is fel kell használnod!"
+    },
+    {
+      "id": "photo-s3-10",
+      "title": "S3-10 · Teljes készlet nézetei",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "source": {
+        "label": "S3-10",
+        "series": 3,
+        "cardNumber": 10,
+        "taskPhoto": "soma-3.jpeg",
+        "solutionPhoto": "soma-3.megoldas.jpeg",
+        "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
     }
   ],
   "series": [
@@ -1912,6 +6948,57 @@ window.SOMA_CONTENT = {
       "cardIds": [
         "pack-small-01",
         "pack-three-02"
+      ]
+    },
+    {
+      "id": "photo-s1",
+      "title": "Fotózott 1 · Rétegekből építés",
+      "goal": "Számozott rétegek összeillesztése és az elemek térbeli követése.",
+      "cardIds": [
+        "photo-s1-01",
+        "photo-s1-02",
+        "photo-s1-03",
+        "photo-s1-04",
+        "photo-s1-05",
+        "photo-s1-06",
+        "photo-s1-07",
+        "photo-s1-08",
+        "photo-s1-09",
+        "photo-s1-10"
+      ]
+    },
+    {
+      "id": "photo-s2",
+      "title": "Fotózott 2 · Kisebb készletek nézetei",
+      "goal": "Három színezett nézet összehangolása kisebb elemkészletekkel.",
+      "cardIds": [
+        "photo-s2-01",
+        "photo-s2-02",
+        "photo-s2-03",
+        "photo-s2-04",
+        "photo-s2-05",
+        "photo-s2-06",
+        "photo-s2-07",
+        "photo-s2-08",
+        "photo-s2-09",
+        "photo-s2-10"
+      ]
+    },
+    {
+      "id": "photo-s3",
+      "title": "Fotózott 3 · A teljes készlet nézetei",
+      "goal": "Nézetek és takarások értelmezése mind a hét elem felhasználásával.",
+      "cardIds": [
+        "photo-s3-01",
+        "photo-s3-02",
+        "photo-s3-03",
+        "photo-s3-04",
+        "photo-s3-05",
+        "photo-s3-06",
+        "photo-s3-07",
+        "photo-s3-08",
+        "photo-s3-09",
+        "photo-s3-10"
       ]
     }
   ],
