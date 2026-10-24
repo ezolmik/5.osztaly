@@ -1,4 +1,4 @@
-// Soma-kártyatár — 69 kártya, 15 rendezett feladatsor.
+// Soma-kártyatár — 87 kártya, 18 rendezett feladatsor.
 // Új kártyát a cards, új feladatsort a series tömbben adj hozzá.
 // A meglévő id-ket őrizd meg: a haladás ezekhez kötődik.
 window.SOMA_CONTENT = {
@@ -10143,6 +10143,3426 @@ window.SOMA_CONTENT = {
           ]
         }
       ]
+    },
+    {
+      "id": "sample-views-master-01",
+      "title": "Három kép, hét elem",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Több nézetben is keresd meg ugyanannak az elemnek a színét! Az egy nézetben szomszédos mezők a térben nem feltétlenül szomszédos kockák.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "views-depth-02",
+      "title": "Kereszteződő színnyomok",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Egy szín látható mezőit egyszerre vizsgáld a három ábrán! Egy lehetséges elhelyezést csak akkor tarts meg, ha mindhárom nézeten helyes takarást ad.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "views-depth-03",
+      "title": "A részletek összeérnek",
+      "type": "views",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Kezdd egy könnyebben azonosítható elemmel! A többi elemnek ezután is elegendő helyet kell hagynod a látható mezőik mögött.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "views-depth-04",
+      "title": "Rejtett folytatások",
+      "type": "views",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "A látható részlet nem feltétlenül az egész elem. Egy próba után nézd meg, hogy a szomszédos elemek mely kockái kerülnek takarásba!",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 7,
+          "cells": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              1,
+              2
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-views-grandmaster-01",
+      "title": "A takart sárga elem",
+      "type": "views",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "A sárga T elemet a készlet felsorolja, mégsem látod a három nézeten. Olyan helyet keress neki, ahol más elemek minden megadott irányból eltakarják!",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              3
+            ],
+            [
+              2,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "views-depth-06",
+      "title": "Négy szint három képen",
+      "type": "views",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Az oldalnézetek négy magassági szintet mutatnak. Egy elem helyzetét a felülnézettel is ellenőrizd; az egymás mögötti kockák színe az oldalnézetben eltűnhet!",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-silhouettes-master-01",
+      "title": "Körvonalakból térbe",
+      "type": "silhouettes",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Az üres nézetmezők teljes térbeli kockasorokat zárnak ki. Először ezekkel szűkítsd a lehetséges teret; a sötét mező egyelőre csak azt mondja, hogy azon a vonalon van kocka.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silhouettes-depth-02",
+      "title": "A hiányzó hely nyomában",
+      "type": "silhouettes",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 2",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Először zárd ki azokat a helyeket, amelyek valamelyik nézet üres mezőjére vetülnének! Ezután ellenőrizd, hogy az elhelyezett elemek minden foglalt nézési vonalat elérnek-e.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silhouettes-depth-03",
+      "title": "Három körvonal együtt",
+      "type": "silhouettes",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 2",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "A három ábra külön-külön sok lehetőséget enged. Egyetlen elem próbáját is mindig mindhárom ábrával ellenőrizd, mielőtt továbblépsz!",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silhouettes-depth-04",
+      "title": "Két réteg, hét elem",
+      "type": "silhouettes",
+      "difficulty": "master",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 3",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "A test csak két kocka magas. Az Ágas és a két Csavar elem mindkét rétegbe átnyúlik; egyiket sem rakhatod teljesen egyetlen rétegbe.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silhouettes-depth-05",
+      "title": "Szűkülő lehetőségek",
+      "type": "silhouettes",
+      "difficulty": "master",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 3",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "Ne rögzítsd túl korán a legkönnyebben beilleszthető elemet! Keress olyan maradó részt, amelyet kevésféle elemmel tudsz kitölteni.",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-silhouettes-grandmaster-01",
+      "title": "Szűk tér, sok próba",
+      "type": "silhouettes",
+      "difficulty": "grandmaster",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Nagymester 1",
+      "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+      "hint": "A nézetekkel még összeegyeztethető helyek száma megegyezik a hét elem 27 kockájával. Itt mindet ki kell töltened. Ezután a kevésféleképpen elhelyezhető elemekből indulj ki!",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layers-depth-01",
+      "title": "Rétegeken át",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "Keresd meg azokat az elemeket, amelyek több rétegben is szerepelnek! Az ábrák tájolását közben ne változtasd meg.",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-layers-master-01",
+      "title": "Négy szint kapcsolatai",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "Válassz egy elemet, és keresd meg az összes kockáját mind a négy rétegen! Az azonos számok ugyanannak a fizikai elemnek a részei, nem külön egységkockák.",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layers-depth-03",
+      "title": "Sűrű kapcsolódások",
+      "type": "layers",
+      "difficulty": "advanced",
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "stageNote": "Haladó 3",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "A középső rétegekben sok különböző elem találkozik. Egy elem összes kockáját azonosítsd, és csak ezután keresd a következő elem helyét!",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layers-depth-04",
+      "title": "Öt emelet térben",
+      "type": "layers",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "Az első rétegtől az ötödikig azonos tájolással haladj! Az L és a T elem három réteget is összekapcsol; ezeket egész elemként képzeld el.",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layers-depth-05",
+      "title": "Átnyúló elemek",
+      "type": "layers",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "Mind a hét elem több rétegben szerepel. Rétegenként figyeld, hogy mely már elkezdett elemek folytatódnak, és melyek kezdődnek újonnan!",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              4
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              4
+            ],
+            [
+              2,
+              0,
+              4
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-layers-grandmaster-01",
+      "title": "Öt szint, hét összefonódó elem",
+      "type": "layers",
+      "difficulty": "master",
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "stageNote": "Mester 1",
+      "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+      "hint": "Az L, a T és a Z elem is három réteget kapcsol össze. Mindig egy teljes elem helyzetét állapítsd meg, és csak utána próbáld hozzá a következőt!",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "spatial-rotation",
+          "construction"
+        ]
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              4
+            ]
+          ]
+        }
+      ]
     }
   ],
   "series": [
@@ -10324,6 +13744,45 @@ window.SOMA_CONTENT = {
         "grandmaster-3-01",
         "grandmaster-3-02",
         "grandmaster-3-03"
+      ]
+    },
+    {
+      "id": "depth-views",
+      "title": "Színek és takarások",
+      "goal": "A látható színfoltok összehangolásától a teljesen takart elem következtetéséig.",
+      "cardIds": [
+        "sample-views-master-01",
+        "views-depth-02",
+        "views-depth-03",
+        "views-depth-04",
+        "sample-views-grandmaster-01",
+        "views-depth-06"
+      ]
+    },
+    {
+      "id": "depth-silhouettes",
+      "title": "Körvonalakból építmény",
+      "goal": "Három sziluett közös feltételeitől a teljes tér tudatos kitöltéséig.",
+      "cardIds": [
+        "sample-silhouettes-master-01",
+        "silhouettes-depth-02",
+        "silhouettes-depth-03",
+        "silhouettes-depth-04",
+        "silhouettes-depth-05",
+        "sample-silhouettes-grandmaster-01"
+      ]
+    },
+    {
+      "id": "depth-layers",
+      "title": "Rétegekből magas építmények",
+      "goal": "Négy réteg áttekintésétől az öt rétegen átnyúló elemek összeépítéséig.",
+      "cardIds": [
+        "layers-depth-01",
+        "sample-layers-master-01",
+        "layers-depth-03",
+        "layers-depth-04",
+        "layers-depth-05",
+        "sample-layers-grandmaster-01"
       ]
     }
   ],
