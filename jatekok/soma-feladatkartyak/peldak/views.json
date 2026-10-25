@@ -1,0 +1,63 @@
+{
+  "id": "views-small-01",
+  "title": "Három oldalról",
+  "type": "views",
+  "parts": [
+    {
+      "id": 1,
+      "cells": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "cells": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ]
+    }
+  ],
+  "instruction": "Építsd meg a három színezett nézetnek megfelelő testet a megadott elemekből! A szín mindig a legközelebbi kockáé.",
+  "hint": "A felülnézet megmutatja az alaprajzot. Az elölnézetből olvasd le, hol van a legmagasabb oszlop!",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "image-reading"
+    ]
+  },
+  "challenge": 3,
+  "classificationStatus": "provisional"
+}

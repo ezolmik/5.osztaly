@@ -1,0 +1,43 @@
+{
+  "id": "copy-t-01",
+  "title": "Egy sárga elem",
+  "type": "copy",
+  "parts": [
+    {
+      "id": 3,
+      "cells": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "instruction": "Másold le a sárga T elem helyzetét!",
+  "hint": "A háromkockás szár vízszintes; a középső kockára kerül a negyedik.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "image-reading",
+    "secondary": [
+      "spatial-rotation"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional"
+}
