@@ -1,0 +1,35 @@
+{
+  "id": "views-three-02",
+  "title": "Három elem nézetei",
+  "type": "views",
+  "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
+  "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "image-reading",
+      "occlusion"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "shapeId": "0017",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

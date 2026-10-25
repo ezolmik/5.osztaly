@@ -182,8 +182,16 @@ function validateCard(card){
  return true;
 }
 function readCard(value){
- if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Egyetlen kártya JSON-objektumát nyisd meg.');
- checkParts(value.parts);validateCard(value);return copy(value);
+ if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Egyetlen kártya vagy alakzat JSON-objektumát nyisd meg.');
+ checkParts(value.parts);
+ // Shape exports contain geometry and a name; task metadata belongs to a new card.
+ const shapeKeys=['id','name','parts'];
+ if(Object.hasOwn(value,'name')&&Object.keys(value).every(k=>shapeKeys.includes(k))){
+  if(typeof value.id!=='string'||!/^\d{4}$/.test(value.id)||value.id==='0000'||!text(value.name))throw Error('Hibás alakzatazonosító vagy hiányzó alakzatnév.');
+  const card={...makeCard(),title:value.name.trim(),parts:copy(value.parts)};
+  validateCard(card);return card;
+ }
+ validateCard(value);return copy(value);
 }
 function exportCard(state){const card={...copy(state.base),parts:copy(state.parts)};if(typeof card.title!=='string'||!card.title.trim())throw Error('Adj címet a kártyának!');if(typeof card.id!=='string'||!/^[a-z0-9][a-z0-9-]*$/.test(card.id))throw Error('Az azonosítóhoz kisbetűt, számot és kötőjelet használj!');checkParts(card.parts,state.side);validateCard(card);return card;}
 function placementCheck(state,edit){
@@ -375,7 +383,7 @@ function install(){
  $('workspace').onchange=()=>{const n=Number($('workspace').value);try{C.checkParts(state.parts,n);remember();state.side=n;layer=Math.min(layer,n-1);edit.anchor=edit.anchor.map(v=>Math.min(v,n-1));buildGrid();persist();render();}catch(e){$('workspace').value=state.side;message('A meglévő test nem fér el ekkora munkatérben.',true);}};
  $('tryGame').onclick=()=>{try{if(edit.dirty)throw Error('Előbb helyezd el vagy állítsd vissza a kijelölt elemet.');const card=C.exportCard(state);persist();window.location.href=Palette.href('index.html',card);}catch(e){message(e.message,true);}};
  $('new').onclick=reset;$('demo').onclick=demo;$('download').onclick=download;$('open').onclick=()=>$('file').click();
- $('file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>256000)throw Error('A fájl túl nagy. Egyetlen kártya JSON-fájlja szükséges.');const card=C.readCard(JSON.parse(await file.text()));replaceWith(card);message('Kártya betöltve: '+card.title);}catch(error){message('Nem nyitható meg: '+error.message,true);}};
+ $('file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>256000)throw Error('A fájl túl nagy. Egyetlen kártya vagy alakzat JSON-fájlja szükséges.');const card=C.readCard(JSON.parse(await file.text()));replaceWith(card);message('Betöltve: '+card.title);}catch(error){message('Nem nyitható meg: '+error.message,true);}};
  $('resetCamera').onclick=()=>{yaw=-.72;pitch=.55;zoom=1;schedulePaint();};$('zoomIn').onclick=()=>{zoom=Math.min(2,zoom+.2);schedulePaint();};$('zoomOut').onclick=()=>{zoom=Math.max(.6,zoom-.2);schedulePaint();};
  refs.canvas.onpointerdown=e=>{drag={id:e.pointerId,x:e.clientX,y:e.clientY};refs.canvas.setPointerCapture(e.pointerId);};
  refs.canvas.onpointermove=e=>{if(!drag||drag.id!==e.pointerId)return;yaw+=(e.clientX-drag.x)*.012;pitch=Math.max(.15,Math.min(1.4,pitch+(e.clientY-drag.y)*.008));drag.x=e.clientX;drag.y=e.clientY;schedulePaint();};

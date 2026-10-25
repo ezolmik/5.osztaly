@@ -1,0 +1,36 @@
+{
+  "id": "views-depth-03",
+  "title": "A részletek összeérnek",
+  "type": "views",
+  "difficulty": "advanced",
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "stageNote": "Haladó 3",
+  "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Kezdd egy könnyebben azonosítható elemmel! A többi elemnek ezután is elegendő helyet kell hagynod a látható mezőik mögött.",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0071",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

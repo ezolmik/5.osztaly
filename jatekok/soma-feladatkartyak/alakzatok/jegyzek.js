@@ -1,8 +1,8 @@
 window.SOMA_SHAPES = {
   "version": 1,
-  "bankFingerprint": "e15efdb",
+  "bankFingerprint": "99856f27",
   "outerFormCount": 83,
-  "bankSha256": "c1eccbec94f5a9faa6710a5ee532332927b06d61a7dbbcbf6afee09bd9f2ef37",
+  "bankSha256": "74061ecd18604edc3164de16295fcdb4fc5ccc283afa810958f0a67b0deebace",
   "cardCount": 153,
   "shapes": [
     {

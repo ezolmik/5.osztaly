@@ -1,0 +1,13 @@
+{
+  "id": "depth-silhouettes",
+  "title": "Körvonalakból építmény",
+  "goal": "Három sziluett közös feltételeitől a teljes tér tudatos kitöltéséig.",
+  "cardIds": [
+    "sample-silhouettes-master-01",
+    "silhouettes-depth-02",
+    "silhouettes-depth-03",
+    "silhouettes-depth-04",
+    "silhouettes-depth-05",
+    "sample-silhouettes-grandmaster-01"
+  ]
+}

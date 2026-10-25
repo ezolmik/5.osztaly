@@ -1,0 +1,34 @@
+{
+  "id": "orient-v-01",
+  "title": "A V függőlegesen",
+  "type": "orientation",
+  "instruction": "Állítsd a zöld V elemet a képen látható helyzetbe!",
+  "hint": "Az elem két kockája a talajon van, a harmadik fölöttük.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "spatial-rotation",
+    "secondary": [
+      "shape-recognition"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "shapeId": "0001",
+  "placement": {
+    "axes": [
+      0,
+      2,
+      1
+    ],
+    "signs": [
+      1,
+      -1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

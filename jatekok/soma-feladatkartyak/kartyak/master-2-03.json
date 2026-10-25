@@ -1,0 +1,36 @@
+{
+  "id": "master-2-03",
+  "title": "Keskeny tető",
+  "type": "packing",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 2",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "shape-recognition"
+    ]
+  },
+  "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 7 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+  "hint": "A tető mellett alacsonyabb oszlopok vannak. A legfelső kockákat ne külön szintként kezeld: egy térbeli elem lefelé is kapcsolódhat!",
+  "shapeId": "0056",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

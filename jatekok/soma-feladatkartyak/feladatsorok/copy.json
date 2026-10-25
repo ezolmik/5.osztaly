@@ -1,0 +1,11 @@
+{
+  "id": "copy",
+  "title": "Másold le!",
+  "goal": "Térbeli ábra és valódi építmény megfeleltetése.",
+  "level": "Kezdő",
+  "cardIds": [
+    "copy-t-01",
+    "copy-small-01",
+    "copy-three-01"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "photo-s1-04",
+  "title": "S1-04 · Számozott rétegek",
+  "type": "layers",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "layer-integration",
+    "secondary": [
+      "image-reading",
+      "spatial-rotation"
+    ]
+  },
+  "source": {
+    "label": "S1-04",
+    "series": 1,
+    "cardNumber": 4,
+    "taskPhoto": "soma-1.jpeg",
+    "solutionPhoto": "soma-1.megoldas.jpeg",
+    "pieceIdsRemapped": true,
+    "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
+  },
+  "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+  "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
+  "shapeId": "0024",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

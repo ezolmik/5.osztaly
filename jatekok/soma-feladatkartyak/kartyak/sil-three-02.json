@@ -1,0 +1,35 @@
+{
+  "id": "sil-three-02",
+  "title": "Három elem árnyképe",
+  "type": "silhouettes",
+  "instruction": "Építs a megadott három elemből olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
+  "hint": "Először a befoglaló méreteket olvasd le! Az üres vetületi mező a teljes vetítősugáron kizárja a kockákat.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0019",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

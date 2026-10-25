@@ -1,0 +1,44 @@
+{
+  "id": "photo-s3-09",
+  "title": "S3-09 · Teljes készlet nézetei",
+  "type": "views",
+  "difficulty": "advanced",
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "source": {
+    "label": "S3-09",
+    "series": 3,
+    "cardNumber": 9,
+    "taskPhoto": "soma-3.jpeg",
+    "solutionPhoto": "soma-3.megoldas.jpeg",
+    "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg.",
+    "note": "A forrásfotón kézírásos X látszik a fekete elem alatt. Az import a nyomtatott, hét elemet felsoroló készletet követi. Fekete elem nélkül a megadott nézeteknek több összeállítás is megfelel."
+  },
+  "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+  "hint": "A fekete Z elem mindhárom nézetből takarásban marad, de ezt is fel kell használnod!",
+  "shapeId": "0049",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

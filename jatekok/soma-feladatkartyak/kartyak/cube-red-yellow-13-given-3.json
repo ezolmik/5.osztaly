@@ -1,0 +1,47 @@
+{
+  "id": "cube-red-yellow-13-given-3",
+  "title": "Fejezd be a kockát! 13 — 3 megadott elem",
+  "type": "completion",
+  "box": [
+    3,
+    3,
+    3
+  ],
+  "fixedPartIds": [
+    3,
+    4,
+    5
+  ],
+  "difficulty": "advanced",
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+  "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+  "familyId": "cube-red-yellow-13",
+  "stageNote": "Haladó 1",
+  "shapeId": "0119",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

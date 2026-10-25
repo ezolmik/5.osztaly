@@ -1,0 +1,36 @@
+{
+  "id": "sample-silhouettes-master-01",
+  "title": "Körvonalakból térbe",
+  "type": "silhouettes",
+  "difficulty": "master",
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 1",
+  "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Az üres nézetmezők teljes térbeli kockasorokat zárnak ki. Először ezekkel szűkítsd a lehetséges teret; a sötét mező egyelőre csak azt mondja, hogy azon a vonalon van kocka.",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0075",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

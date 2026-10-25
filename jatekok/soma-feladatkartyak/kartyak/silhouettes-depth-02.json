@@ -1,0 +1,36 @@
+{
+  "id": "silhouettes-depth-02",
+  "title": "A hiányzó hely nyomában",
+  "type": "silhouettes",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 2",
+  "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Először zárd ki azokat a helyeket, amelyek valamelyik nézet üres mezőjére vetülnének! Ezután ellenőrizd, hogy az elhelyezett elemek minden foglalt nézési vonalat elérnek-e.",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0076",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

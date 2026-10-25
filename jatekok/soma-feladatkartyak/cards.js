@@ -1,6 +1,5 @@
-// Soma-kártyatár — 153 kártya, 22 rendezett feladatsor.
-// Új kártyát a cards, új feladatsort a series tömbben adj hozzá.
-// A meglévő id-ket őrizd meg: a haladás ezekhez kötődik.
+// Generált fájl. Forrás: kartyak/, feladatsorok/, alakzatok/, adatbazis.json.
+// Frissítés: node frissit.cjs
 window.SOMA_CONTENT = {
   "schemaVersion": 1,
   "taxonomy": {
@@ -29,33 +28,34 @@ window.SOMA_CONTENT = {
       "construction": "Konstrukció és keresés"
     }
   },
+  "legacyProgressKeys": {
+    "orientation/orient-v-01": "orient-v-01",
+    "orientation/orient-l-01": "orient-l-01",
+    "orientation/orient-screw-a-01": "orient-screw-a-01",
+    "copy/copy-t-01": "copy-t-01",
+    "copy/copy-small-01": "copy-small-01",
+    "copy/copy-three-01": "copy-three-01",
+    "layers/layers-small-01": "layers-small-01",
+    "layers/layers-own-02": "layers-own-02",
+    "layers/layers-own-03": "layers-own-03",
+    "layers/layers-own-04": "layers-own-04",
+    "layers/layers-own-05": "layers-own-05",
+    "layers/layers-own-06": "layers-own-06",
+    "layers/layers-own-07": "layers-own-07",
+    "layers/layers-cube-01": "layers-cube-01",
+    "views/views-small-01": "views-small-01",
+    "views/views-three-02": "views-three-02",
+    "views/views-four-03": "views-four-03",
+    "silhouettes/sil-small-01": "sil-small-01",
+    "silhouettes/sil-three-02": "sil-three-02",
+    "packing/pack-small-01": "pack-small-01",
+    "packing/pack-three-02": "pack-three-02"
+  },
   "cards": [
     {
       "id": "orient-v-01",
       "title": "A V függőlegesen",
       "type": "orientation",
-      "parts": [
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              0
-            ]
-          ]
-        }
-      ],
       "instruction": "Állítsd a zöld V elemet a képen látható helyzetbe!",
       "hint": "Az elem két kockája a talajon van, a harmadik fölöttük.",
       "difficulty": "beginner",
@@ -66,141 +66,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 1,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "orient-l-01",
-      "title": "Az L új helyzetben",
-      "type": "orientation",
-      "parts": [
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              1,
-              0,
-              0
-            ]
-          ]
-        }
-      ],
-      "instruction": "Vedd kézbe az L elemet, és állítsd a képen látható helyzetbe! A képet rögzített nézőpontból látod.",
-      "hint": "Keresd meg a három kockából álló hosszú szárat: most függőlegesen áll.",
-      "difficulty": "beginner",
-      "goals": {
-        "primary": "spatial-rotation",
-        "secondary": [
-          "shape-recognition"
-        ]
-      },
-      "challenge": 1,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "orient-screw-a-01",
-      "title": "A fehér csavar",
-      "type": "orientation",
-      "parts": [
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        }
-      ],
-      "instruction": "Állítsd a fehér Csavar A elemet a képen látható helyzetbe!",
-      "hint": "A fehér és a lila elem tükörpár. A feladathoz csak a fehér elemet használd; az elemet a kezedben is elfordíthatod.",
-      "difficulty": "beginner",
-      "goals": {
-        "primary": "spatial-rotation",
-        "secondary": [
-          "shape-recognition"
-        ]
-      },
-      "challenge": 2,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "copy-t-01",
-      "title": "Egy sárga elem",
-      "type": "copy",
-      "parts": [
-        {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ]
-          ]
-        }
-      ],
-      "instruction": "Másold le a sárga T elem helyzetét!",
-      "hint": "A háromkockás szár vízszintes; a középső kockára kerül a negyedik.",
-      "difficulty": "beginner",
-      "goals": {
-        "primary": "image-reading",
-        "secondary": [
-          "spatial-rotation"
-        ]
-      },
-      "challenge": 1,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "copy-small-01",
-      "title": "Két elem egymáson",
-      "type": "copy",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -211,33 +77,51 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              1,
               0,
-              0
+              0,
+              1
             ],
             [
-              0,
               1,
+              0,
               0
             ]
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "orient-l-01",
+      "title": "Az L új helyzetben",
+      "type": "orientation",
+      "instruction": "Vedd kézbe az L elemet, és állítsd a képen látható helyzetbe! A képet rögzített nézőpontból látod.",
+      "hint": "Keresd meg a három kockából álló hosszú szárat: most függőlegesen áll.",
+      "difficulty": "beginner",
+      "goals": {
+        "primary": "spatial-rotation",
+        "secondary": [
+          "shape-recognition"
+        ]
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "parts": [
         {
-          "id": 5,
+          "id": 2,
           "cells": [
             [
               0,
               0,
-              1
+              0
             ],
             [
               1,
               0,
-              1
+              0
             ],
             [
               0,
-              1,
+              0,
               1
             ],
             [
@@ -247,7 +131,98 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "orient-screw-a-01",
+      "title": "A fehér csavar",
+      "type": "orientation",
+      "instruction": "Állítsd a fehér Csavar A elemet a képen látható helyzetbe!",
+      "hint": "A fehér és a lila elem tükörpár. A feladathoz csak a fehér elemet használd; az elemet a kezedben is elfordíthatod.",
+      "difficulty": "beginner",
+      "goals": {
+        "primary": "spatial-rotation",
+        "secondary": [
+          "shape-recognition"
+        ]
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "parts": [
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "copy-t-01",
+      "title": "Egy sárga elem",
+      "type": "copy",
+      "instruction": "Másold le a sárga T elem helyzetét!",
+      "hint": "A háromkockás szár vízszintes; a középső kockára kerül a negyedik.",
+      "difficulty": "beginner",
+      "goals": {
+        "primary": "image-reading",
+        "secondary": [
+          "spatial-rotation"
+        ]
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "copy-small-01",
+      "title": "Két elem egymáson",
+      "type": "copy",
       "instruction": "Építsd meg a képen látható színezett építményt! A takart részekhez használd az elemek alakját.",
       "hint": "Az 1-es elem alkotja az alsó réteget. Az 5-ös elem három kockája kerül fölé.",
       "difficulty": "beginner",
@@ -259,15 +234,10 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 2,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "copy-three-01",
-      "title": "Három szín együtt",
-      "type": "copy",
+      "classificationStatus": "provisional",
       "parts": [
         {
-          "id": 2,
+          "id": 1,
           "cells": [
             [
               0,
@@ -276,43 +246,13 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              0,
-              1
-            ],
-            [
-              0,
-              0,
-              2
+              1,
+              0
             ],
             [
               1,
               0,
               0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
             ]
           ]
         },
@@ -320,28 +260,33 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
-              2,
-              1,
-              0
-            ],
-            [
-              3,
               0,
-              0
+              0,
+              1
             ],
             [
-              3,
-              1,
-              0
+              0,
+              0,
+              2
             ],
             [
-              3,
+              0,
               1,
+              1
+            ],
+            [
+              1,
+              0,
               1
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "copy-three-01",
+      "title": "Három szín együtt",
+      "type": "copy",
       "instruction": "Építsd meg a képen látható háromelemes építményt!",
       "hint": "A kék, fekete és piros elem minden kockájának helyet kell találnod. A takart részeknél az elemek ismert alakja segít.",
       "difficulty": "beginner",
@@ -353,15 +298,10 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 3,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "layers-small-01",
-      "title": "Három réteg, két elem",
-      "type": "layers",
+      "classificationStatus": "provisional",
       "parts": [
         {
-          "id": 1,
+          "id": 2,
           "cells": [
             [
               0,
@@ -369,14 +309,44 @@ window.SOMA_CONTENT = {
               0
             ],
             [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
               1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
               0,
               0
             ],
             [
+              2,
               0,
-              1,
-              0
+              1
             ]
           ]
         },
@@ -384,28 +354,33 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
-              0,
-              0,
-              1
-            ],
-            [
+              2,
               1,
-              0,
-              1
+              0
             ],
             [
+              3,
               0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
               1,
               1
-            ],
-            [
-              0,
-              0,
-              2
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "layers-small-01",
+      "title": "Három réteg, két elem",
+      "type": "layers",
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Az azonos számú mezők egyetlen merev Soma-elemhez tartoznak. A lapokat ne külön kockákból másold!",
       "difficulty": "beginner",
@@ -416,12 +391,70 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 2,
-      "classificationStatus": "provisional"
+      "classificationStatus": "provisional",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
     },
     {
       "id": "layers-own-02",
       "title": "Két hosszabb elem",
       "type": "layers",
+      "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
+      "difficulty": "beginner",
+      "goals": {
+        "primary": "layer-integration",
+        "secondary": [
+          "image-reading"
+        ]
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 2,
@@ -473,7 +506,12 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "layers-own-03",
+      "title": "Három elem, két réteg",
+      "type": "layers",
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "beginner",
@@ -484,12 +522,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 3,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "layers-own-03",
-      "title": "Három elem, két réteg",
-      "type": "layers",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -561,100 +594,12 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
-      "difficulty": "beginner",
-      "goals": {
-        "primary": "layer-integration",
-        "secondary": [
-          "image-reading"
-        ]
-      },
-      "challenge": 3,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "layers-own-04",
       "title": "Térbeli elemek",
       "type": "layers",
-      "parts": [
-        {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ]
-          ]
-        }
-      ],
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 5. elemmel (piros): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
@@ -665,109 +610,89 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 1,
-      "classificationStatus": "provisional"
+      "classificationStatus": "provisional",
+      "parts": [
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
     },
     {
       "id": "layers-own-05",
       "title": "Négy elem összekapcsolása",
       "type": "layers",
-      "parts": [
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              0,
-              3,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              2,
-              0,
-              0
-            ]
-          ]
-        }
-      ],
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
@@ -778,12 +703,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 1,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "layers-own-06",
-      "title": "Öt elem, három réteg",
-      "type": "layers",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -820,18 +740,43 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              2,
-              1
+              3,
+              0
             ],
             [
               0,
-              2,
-              2
+              3,
+              1
             ]
           ]
         },
         {
-          "id": 3,
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
           "cells": [
             [
               1,
@@ -849,63 +794,18 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              1,
               2,
+              0,
               0
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              1,
-              3,
-              1
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "layers-own-06",
+      "title": "Öt elem, három réteg",
+      "type": "layers",
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 3. elemmel (sárga): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
@@ -916,12 +816,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 2,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "layers-own-07",
-      "title": "Hat elem együtt",
-      "type": "layers",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -933,13 +828,13 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              1,
-              0
+              0,
+              1
             ],
             [
-              1,
               0,
-              0
+              1,
+              1
             ]
           ]
         },
@@ -947,24 +842,24 @@ window.SOMA_CONTENT = {
           "id": 2,
           "cells": [
             [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              3,
               0,
+              1,
               0
             ],
             [
-              3,
-              1,
+              0,
+              2,
               0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
             ]
           ]
         },
@@ -972,48 +867,23 @@ window.SOMA_CONTENT = {
           "id": 3,
           "cells": [
             [
+              1,
               0,
-              2,
               0
             ],
             [
               1,
-              2,
+              1,
               0
             ],
             [
               1,
-              3,
-              0
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              3,
               1,
               1
             ],
             [
-              3,
+              1,
               2,
-              0
-            ],
-            [
-              3,
-              2,
-              1
-            ],
-            [
-              3,
-              3,
               0
             ]
           ]
@@ -1022,53 +892,58 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
-              2,
               0,
-              0
+              0,
+              2
             ],
             [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
               1,
+              0,
               1
             ],
             [
-              3,
+              1,
               0,
-              1
+              2
+            ],
+            [
+              1,
+              1,
+              2
             ]
           ]
         },
         {
-          "id": 7,
+          "id": 6,
           "cells": [
+            [
+              0,
+              3,
+              0
+            ],
             [
               1,
               2,
               1
             ],
             [
-              2,
-              2,
-              1
-            ],
-            [
-              2,
+              1,
               3,
               0
             ],
             [
-              2,
+              1,
               3,
               1
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "layers-own-07",
+      "title": "Hat elem együtt",
+      "type": "layers",
       "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
       "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
       "difficulty": "advanced",
@@ -1079,12 +954,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 2,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "layers-cube-01",
-      "title": "A teljes kocka",
-      "type": "layers",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1096,13 +966,13 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              0,
-              1
+              1,
+              0
             ],
             [
-              0,
               1,
-              1
+              0,
+              0
             ]
           ]
         },
@@ -1110,24 +980,24 @@ window.SOMA_CONTENT = {
           "id": 2,
           "cells": [
             [
-              0,
-              0,
-              2
-            ],
-            [
-              0,
               1,
-              2
-            ],
-            [
               1,
-              0,
-              2
+              0
             ],
             [
               2,
+              1,
+              0
+            ],
+            [
+              3,
               0,
-              2
+              0
+            ],
+            [
+              3,
+              1,
+              0
             ]
           ]
         },
@@ -1137,45 +1007,20 @@ window.SOMA_CONTENT = {
             [
               0,
               2,
-              2
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ],
-            [
-              2,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              1,
               0
             ],
             [
-              0,
+              1,
               2,
               0
             ],
             [
-              0,
-              2,
-              1
+              1,
+              3,
+              0
             ],
             [
-              1,
+              2,
               2,
               0
             ]
@@ -1185,24 +1030,49 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
+              3,
               1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
               0,
               0
             ],
             [
-              1,
-              1,
-              0
+              2,
+              0,
+              1
             ],
             [
               2,
               1,
-              0
+              1
             ],
             [
-              2,
-              2,
-              0
+              3,
+              0,
+              1
             ]
           ]
         },
@@ -1211,52 +1081,32 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
+              2,
               1
             ],
             [
               2,
-              0,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
               0
             ],
             [
               2,
-              0,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              2,
-              1,
-              2
-            ],
-            [
-              2,
-              2,
+              3,
               1
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "layers-cube-01",
+      "title": "A teljes kocka",
+      "type": "layers",
       "box": [
         3,
         3,
@@ -1272,12 +1122,7 @@ window.SOMA_CONTENT = {
         ]
       },
       "challenge": 2,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "views-small-01",
-      "title": "Három oldalról",
-      "type": "views",
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1288,13 +1133,201 @@ window.SOMA_CONTENT = {
               0
             ],
             [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
               1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "views-small-01",
+      "title": "Három oldalról",
+      "type": "views",
+      "instruction": "Építsd meg a három színezett nézetnek megfelelő testet a megadott elemekből! A szín mindig a legközelebbi kockáé.",
+      "hint": "A felülnézet megmutatja az alaprajzot. Az elölnézetből olvasd le, hol van a legmagasabb oszlop!",
+      "difficulty": "beginner",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading"
+        ]
+      },
+      "challenge": 3,
+      "classificationStatus": "provisional",
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
               0,
               0
             ],
             [
               0,
               1,
+              0
+            ],
+            [
+              1,
+              0,
               0
             ]
           ]
@@ -1308,39 +1341,40 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              1,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
               0,
               0,
               2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg a három színezett nézetnek megfelelő testet a megadott elemekből! A szín mindig a legközelebbi kockáé.",
-      "hint": "A felülnézet megmutatja az alaprajzot. Az elölnézetből olvasd le, hol van a legmagasabb oszlop!",
-      "difficulty": "beginner",
-      "goals": {
-        "primary": "view-integration",
-        "secondary": [
-          "image-reading"
-        ]
-      },
-      "challenge": 3,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "views-three-02",
       "title": "Három elem nézetei",
       "type": "views",
+      "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
+      "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
+      "difficulty": "advanced",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "image-reading",
+          "occlusion"
+        ]
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1412,24 +1446,24 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "views-four-03",
+      "title": "Négy elem takarásban",
+      "type": "views",
       "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
       "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
       "difficulty": "advanced",
       "goals": {
         "primary": "view-integration",
         "secondary": [
-          "image-reading",
-          "occlusion"
+          "occlusion",
+          "construction"
         ]
       },
-      "challenge": 1,
-      "classificationStatus": "provisional"
-    },
-    {
-      "id": "views-four-03",
-      "title": "Négy elem takarásban",
-      "type": "views",
+      "challenge": 2,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 2,
@@ -1531,24 +1565,23 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építs a megadott elemekből olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal!",
-      "hint": "Kezdd a felülnézettel, és azonosítsd az ott látható elemeket! Ami takarásban van, annak a másik két nézetben keress nyomot.",
-      "difficulty": "advanced",
-      "goals": {
-        "primary": "view-integration",
-        "secondary": [
-          "occlusion",
-          "construction"
-        ]
-      },
-      "challenge": 2,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "sil-small-01",
       "title": "Csak a körvonal",
       "type": "silhouettes",
+      "instruction": "A két megadott elemből építs olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
+      "hint": "A foglalt mező legalább egy kockát jelent az adott vetítősugáron. A felülnézeten az üres mezőben egyik magasságban sem lehet kocka.",
+      "difficulty": "advanced",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "spatial-rotation"
+        ]
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1559,13 +1592,13 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              1,
               0,
+              1,
               0
             ],
             [
-              0,
               1,
+              0,
               0
             ]
           ]
@@ -1579,39 +1612,40 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              1,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
               0,
               0,
               2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
             ]
           ]
         }
-      ],
-      "instruction": "A két megadott elemből építs olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
-      "hint": "A foglalt mező legalább egy kockát jelent az adott vetítősugáron. A felülnézeten az üres mezőben egyik magasságban sem lehet kocka.",
-      "difficulty": "advanced",
-      "goals": {
-        "primary": "view-integration",
-        "secondary": [
-          "spatial-rotation"
-        ]
-      },
-      "challenge": 1,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "sil-three-02",
       "title": "Három elem árnyképe",
       "type": "silhouettes",
+      "instruction": "Építs a megadott három elemből olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
+      "hint": "Először a befoglaló méreteket olvasd le! Az üres vetületi mező a teljes vetítősugáron kizárja a kockákat.",
+      "difficulty": "advanced",
+      "goals": {
+        "primary": "view-integration",
+        "secondary": [
+          "occlusion",
+          "construction"
+        ]
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1683,24 +1717,23 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építs a megadott három elemből olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
-      "hint": "Először a befoglaló méreteket olvasd le! Az üres vetületi mező a teljes vetítősugáron kizárja a kockákat.",
-      "difficulty": "advanced",
-      "goals": {
-        "primary": "view-integration",
-        "secondary": [
-          "occlusion",
-          "construction"
-        ]
-      },
-      "challenge": 2,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "pack-small-01",
       "title": "Rejtett elemhatárok",
       "type": "packing",
+      "instruction": "A megadott két elemből építsd meg az egyszínű célalakzatot! A belső elemhatárokat neked kell megtalálnod.",
+      "hint": "A célalakzat 7 kis kockából áll. Próbáld meg az 1-es elemet vízszintesen elhelyezni.",
+      "difficulty": "advanced",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation"
+        ]
+      },
+      "challenge": 1,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 1,
@@ -1711,13 +1744,13 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              1,
               0,
+              1,
               0
             ],
             [
-              0,
               1,
+              0,
               0
             ]
           ]
@@ -1731,39 +1764,40 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              1,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
               0,
               0,
               2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
             ]
           ]
         }
-      ],
-      "instruction": "A megadott két elemből építsd meg az egyszínű célalakzatot! A belső elemhatárokat neked kell megtalálnod.",
-      "hint": "A célalakzat 7 kis kockából áll. Próbáld meg az 1-es elemet vízszintesen elhelyezni.",
-      "difficulty": "advanced",
-      "goals": {
-        "primary": "construction",
-        "secondary": [
-          "spatial-rotation"
-        ]
-      },
-      "challenge": 1,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "pack-three-02",
       "title": "Három elem, rejtett határok",
       "type": "packing",
+      "instruction": "A megadott három elemből építsd meg az egyszínű célalakzatot!",
+      "hint": "Próbáld meg a kék L elemet elhelyezni! A sárga T és a fekete Z alakja korlátozza, milyen üreget hagyhatsz nekik.",
+      "difficulty": "advanced",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "challenge": 2,
+      "classificationStatus": "provisional",
       "parts": [
         {
           "id": 2,
@@ -1840,19 +1874,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A megadott három elemből építsd meg az egyszínű célalakzatot!",
-      "hint": "Próbáld meg a kék L elemet elhelyezni! A sárga T és a fekete Z alakja korlátozza, milyen üreget hagyhatsz nekik.",
-      "difficulty": "advanced",
-      "goals": {
-        "primary": "construction",
-        "secondary": [
-          "spatial-rotation",
-          "occlusion"
-        ]
-      },
-      "challenge": 2,
-      "classificationStatus": "provisional"
+      ]
     },
     {
       "id": "photo-s1-01",
@@ -1877,18 +1899,20 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
           "cells": [
             [
               1,
-              1,
+              0,
               1
             ],
             [
               1,
-              0,
+              1,
               1
             ],
             [
@@ -1903,22 +1927,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
-              2,
-              0
-            ],
-            [
               1,
-              2,
-              0
-            ],
-            [
-              2,
-              2,
               0
             ],
             [
               0,
+              2,
+              0
+            ],
+            [
               1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
               0
             ]
           ]
@@ -1937,14 +1961,14 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              2,
-              2,
-              1
-            ],
-            [
               1,
               2,
               2
+            ],
+            [
+              2,
+              2,
+              1
             ]
           ]
         },
@@ -1953,22 +1977,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              1,
+              2
+            ],
+            [
+              0,
               2,
               2
             ],
             [
-              0,
               1,
+              0,
               2
             ],
             [
               1,
               1,
-              2
-            ],
-            [
-              1,
-              0,
               2
             ]
           ]
@@ -1983,12 +2007,12 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              1,
+              0,
               0
             ],
             [
               2,
-              0,
+              1,
               0
             ],
             [
@@ -2007,25 +2031,23 @@ window.SOMA_CONTENT = {
               0
             ],
             [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
               1,
               0,
               0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              0,
-              1
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-02",
@@ -2050,23 +2072,25 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
           "cells": [
             [
               0,
-              2,
-              2
-            ],
-            [
               1,
-              2,
               2
             ],
             [
               0,
+              2,
+              2
+            ],
+            [
               1,
+              2,
               2
             ]
           ]
@@ -2076,8 +2100,13 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               2,
-              2,
+              0,
               0
+            ],
+            [
+              2,
+              0,
+              1
             ],
             [
               2,
@@ -2086,13 +2115,8 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              0,
-              0
-            ],
-            [
               2,
-              0,
-              1
+              0
             ]
           ]
         },
@@ -2101,22 +2125,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
               2,
               1
             ],
             [
-              0,
-              1,
-              1
-            ],
-            [
               1,
               1,
-              1
-            ],
-            [
-              0,
-              0,
               1
             ]
           ]
@@ -2125,11 +2149,6 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
-              1,
-              1,
-              0
-            ],
-            [
               0,
               0,
               0
@@ -2143,6 +2162,11 @@ window.SOMA_CONTENT = {
               1,
               0,
               1
+            ],
+            [
+              1,
+              1,
+              0
             ]
           ]
         },
@@ -2150,16 +2174,6 @@ window.SOMA_CONTENT = {
           "id": 6,
           "cells": [
             [
-              2,
-              2,
-              1
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
               1,
               1,
               2
@@ -2167,7 +2181,17 @@ window.SOMA_CONTENT = {
             [
               2,
               1,
+              1
+            ],
+            [
+              2,
+              1,
               2
+            ],
+            [
+              2,
+              2,
+              1
             ]
           ]
         },
@@ -2176,17 +2200,17 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
-              2,
-              0
-            ],
-            [
               1,
-              2,
               0
             ],
             [
               0,
+              2,
+              0
+            ],
+            [
               1,
+              2,
               0
             ],
             [
@@ -2196,9 +2220,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-03",
@@ -2223,15 +2245,12 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
           "cells": [
-            [
-              3,
-              1,
-              0
-            ],
             [
               2,
               0,
@@ -2240,6 +2259,11 @@ window.SOMA_CONTENT = {
             [
               3,
               0,
+              0
+            ],
+            [
+              3,
+              1,
               0
             ]
           ]
@@ -2248,11 +2272,6 @@ window.SOMA_CONTENT = {
           "id": 2,
           "cells": [
             [
-              3,
-              1,
-              1
-            ],
-            [
               1,
               1,
               2
@@ -2261,6 +2280,11 @@ window.SOMA_CONTENT = {
               2,
               1,
               2
+            ],
+            [
+              3,
+              1,
+              1
             ],
             [
               3,
@@ -2273,6 +2297,16 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
               1,
               1,
               0
@@ -2280,16 +2314,6 @@ window.SOMA_CONTENT = {
             [
               2,
               1,
-              0
-            ],
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
               0
             ]
           ]
@@ -2304,12 +2328,12 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              1,
+              0,
               2
             ],
             [
               0,
-              0,
+              1,
               2
             ],
             [
@@ -2324,12 +2348,12 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               2,
-              1,
+              0,
               1
             ],
             [
               2,
-              0,
+              1,
               1
             ],
             [
@@ -2359,19 +2383,17 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              1,
+              0,
               1
             ],
             [
               1,
-              0,
+              1,
               1
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-04",
@@ -2396,6 +2418,8 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
@@ -2422,17 +2446,17 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               2,
+              1,
+              1
+            ],
+            [
+              2,
               2,
               0
             ],
             [
               2,
               2,
-              1
-            ],
-            [
-              2,
-              1,
               1
             ],
             [
@@ -2447,22 +2471,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               1,
-              2,
-              0
-            ],
-            [
-              1,
               1,
               0
             ],
             [
-              2,
               1,
+              2,
               0
             ],
             [
               2,
               0,
+              0
+            ],
+            [
+              2,
+              1,
               0
             ]
           ]
@@ -2472,16 +2496,6 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
-              1,
-              0
-            ],
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
               0,
               0
             ],
@@ -2489,6 +2503,16 @@ window.SOMA_CONTENT = {
               0,
               0,
               1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
             ]
           ]
         },
@@ -2497,12 +2521,12 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               1,
-              1,
+              0,
               1
             ],
             [
               1,
-              0,
+              1,
               1
             ],
             [
@@ -2532,19 +2556,17 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              1,
+              0,
               2
             ],
             [
               1,
-              0,
+              1,
               2
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-05",
@@ -2569,6 +2591,8 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
@@ -2579,14 +2603,14 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              1,
-              0,
-              0
-            ],
-            [
               0,
               0,
               1
+            ],
+            [
+              1,
+              0,
+              0
             ]
           ]
         },
@@ -2595,22 +2619,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               1,
+              0,
+              2
+            ],
+            [
+              1,
               1,
               1
             ],
             [
               1,
+              1,
+              2
+            ],
+            [
+              1,
               2,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              0,
               2
             ]
           ]
@@ -2620,23 +2644,23 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
               2,
               1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              0,
-              0,
-              2
             ]
           ]
         },
@@ -2644,23 +2668,23 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
+              1,
+              0,
+              1
+            ],
+            [
               2,
               0,
               0
             ],
             [
               2,
-              1,
-              1
-            ],
-            [
-              1,
               0,
               1
             ],
             [
               2,
-              0,
+              1,
               1
             ]
           ]
@@ -2669,11 +2693,6 @@ window.SOMA_CONTENT = {
           "id": 6,
           "cells": [
             [
-              2,
-              2,
-              0
-            ],
-            [
               1,
               1,
               0
@@ -2681,6 +2700,11 @@ window.SOMA_CONTENT = {
             [
               2,
               1,
+              0
+            ],
+            [
+              2,
+              2,
               0
             ],
             [
@@ -2695,17 +2719,17 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
-              2,
-              0
-            ],
-            [
               1,
-              2,
               0
             ],
             [
               0,
+              2,
+              0
+            ],
+            [
               1,
+              2,
               0
             ],
             [
@@ -2715,9 +2739,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-06",
@@ -2742,10 +2764,17 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
           "cells": [
+            [
+              2,
+              0,
+              1
+            ],
             [
               2,
               1,
@@ -2754,11 +2783,6 @@ window.SOMA_CONTENT = {
             [
               2,
               1,
-              1
-            ],
-            [
-              2,
-              0,
               1
             ]
           ]
@@ -2768,6 +2792,11 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               2,
+              1,
+              2
+            ],
+            [
+              2,
               2,
               0
             ],
@@ -2779,11 +2808,6 @@ window.SOMA_CONTENT = {
             [
               2,
               2,
-              2
-            ],
-            [
-              2,
-              1,
               2
             ]
           ]
@@ -2793,22 +2817,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
               2,
               0
             ],
             [
-              0,
-              1,
-              0
-            ],
-            [
               1,
               1,
-              0
-            ],
-            [
-              0,
-              0,
               0
             ]
           ]
@@ -2817,24 +2841,24 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
+              0,
+              0,
+              1
+            ],
+            [
               1,
               0,
               0
+            ],
+            [
+              1,
+              0,
+              1
             ],
             [
               2,
               0,
               0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              1
             ]
           ]
         },
@@ -2843,6 +2867,11 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              1,
+              2
+            ],
+            [
+              0,
               2,
               1
             ],
@@ -2855,17 +2884,22 @@ window.SOMA_CONTENT = {
               1,
               2,
               2
-            ],
-            [
-              0,
-              1,
-              2
             ]
           ]
         },
         {
           "id": 7,
           "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
             [
               1,
               2,
@@ -2875,22 +2909,10 @@ window.SOMA_CONTENT = {
               1,
               2,
               1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              1
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-07",
@@ -2915,18 +2937,20 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 2,
           "cells": [
             [
               0,
-              3,
+              2,
               0
             ],
             [
               0,
-              2,
+              3,
               0
             ],
             [
@@ -2946,17 +2970,17 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               1,
+              2,
+              1
+            ],
+            [
+              1,
               3,
               0
             ],
             [
               1,
               3,
-              1
-            ],
-            [
-              1,
-              2,
               1
             ],
             [
@@ -2970,23 +2994,23 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
               1,
               2,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              0,
-              0,
               0
             ]
           ]
@@ -3001,12 +3025,12 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              1,
+              0,
               2
             ],
             [
               0,
-              0,
+              1,
               2
             ],
             [
@@ -3020,23 +3044,23 @@ window.SOMA_CONTENT = {
           "id": 6,
           "cells": [
             [
+              0,
+              1,
+              1
+            ],
+            [
               1,
               0,
               0
             ],
             [
-              0,
               1,
+              0,
               1
             ],
             [
               1,
               1,
-              1
-            ],
-            [
-              1,
-              0,
               1
             ]
           ]
@@ -3056,19 +3080,17 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              2,
+              1,
               2
             ],
             [
               1,
-              1,
+              2,
               2
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-08",
@@ -3093,15 +3115,12 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
           "cells": [
-            [
-              0,
-              1,
-              1
-            ],
             [
               0,
               0,
@@ -3111,6 +3130,11 @@ window.SOMA_CONTENT = {
               0,
               0,
               2
+            ],
+            [
+              0,
+              1,
+              1
             ]
           ]
         },
@@ -3119,22 +3143,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
-              2,
-              0
-            ],
-            [
               1,
-              2,
-              0
-            ],
-            [
-              2,
-              2,
               0
             ],
             [
               0,
+              2,
+              0
+            ],
+            [
               1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
               0
             ]
           ]
@@ -3143,11 +3167,6 @@ window.SOMA_CONTENT = {
           "id": 3,
           "cells": [
             [
-              1,
-              2,
-              2
-            ],
-            [
               0,
               1,
               2
@@ -3155,6 +3174,11 @@ window.SOMA_CONTENT = {
             [
               1,
               1,
+              2
+            ],
+            [
+              1,
+              2,
               2
             ],
             [
@@ -3199,12 +3223,12 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              2,
+              1,
               1
             ],
             [
               2,
-              1,
+              2,
               1
             ],
             [
@@ -3223,9 +3247,9 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              2,
               1,
-              0
+              1,
+              1
             ],
             [
               2,
@@ -3233,15 +3257,13 @@ window.SOMA_CONTENT = {
               0
             ],
             [
+              2,
               1,
-              1,
-              1
+              0
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-09",
@@ -3266,6 +3288,8 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
@@ -3276,25 +3300,20 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              2,
-              3,
-              0
-            ],
-            [
               1,
               3,
               1
+            ],
+            [
+              2,
+              3,
+              0
             ]
           ]
         },
         {
           "id": 2,
           "cells": [
-            [
-              2,
-              3,
-              1
-            ],
             [
               0,
               2,
@@ -3308,6 +3327,11 @@ window.SOMA_CONTENT = {
             [
               2,
               2,
+              1
+            ],
+            [
+              2,
+              3,
               1
             ]
           ]
@@ -3317,22 +3341,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
               3,
               0
             ],
             [
-              0,
-              2,
-              0
-            ],
-            [
               1,
               2,
-              0
-            ],
-            [
-              0,
-              1,
               0
             ]
           ]
@@ -3341,23 +3365,23 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
-              2,
-              2,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
               1,
               0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
               0
             ]
           ]
@@ -3372,12 +3396,12 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              1,
+              0,
               1
             ],
             [
               0,
-              0,
+              1,
               1
             ],
             [
@@ -3391,23 +3415,23 @@ window.SOMA_CONTENT = {
           "id": 6,
           "cells": [
             [
-              2,
-              0,
-              0
-            ],
-            [
               1,
-              1,
-              1
-            ],
-            [
-              2,
               1,
               1
             ],
             [
               2,
               0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
               1
             ]
           ]
@@ -3427,19 +3451,17 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              3,
+              2,
               2
             ],
             [
               1,
-              2,
+              3,
               2
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s1-10",
@@ -3464,6 +3486,8 @@ window.SOMA_CONTENT = {
         "pieceIdsRemapped": true,
         "note": "A forrás elemszámait alak szerint az alkalmazás azonosítóira képeztük át. A színezés a saját készlethez igazodik."
       },
+      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
+      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!",
       "parts": [
         {
           "id": 1,
@@ -3474,14 +3498,14 @@ window.SOMA_CONTENT = {
               0
             ],
             [
-              2,
-              3,
-              0
-            ],
-            [
               1,
               3,
               1
+            ],
+            [
+              2,
+              3,
+              0
             ]
           ]
         },
@@ -3495,7 +3519,7 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              2,
+              0,
               1
             ],
             [
@@ -3505,7 +3529,7 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              0,
+              2,
               1
             ]
           ]
@@ -3515,22 +3539,22 @@ window.SOMA_CONTENT = {
           "cells": [
             [
               0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
               3,
               0
             ],
             [
-              0,
-              2,
-              0
-            ],
-            [
               1,
               2,
-              0
-            ],
-            [
-              0,
-              1,
               0
             ]
           ]
@@ -3539,23 +3563,23 @@ window.SOMA_CONTENT = {
           "id": 4,
           "cells": [
             [
-              2,
-              2,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
               1,
               0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
               0
             ]
           ]
@@ -3564,23 +3588,23 @@ window.SOMA_CONTENT = {
           "id": 5,
           "cells": [
             [
+              1,
+              0,
+              1
+            ],
+            [
               2,
               0,
               0
             ],
             [
               2,
-              1,
-              1
-            ],
-            [
-              1,
               0,
               1
             ],
             [
               2,
-              0,
+              1,
               1
             ]
           ]
@@ -3589,16 +3613,6 @@ window.SOMA_CONTENT = {
           "id": 6,
           "cells": [
             [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
               0,
               1,
               2
@@ -3606,7 +3620,17 @@ window.SOMA_CONTENT = {
             [
               1,
               1,
+              1
+            ],
+            [
+              1,
+              1,
               2
+            ],
+            [
+              1,
+              2,
+              1
             ]
           ]
         },
@@ -3614,19 +3638,19 @@ window.SOMA_CONTENT = {
           "id": 7,
           "cells": [
             [
-              2,
-              3,
-              1
-            ],
-            [
-              2,
-              2,
-              1
-            ],
-            [
               1,
               3,
               2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
             ],
             [
               2,
@@ -3635,9 +3659,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "Építsd meg az alakzatot a színezett, számozott rétegek alapján! Az 1. réteg van legalul.",
-      "hint": "Az azonos számú mezők egyetlen merev elemhez tartoznak. Kövesd végig az elemet az összes rétegen, mielőtt elhelyezed!"
+      ]
     },
     {
       "id": "photo-s2-01",
@@ -3661,7 +3683,34 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 6. elem (fehér): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
         {
           "id": 6,
           "cells": [
@@ -3711,35 +3760,8 @@ window.SOMA_CONTENT = {
               1
             ]
           ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 6. elem (fehér): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-02",
@@ -3763,7 +3785,29 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
         {
           "id": 3,
           "cells": [
@@ -3784,6 +3828,31 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
               2,
               0
             ]
@@ -3813,55 +3882,8 @@ window.SOMA_CONTENT = {
               1
             ]
           ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              0,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-03",
@@ -3885,6 +3907,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -3932,31 +3956,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              1,
-              3,
-              1
-            ]
-          ]
-        },
-        {
           "id": 3,
           "cells": [
             [
@@ -3980,10 +3979,33 @@ window.SOMA_CONTENT = {
               0
             ]
           ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-04",
@@ -4007,6 +4029,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 2,
@@ -4108,9 +4132,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-05",
@@ -4134,29 +4156,26 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
-          "id": 3,
+          "id": 1,
           "cells": [
             [
-              2,
+              1,
               0,
               1
             ],
             [
-              2,
+              1,
               1,
               0
             ],
             [
-              2,
+              1,
               1,
               1
-            ],
-            [
-              2,
-              1,
-              2
             ]
           ]
         },
@@ -4186,6 +4205,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
           "id": 6,
           "cells": [
             [
@@ -4209,30 +4253,8 @@ window.SOMA_CONTENT = {
               2
             ]
           ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-06",
@@ -4256,57 +4278,9 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              2,
-              2
-            ]
-          ]
-        },
         {
           "id": 3,
           "cells": [
@@ -4356,10 +4330,58 @@ window.SOMA_CONTENT = {
               0
             ]
           ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-07",
@@ -4383,6 +4405,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -4430,31 +4454,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              2,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ]
-          ]
-        },
-        {
           "id": 3,
           "cells": [
             [
@@ -4478,10 +4477,33 @@ window.SOMA_CONTENT = {
               0
             ]
           ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-08",
@@ -4505,7 +4527,29 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "A zöld V elem egyik nézeten sem látszik, de azt is fel kell használnod. A látható elemek között keress számára megfelelő helyet!",
       "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
         {
           "id": 2,
           "cells": [
@@ -4580,30 +4624,8 @@ window.SOMA_CONTENT = {
               0
             ]
           ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "A zöld V elem egyik nézeten sem látszik, de azt is fel kell használnod. A látható elemek között keress számára megfelelő helyet!"
+      ]
     },
     {
       "id": "photo-s2-09",
@@ -4627,6 +4649,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -4674,31 +4698,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
-          "cells": [
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              2,
-              1,
-              2
-            ],
-            [
-              2,
-              2,
-              1
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -4720,6 +4719,31 @@ window.SOMA_CONTENT = {
               2,
               2,
               0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
             ]
           ]
         },
@@ -4748,9 +4772,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s2-10",
@@ -4774,53 +4796,25 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-2.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
-          "id": 3,
+          "id": 1,
           "cells": [
             [
-              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
               2,
-              1
-            ],
-            [
-              0,
-              3,
               0
             ],
             [
-              0,
-              3,
-              1
-            ],
-            [
-              0,
-              3,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
               1,
-              1
-            ],
-            [
-              1,
-              0,
+              2,
               1
             ]
           ]
@@ -4845,6 +4839,31 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
               3,
               2
             ]
@@ -4876,28 +4895,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "cells": [
             [
-              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
               1,
               1
             ],
             [
               1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
+              0,
               1
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-01",
@@ -4921,7 +4943,29 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              1,
+              5,
+              0
+            ]
+          ]
+        },
         {
           "id": 2,
           "cells": [
@@ -4973,6 +5017,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
           "id": 5,
           "cells": [
             [
@@ -4993,31 +5062,6 @@ window.SOMA_CONTENT = {
             [
               1,
               2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              4,
-              2
-            ],
-            [
-              1,
-              4,
-              2
-            ],
-            [
-              1,
-              5,
-              1
-            ],
-            [
-              1,
-              5,
               2
             ]
           ]
@@ -5048,53 +5092,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 7,
           "cells": [
             [
               0,
               4,
-              0
+              2
             ],
             [
-              0,
+              1,
+              4,
+              2
+            ],
+            [
+              1,
               5,
-              0
-            ],
-            [
-              1,
-              5,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
               1
             ],
             [
               1,
-              3,
-              1
-            ],
-            [
-              1,
-              3,
+              5,
               2
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-02",
@@ -5118,7 +5140,29 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
         {
           "id": 2,
           "cells": [
@@ -5170,56 +5214,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              3,
-              2
-            ],
-            [
-              0,
-              3,
-              3
-            ],
-            [
-              1,
-              2,
-              3
-            ],
-            [
-              1,
-              3,
-              3
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -5245,21 +5239,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "cells": [
             [
               0,
-              2,
+              0,
               0
             ],
             [
               0,
-              3,
+              1,
               0
             ],
             [
+              0,
               1,
-              3,
+              1
+            ],
+            [
+              1,
+              1,
               0
             ]
           ]
@@ -5288,10 +5287,33 @@ window.SOMA_CONTENT = {
               2
             ]
           ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              3,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              3
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 2. elem (kék): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-03",
@@ -5315,6 +5337,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -5332,6 +5356,31 @@ window.SOMA_CONTENT = {
             [
               1,
               0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
               0
             ]
           ]
@@ -5412,31 +5461,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ]
-          ]
-        },
-        {
           "id": 6,
           "cells": [
             [
@@ -5486,9 +5510,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-04",
@@ -5512,6 +5534,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -5609,31 +5633,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              3
-            ],
-            [
-              1,
-              2,
-              3
-            ],
-            [
-              2,
-              2,
-              3
-            ]
-          ]
-        },
-        {
           "id": 5,
           "cells": [
             [
@@ -5682,10 +5681,33 @@ window.SOMA_CONTENT = {
               1
             ]
           ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-05",
@@ -5709,6 +5731,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -5727,6 +5751,31 @@ window.SOMA_CONTENT = {
               2,
               2,
               3
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
             ]
           ]
         },
@@ -5752,6 +5801,31 @@ window.SOMA_CONTENT = {
               2,
               0,
               2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
             ]
           ]
         },
@@ -5806,56 +5880,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 7,
           "cells": [
             [
@@ -5880,9 +5904,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-06",
@@ -5906,53 +5928,25 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              3
-            ],
-            [
-              1,
               2,
-              3
-            ],
-            [
-              2,
-              1,
-              3
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
               0,
               0
             ],
             [
-              0,
+              2,
               0,
               1
             ],
             [
-              0,
+              2,
               1,
-              0
-            ],
-            [
-              1,
-              0,
               1
             ]
           ]
@@ -5983,27 +5977,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 6,
+          "id": 3,
           "cells": [
             [
-              0,
+              2,
               1,
-              1
+              2
             ],
             [
-              1,
-              1,
-              1
-            ],
-            [
-              1,
+              2,
               2,
               1
             ],
             [
-              1,
+              2,
               2,
               2
+            ],
+            [
+              2,
+              2,
+              3
             ]
           ]
         },
@@ -6033,53 +6027,81 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "cells": [
             [
-              2,
-              0,
-              0
+              1,
+              1,
+              2
             ],
             [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
               2,
-              0,
-              1
+              3
             ],
             [
               2,
               1,
-              1
+              3
             ]
           ]
         },
         {
-          "id": 3,
+          "id": 6,
           "cells": [
             [
-              2,
+              0,
               1,
-              2
+              1
             ],
             [
-              2,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
               2,
               1
             ],
             [
-              2,
+              1,
               2,
               2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
             ],
             [
-              2,
-              2,
-              3
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-07",
@@ -6103,29 +6125,26 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
-              1,
-              1,
+              2,
+              2,
               0
             ],
             [
-              1,
-              1,
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
               1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              2,
-              1,
-              0
             ]
           ]
         },
@@ -6151,51 +6170,6 @@ window.SOMA_CONTENT = {
               2,
               2,
               1
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              2,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              0,
-              3
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              3
-            ],
-            [
-              2,
-              0,
-              3
             ]
           ]
         },
@@ -6250,6 +6224,56 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ]
+        },
+        {
           "id": 7,
           "cells": [
             [
@@ -6274,9 +6298,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 5. elem (piros): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-08",
@@ -6300,7 +6322,54 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
         {
           "id": 3,
           "cells": [
@@ -6377,31 +6446,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 6,
           "cells": [
             [
@@ -6427,53 +6471,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 7,
           "cells": [
             [
               0,
-              3,
-              2
+              0,
+              0
             ],
             [
               1,
-              3,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
               1
             ],
             [
               1,
-              3,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
               1,
-              1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              3,
-              0
+              1
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 3. elem (sárga): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "photo-s3-09",
@@ -6498,79 +6520,26 @@ window.SOMA_CONTENT = {
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg.",
         "note": "A forrásfotón kézírásos X látszik a fekete elem alatt. Az import a nyomtatott, hét elemet felsoroló készletet követi. Fekete elem nélkül a megadott nézeteknek több összeállítás is megfelel."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "A fekete Z elem mindhárom nézetből takarásban marad, de ezt is fel kell használnod!",
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
               0,
-              0,
+              2,
               0
             ],
             [
               0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
+              2,
               1
             ],
             [
               1,
-              0,
+              2,
               1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              3
-            ],
-            [
-              0,
-              1,
-              3
-            ],
-            [
-              1,
-              1,
-              3
-            ],
-            [
-              1,
-              1,
-              4
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              0,
-              3
             ]
           ]
         },
@@ -6625,26 +6594,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              1
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -6668,10 +6617,83 @@ window.SOMA_CONTENT = {
               3
             ]
           ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              4
+            ]
+          ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "A fekete Z elem mindhárom nézetből takarásban marad, de ezt is fel kell használnod!"
+      ]
     },
     {
       "id": "photo-s3-10",
@@ -6695,6 +6717,8 @@ window.SOMA_CONTENT = {
         "solutionPhoto": "soma-3.megoldas.jpeg",
         "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
       },
+      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
       "parts": [
         {
           "id": 1,
@@ -6713,6 +6737,56 @@ window.SOMA_CONTENT = {
               2,
               0,
               2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
             ]
           ]
         },
@@ -6767,31 +6841,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              1,
-              2
-            ],
-            [
-              2,
-              2,
-              1
-            ],
-            [
-              2,
-              2,
-              2
-            ]
-          ]
-        },
-        {
           "id": 6,
           "cells": [
             [
@@ -6817,58 +6866,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 7,
           "cells": [
             [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
               1,
               1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              2,
-              0,
-              0
+              2
             ],
             [
               2,
               1,
-              0
+              2
             ],
             [
               2,
-              1,
+              2,
               1
             ],
             [
               2,
               2,
-              0
+              2
             ]
           ]
         }
-      ],
-      "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
-      "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!"
+      ]
     },
     {
       "id": "master-1-01",
@@ -6909,27 +6931,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 2,
           "cells": [
             [
-              0,
+              3,
               0,
               0
             ],
             [
+              3,
               0,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
               1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
             ]
           ]
         },
@@ -6959,31 +6981,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
-          "cells": [
-            [
-              3,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              1
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              3,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 5,
           "cells": [
             [
@@ -7003,6 +7000,31 @@ window.SOMA_CONTENT = {
             ],
             [
               3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
               1,
               1
             ]
@@ -7049,26 +7071,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
+          "id": 2,
           "cells": [
             [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
               0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
               0
             ],
             [
               2,
-              1,
-              0
-            ],
-            [
               2,
-              1,
               1
             ]
           ]
@@ -7099,31 +7121,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              0,
-              1
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -7149,26 +7146,51 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 5,
           "cells": [
             [
-              0,
-              2,
-              1
-            ],
-            [
               1,
-              2,
-              1
-            ],
-            [
-              2,
-              2,
+              1,
               0
             ],
             [
               2,
+              0,
+              0
+            ],
+            [
               2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
               1
             ]
           ]
@@ -7239,6 +7261,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
           "id": 5,
           "cells": [
             [
@@ -7284,31 +7331,6 @@ window.SOMA_CONTENT = {
             [
               2,
               2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              1
-            ],
-            [
-              3,
-              3,
               0
             ]
           ]
@@ -7334,31 +7356,6 @@ window.SOMA_CONTENT = {
       "hint": "Ebben a készletben nincs háromkockás V elem. Minden elem négy kockát fed le. Ha a maradék tér különálló részekre szakad, mindegyik rész kockaszámának néggyel oszthatónak kell lennie.",
       "parts": [
         {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 2,
           "cells": [
             [
@@ -7384,6 +7381,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
           "id": 4,
           "cells": [
             [
@@ -7403,31 +7425,6 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              2,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              1,
               2,
               1
             ]
@@ -7480,6 +7477,31 @@ window.SOMA_CONTENT = {
               2,
               3,
               2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
             ]
           ]
         }
@@ -7504,131 +7526,6 @@ window.SOMA_CONTENT = {
       "hint": "Forgasd körbe, és válassz egy keskeny felső részt! Sorold fel, mely elemek érhetnek fel oda anélkül, hogy a céltestből kilógnának!",
       "parts": [
         {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              0,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              0,
-              3,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              3,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
-              2,
-              1
-            ],
-            [
-              3,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -7670,6 +7567,131 @@ window.SOMA_CONTENT = {
               3,
               3,
               0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
             ]
           ]
         }
@@ -7694,101 +7716,21 @@ window.SOMA_CONTENT = {
       "hint": "A tető mellett alacsonyabb oszlopok vannak. A legfelső kockákat ne külön szintként kezeld: egy térbeli elem lefelé is kapcsolódhat!",
       "parts": [
         {
-          "id": 6,
+          "id": 1,
           "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
             [
               2,
-              0,
-              0
-            ],
-            [
               2,
-              0,
-              1
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              0,
               2
             ],
             [
+              3,
               2,
-              0,
-              2
-            ],
-            [
-              2,
-              1,
               1
             ],
             [
+              3,
               2,
-              1,
               2
             ]
           ]
@@ -7844,21 +7786,101 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 4,
           "cells": [
             [
-              2,
-              2,
-              2
+              0,
+              0,
+              0
             ],
             [
-              3,
-              2,
+              0,
+              0,
               1
             ],
             [
-              3,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
               2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
               2
             ]
           ]
@@ -7884,26 +7906,21 @@ window.SOMA_CONTENT = {
       "hint": "A perem mélyedései segítenek kizárni a kilógó elhelyezéseket. Válassz egyet, és az azt határoló kockákból indulj ki!",
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
-              0,
-              1,
-              0
-            ],
-            [
               1,
               0,
+              1
+            ],
+            [
+              2,
+              0,
               0
             ],
             [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
+              2,
+              0,
               1
             ]
           ]
@@ -7934,21 +7951,76 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "cells": [
             [
-              1,
-              0,
-              1
-            ],
-            [
-              2,
+              3,
               0,
               0
             ],
             [
-              2,
+              3,
               0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
               1
             ]
           ]
@@ -8000,56 +8072,6 @@ window.SOMA_CONTENT = {
               1,
               2,
               2
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              3,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              3,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              1
-            ],
-            [
-              3,
-              0,
-              2
-            ],
-            [
-              3,
-              1,
-              1
             ]
           ]
         }
@@ -8074,6 +8096,26 @@ window.SOMA_CONTENT = {
       "hint": "Ez a test csak két kocka magas. Az Ágas és a két Csavar elem térbeli, ezért mindegyiknek mindkét rétegben kell kockát elfoglalnia.",
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
           "id": 2,
           "cells": [
             [
@@ -8124,45 +8166,25 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 4,
           "cells": [
             [
-              1,
+              3,
               0,
               0
             ],
             [
-              1,
+              3,
               1,
               0
             ],
             [
-              1,
+              3,
               1,
               1
             ],
             [
-              2,
-              0,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
+              3,
               2,
               1
             ]
@@ -8194,31 +8216,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 4,
-          "cells": [
-            [
-              3,
-              0,
-              0
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              3,
-              1,
-              1
-            ],
-            [
-              3,
-              2,
-              1
-            ]
-          ]
-        },
-        {
           "id": 6,
           "cells": [
             [
@@ -8240,6 +8237,31 @@ window.SOMA_CONTENT = {
               3,
               0,
               1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
             ]
           ]
         }
@@ -8264,31 +8286,6 @@ window.SOMA_CONTENT = {
       "hint": "Keresd meg felülről a perem bemetszését! Az itt próbált elem ne csak a felső alakzathoz illeszkedjen: alul is a testben kell maradnia!",
       "parts": [
         {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -8305,6 +8302,31 @@ window.SOMA_CONTENT = {
               0,
               1,
               1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
             ]
           ]
         },
@@ -8409,27 +8431,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 7,
           "cells": [
             [
-              1,
               0,
-              2
+              1,
+              0
             ],
             [
-              2,
+              1,
               0,
               0
             ],
             [
-              2,
+              1,
               0,
               1
             ],
             [
-              2,
-              0,
-              2
+              1,
+              1,
+              0
             ]
           ]
         }
@@ -8454,27 +8476,22 @@ window.SOMA_CONTENT = {
       "hint": "A hosszú, három kocka magas gerinc több elemből is összeállhat. Ne rögzítsd túl korán egyetlen elemhez: próbálj kétféle felbontást!",
       "parts": [
         {
-          "id": 3,
+          "id": 1,
           "cells": [
             [
-              0,
-              0,
-              0
+              1,
+              2,
+              2
             ],
             [
-              0,
               1,
-              0
-            ],
-            [
-              0,
-              1,
+              3,
               1
             ],
             [
-              0,
-              2,
-              0
+              1,
+              3,
+              2
             ]
           ]
         },
@@ -8504,26 +8521,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 3,
           "cells": [
             [
               0,
-              2,
-              1
-            ],
-            [
               0,
-              3,
               0
             ],
             [
               0,
-              3,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
               1
             ],
             [
-              1,
-              3,
+              0,
+              2,
               0
             ]
           ]
@@ -8554,22 +8571,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "cells": [
             [
-              1,
               2,
-              2
+              0,
+              0
             ],
             [
+              2,
               1,
-              3,
+              0
+            ],
+            [
+              2,
+              1,
               1
             ],
             [
-              1,
               3,
-              2
+              1,
+              0
             ]
           ]
         },
@@ -8599,26 +8621,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
+          "id": 7,
           "cells": [
             [
-              2,
               0,
-              0
-            ],
-            [
               2,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
               1
             ],
             [
+              0,
               3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
               1,
+              3,
               0
             ]
           ]
@@ -8644,27 +8666,47 @@ window.SOMA_CONTENT = {
       "hint": "Két távoli szélső részt is figyelj egyszerre! Ha az egyikre felhasználsz egy elemet, marad-e a másikhoz odaillő elem?",
       "parts": [
         {
-          "id": 6,
+          "id": 1,
           "cells": [
             [
               0,
-              0,
+              3,
               0
             ],
             [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
               0,
-              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
               1
             ],
             [
-              0,
               1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
+              2,
+              2
             ]
           ]
         },
@@ -8719,51 +8761,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              2,
-              2
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              1,
-              3,
-              1
-            ]
-          ]
-        },
-        {
           "id": 5,
           "cells": [
             [
@@ -8784,6 +8781,31 @@ window.SOMA_CONTENT = {
             [
               3,
               3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
               0
             ]
           ]
@@ -8834,50 +8856,45 @@ window.SOMA_CONTENT = {
       "hint": "Felülről több hiányzó peremhely látszik. Válassz egy szélső részt, és minden próbád után ellenőrizd a túloldali alacsony oszlopokat is!",
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
+              3,
               0,
               0
             ],
             [
-              1,
+              3,
               1,
               0
             ],
             [
-              1,
+              3,
               1,
               1
             ]
           ]
         },
         {
-          "id": 4,
+          "id": 2,
           "cells": [
             [
-              0,
-              0,
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
               0
             ],
             [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
+              2,
               1,
               1
             ],
             [
-              0,
+              2,
               1,
               2
             ]
@@ -8909,45 +8926,50 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 4,
           "cells": [
             [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              1,
+              0,
+              0,
               0
             ],
             [
-              2,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
               1,
               1
             ],
             [
-              2,
+              0,
               1,
               2
             ]
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "cells": [
             [
-              3,
               0,
-              0
-            ],
-            [
-              3,
               1,
               0
             ],
             [
-              3,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
               1,
               1
             ]
@@ -9024,6 +9046,26 @@ window.SOMA_CONTENT = {
       "hint": "A magas részek közötti alacsonyabb oszlopok korlátozzák az elemek átnyúlását. Ne csak a csúcsokat, a köztük üresen maradó helyeket is vizsgáld!",
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
           "id": 2,
           "cells": [
             [
@@ -9045,6 +9087,31 @@ window.SOMA_CONTENT = {
               2,
               0,
               1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
             ]
           ]
         },
@@ -9074,47 +9141,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
+          "id": 5,
           "cells": [
             [
               2,
-              1,
-              1
-            ],
-            [
-              3,
-              1,
+              2,
               0
             ],
             [
+              2,
               3,
-              1,
+              0
+            ],
+            [
+              2,
+              3,
               1
             ],
             [
               3,
-              1,
-              2
+              3,
+              0
             ]
           ]
         },
@@ -9165,31 +9212,6 @@ window.SOMA_CONTENT = {
               1,
               2,
               2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              1
-            ],
-            [
-              3,
-              3,
-              0
             ]
           ]
         }
@@ -9214,31 +9236,6 @@ window.SOMA_CONTENT = {
       "hint": "A tömör felső rész alatt is el kell férnie a maradó elemeknek. Két elem elhelyezése után vizsgáld meg a maradék összefüggő részeit: külön-külön kirakhatók-e?",
       "parts": [
         {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -9255,81 +9252,6 @@ window.SOMA_CONTENT = {
               1,
               0,
               1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              3,
-              1,
-              1
-            ],
-            [
-              3,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              0,
-              2
             ]
           ]
         },
@@ -9359,6 +9281,56 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
           "id": 5,
           "cells": [
             [
@@ -9379,6 +9351,56 @@ window.SOMA_CONTENT = {
             [
               2,
               3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
               0
             ]
           ]
@@ -9404,51 +9426,21 @@ window.SOMA_CONTENT = {
       "hint": "A perem több helyen visszalép. Egyetlen ilyen sarokhoz több elem is illeszkedhet; a következő elem lehetőségeivel döntsd el, melyik próbát folytatod!",
       "parts": [
         {
-          "id": 3,
+          "id": 1,
           "cells": [
             [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
               1,
-              0
-            ],
-            [
-              0,
               2,
-              0
+              1
             ],
             [
-              1,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
+              2,
               1,
               1
             ],
             [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
+              2,
+              2,
               1
             ]
           ]
@@ -9479,47 +9471,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "cells": [
             [
-              1,
-              2,
-              1
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              2,
-              2,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
               0,
-              2
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
             ],
             [
               1,
               1,
-              2
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              0,
-              2
+              0
             ]
           ]
         },
@@ -9570,6 +9542,56 @@ window.SOMA_CONTENT = {
               3,
               3,
               1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
             ]
           ]
         }
@@ -9594,52 +9616,22 @@ window.SOMA_CONTENT = {
       "hint": "A nagy felső felület önmagában kevés támpont. Fordítsd a testet alulnézetbe, és ott keress olyan szélső részt, amelyhez kevésféle elem illeszkedik!",
       "parts": [
         {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              1,
-              0,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 6,
+          "id": 1,
           "cells": [
             [
               1,
-              0,
-              1
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
               1,
               0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
             ]
           ]
         },
@@ -9669,22 +9661,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "cells": [
             [
+              0,
               1,
+              2
+            ],
+            [
               1,
-              0
+              0,
+              2
             ],
             [
               1,
               1,
-              1
+              2
             ],
             [
               1,
               2,
-              1
+              2
             ]
           ]
         },
@@ -9714,31 +9711,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              2,
-              2
-            ]
-          ]
-        },
-        {
           "id": 5,
           "cells": [
             [
@@ -9760,6 +9732,56 @@ window.SOMA_CONTENT = {
               3,
               3,
               1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
             ]
           ]
         }
@@ -9784,56 +9806,6 @@ window.SOMA_CONTENT = {
       "hint": "A hátoldal alacsonyabb része könnyen elbújik az alapnézetben. Fordítsd körbe, és minden nagyobb részlet kirakása után ellenőrizd ezt az oldalt is!",
       "parts": [
         {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -9879,6 +9851,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
           "id": 4,
           "cells": [
             [
@@ -9898,31 +9895,6 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
               2,
               2
             ]
@@ -9950,6 +9922,56 @@ window.SOMA_CONTENT = {
               3,
               3,
               1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
             ]
           ]
         }
@@ -9974,52 +9996,22 @@ window.SOMA_CONTENT = {
       "hint": "A hosszú, két kocka magas perem és a magasabb tömb együtt ad feltételt. Próbálj olyan elemet választani, amely összeköti őket, majd ellenőrizd a két oldalon maradó helyeket!",
       "parts": [
         {
-          "id": 6,
+          "id": 1,
           "cells": [
             [
-              0,
-              0,
-              0
-            ],
-            [
               1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              0,
               0,
               1
             ],
             [
-              0,
               1,
-              0
+              0,
+              2
             ],
             [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
               2,
-              0
+              0,
+              2
             ]
           ]
         },
@@ -10074,27 +10066,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 4,
           "cells": [
             [
-              1,
-              1,
-              2
+              0,
+              0,
+              1
             ],
             [
+              0,
               1,
-              2,
-              2
+              0
             ],
             [
-              2,
+              0,
               1,
               1
             ],
             [
+              0,
               2,
-              1,
-              2
+              0
             ]
           ]
         },
@@ -10124,21 +10116,51 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 6,
           "cells": [
             [
-              1,
               0,
-              1
+              0,
+              0
             ],
             [
               1,
               0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
               2
             ],
             [
               2,
-              0,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
               2
             ]
           ]
@@ -10164,6 +10186,51 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
           "id": 3,
           "cells": [
             [
@@ -10185,101 +10252,6 @@ window.SOMA_CONTENT = {
               0,
               2,
               0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              0,
-              3,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              3,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              2,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              2,
-              3,
-              0
-            ],
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              3,
-              0
-            ],
-            [
-              3,
-              3,
-              1
             ]
           ]
         },
@@ -10309,27 +10281,77 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 5,
           "cells": [
             [
               2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
               0,
               1
             ],
             [
               2,
-              1,
-              1
-            ],
-            [
-              2,
-              2,
+              0,
               0
             ],
             [
               2,
-              2,
-              1
+              1,
+              0
             ]
           ]
         }
@@ -10354,31 +10376,6 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -10420,56 +10417,6 @@ window.SOMA_CONTENT = {
               2,
               2,
               0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              2
             ]
           ]
         },
@@ -10520,6 +10467,81 @@ window.SOMA_CONTENT = {
               1,
               3,
               2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
             ]
           ]
         }
@@ -10544,81 +10566,6 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -10635,31 +10582,6 @@ window.SOMA_CONTENT = {
               1,
               2,
               2
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              3,
-              2,
-              0
             ]
           ]
         },
@@ -10709,6 +10631,106 @@ window.SOMA_CONTENT = {
             [
               2,
               2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
               2
             ]
           ]
@@ -10734,89 +10756,9 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 7,
-          "cells": [
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              2,
-              1
-            ],
-            [
-              3,
-              1,
-              0
-            ],
-            [
-              2,
-              2,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              0,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
-              3,
-              1,
-              1
-            ],
-            [
               2,
               1,
               0
@@ -10825,29 +10767,34 @@ window.SOMA_CONTENT = {
               2,
               1,
               1
+            ],
+            [
+              3,
+              1,
+              1
             ]
           ]
         },
         {
-          "id": 5,
+          "id": 2,
           "cells": [
             [
-              2,
-              2,
-              2
+              3,
+              0,
+              0
             ],
             [
-              1,
-              2,
+              3,
+              0,
               1
             ],
             [
-              1,
-              2,
+              3,
+              0,
               2
             ],
             [
-              1,
+              3,
               1,
               2
             ]
@@ -10857,7 +10804,7 @@ window.SOMA_CONTENT = {
           "id": 3,
           "cells": [
             [
-              2,
+              0,
               0,
               0
             ],
@@ -10872,34 +10819,109 @@ window.SOMA_CONTENT = {
               1
             ],
             [
-              0,
+              2,
               0,
               0
             ]
           ]
         },
         {
-          "id": 2,
+          "id": 4,
           "cells": [
             [
-              3,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
               1,
               2
             ],
             [
-              3,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
               0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
               0
             ],
             [
-              3,
               0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              2,
               1
             ],
             [
               3,
-              0,
-              2
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
             ]
           ]
         }
@@ -10924,27 +10946,72 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 5,
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 2,
           "cells": [
             [
               0,
-              2,
-              1
+              1,
+              0
             ],
             [
-              1,
+              0,
               2,
               0
             ],
             [
               1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
               2,
               1
             ],
             [
-              1,
-              1,
-              1
+              2,
+              2,
+              2
             ]
           ]
         },
@@ -10958,12 +11025,12 @@ window.SOMA_CONTENT = {
             ],
             [
               0,
-              2,
+              1,
               2
             ],
             [
               0,
-              1,
+              2,
               2
             ],
             [
@@ -10974,97 +11041,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 5,
           "cells": [
             [
               0,
-              1,
-              3
-            ],
-            [
-              1,
-              2,
-              2
-            ],
-            [
-              1,
-              2,
-              3
-            ],
-            [
-              1,
-              1,
-              3
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
               2,
               1
             ],
             [
-              2,
+              1,
               1,
               1
             ],
             [
-              2,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              2,
               1,
-              2
-            ],
-            [
-              2,
-              2,
-              3
-            ],
-            [
-              2,
-              1,
-              3
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
               2,
               0
             ],
             [
-              0,
               1,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
               2,
-              1,
-              0
+              1
             ]
           ]
         },
@@ -11078,18 +11075,43 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              1,
+              0,
               2
             ],
             [
               1,
-              0,
+              1,
               2
             ],
             [
               2,
               0,
               1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
             ]
           ]
         }
@@ -11114,6 +11136,76 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
           "id": 4,
           "cells": [
             [
@@ -11139,6 +11231,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
           "id": 6,
           "cells": [
             [
@@ -11148,11 +11265,6 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              2,
-              0
-            ],
-            [
-              1,
               1,
               0
             ],
@@ -11160,26 +11272,11 @@ window.SOMA_CONTENT = {
               1,
               1,
               1
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              2,
-              2
-            ],
-            [
-              0,
-              2,
-              3
             ],
             [
               1,
               2,
-              3
+              0
             ]
           ]
         },
@@ -11198,88 +11295,13 @@ window.SOMA_CONTENT = {
             ],
             [
               1,
-              1,
-              3
-            ],
-            [
-              1,
               0,
               3
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              2,
-              2
-            ],
-            [
-              2,
-              1,
-              2
-            ],
-            [
-              2,
-              0,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
             ],
             [
               1,
-              0,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              2,
-              2,
-              1
-            ],
-            [
-              2,
               1,
-              1
-            ],
-            [
-              2,
-              0,
-              1
+              3
             ]
           ]
         }
@@ -11324,26 +11346,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 4,
+          "id": 2,
           "cells": [
             [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
+              1,
               1,
               0
             ],
             [
-              0,
+              1,
               1,
               1
             ],
             [
-              0,
+              1,
               2,
+              0
+            ],
+            [
+              1,
+              3,
               0
             ]
           ]
@@ -11374,26 +11396,26 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 4,
           "cells": [
             [
-              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
               1,
               0
             ],
             [
-              1,
+              0,
               1,
               1
             ],
             [
-              1,
+              0,
               2,
-              0
-            ],
-            [
-              1,
-              3,
               0
             ]
           ]
@@ -11420,31 +11442,6 @@ window.SOMA_CONTENT = {
               2,
               3,
               1
-            ]
-          ]
-        },
-        {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ],
-            [
-              2,
-              1,
-              2
-            ],
-            [
-              2,
-              2,
-              2
             ]
           ]
         },
@@ -11472,6 +11469,31 @@ window.SOMA_CONTENT = {
               2
             ]
           ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
         }
       ]
     },
@@ -11494,26 +11516,21 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 5,
+          "id": 1,
           "cells": [
             [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
               1,
+              3,
               0
             ],
             [
-              0,
-              1,
-              1
+              2,
+              3,
+              0
             ],
             [
-              1,
-              1,
+              2,
+              3,
               1
             ]
           ]
@@ -11569,26 +11586,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
-          "cells": [
-            [
-              1,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              0
-            ],
-            [
-              2,
-              3,
-              1
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -11609,6 +11606,31 @@ window.SOMA_CONTENT = {
             [
               1,
               3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
               1
             ]
           ]
@@ -11684,31 +11706,6 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -11729,27 +11726,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 2,
           "cells": [
             [
-              0,
+              2,
+              1,
+              0
+            ],
+            [
+              2,
               1,
               1
             ],
             [
-              0,
               2,
-              0
-            ],
-            [
-              0,
               2,
               1
             ],
             [
-              1,
               2,
-              0
+              3,
+              1
             ]
           ]
         },
@@ -11804,6 +11801,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
           "id": 6,
           "cells": [
             [
@@ -11829,27 +11851,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
+          "id": 7,
           "cells": [
             [
-              2,
+              0,
               1,
+              1
+            ],
+            [
+              0,
+              2,
               0
             ],
             [
+              0,
               2,
+              1
+            ],
+            [
               1,
-              1
-            ],
-            [
               2,
-              2,
-              1
-            ],
-            [
-              2,
-              3,
-              1
+              0
             ]
           ]
         }
@@ -11874,6 +11896,51 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
           "id": 3,
           "cells": [
             [
@@ -11924,31 +11991,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 6,
-          "cells": [
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              3,
-              0,
-              0
-            ],
-            [
-              3,
-              0,
-              1
-            ],
-            [
-              3,
-              1,
-              1
-            ]
-          ]
-        },
-        {
           "id": 5,
           "cells": [
             [
@@ -11974,6 +12016,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
           "id": 7,
           "cells": [
             [
@@ -11993,51 +12060,6 @@ window.SOMA_CONTENT = {
             ],
             [
               2,
-              3,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              3,
-              0
-            ],
-            [
-              3,
-              3,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              0,
-              2,
-              1
-            ],
-            [
-              0,
-              3,
-              0
-            ],
-            [
-              0,
               3,
               1
             ]
@@ -12064,56 +12086,6 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 5,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              1,
-              0,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              3,
-              1,
-              0
-            ]
-          ]
-        },
-        {
           "id": 1,
           "cells": [
             [
@@ -12129,31 +12101,6 @@ window.SOMA_CONTENT = {
             [
               1,
               1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              2,
-              2,
-              0
-            ],
-            [
-              3,
-              1,
-              1
-            ],
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              2,
               1
             ]
           ]
@@ -12184,6 +12131,31 @@ window.SOMA_CONTENT = {
           ]
         },
         {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
           "id": 4,
           "cells": [
             [
@@ -12204,6 +12176,56 @@ window.SOMA_CONTENT = {
             [
               3,
               3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
               1
             ]
           ]
@@ -12254,27 +12276,22 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 4,
+          "id": 1,
           "cells": [
             [
               0,
               1,
-              0
-            ],
-            [
-              0,
-              2,
-              0
+              2
             ],
             [
               1,
               0,
-              0
+              2
             ],
             [
               1,
               1,
-              0
+              2
             ]
           ]
         },
@@ -12300,6 +12317,81 @@ window.SOMA_CONTENT = {
               1,
               2,
               1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              3,
+              1,
+              2
             ]
           ]
         },
@@ -12350,76 +12442,6 @@ window.SOMA_CONTENT = {
               3,
               1,
               0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              3,
-              1,
-              1
-            ],
-            [
-              3,
-              2,
-              0
-            ],
-            [
-              3,
-              2,
-              1
-            ],
-            [
-              3,
-              2,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              2,
-              0,
-              2
-            ],
-            [
-              3,
-              0,
-              1
-            ],
-            [
-              3,
-              0,
-              2
-            ],
-            [
-              3,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
             ]
           ]
         }
@@ -12444,6 +12466,76 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
           "id": 4,
           "cells": [
             [
@@ -12519,56 +12611,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 2,
-          "cells": [
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              0,
-              2
-            ],
-            [
-              2,
-              1,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ],
-            [
-              1,
-              2,
-              3
-            ],
-            [
-              2,
-              2,
-              2
-            ]
-          ]
-        },
-        {
           "id": 7,
           "cells": [
             [
@@ -12590,26 +12632,6 @@ window.SOMA_CONTENT = {
               2,
               1,
               3
-            ]
-          ]
-        },
-        {
-          "id": 1,
-          "cells": [
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              0,
-              2,
-              1
             ]
           ]
         }
@@ -12634,75 +12656,20 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 7,
+          "id": 1,
           "cells": [
             [
               0,
-              0,
-              0
-            ],
-            [
-              0,
-              0,
+              1,
               1
             ],
             [
               0,
-              1,
+              2,
               0
             ],
             [
-              1,
               0,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              1,
-              2,
-              1
-            ],
-            [
-              1,
-              2,
-              2
-            ],
-            [
-              2,
               2,
               1
             ]
@@ -12734,22 +12701,77 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "cells": [
             [
-              0,
               1,
-              1
-            ],
-            [
-              0,
               2,
               0
             ],
             [
-              0,
+              1,
               2,
               1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
             ]
           ]
         },
@@ -12779,27 +12801,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 5,
+          "id": 7,
           "cells": [
             [
               0,
-              1,
-              3
+              0,
+              0
             ],
             [
               0,
-              2,
-              2
+              0,
+              1
             ],
             [
               0,
-              2,
-              3
+              1,
+              0
             ],
             [
               1,
-              2,
-              3
+              0,
+              1
             ]
           ]
         }
@@ -12824,27 +12846,22 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 6,
+          "id": 1,
           "cells": [
             [
-              0,
-              0,
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
               1
             ],
             [
-              1,
-              0,
-              0
-            ],
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0
+              2,
+              2,
+              2
             ]
           ]
         },
@@ -12899,31 +12916,6 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
-          "cells": [
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ],
-            [
-              2,
-              1,
-              1
-            ],
-            [
-              2,
-              2,
-              0
-            ]
-          ]
-        },
-        {
           "id": 4,
           "cells": [
             [
@@ -12974,22 +12966,52 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 6,
           "cells": [
             [
-              2,
+              0,
+              0,
+              1
+            ],
+            [
               1,
-              2
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              2,
+              0
             ],
             [
               2,
+              1,
+              0
+            ],
+            [
               2,
+              1,
               1
             ],
             [
               2,
               2,
-              2
+              0
             ]
           ]
         }
@@ -13014,126 +13036,21 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 4,
-          "cells": [
-            [
-              0,
-              2,
-              0
-            ],
-            [
-              1,
-              1,
-              0
-            ],
-            [
-              1,
-              2,
-              0
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 7,
+          "id": 1,
           "cells": [
             [
               1,
               0,
-              0
-            ],
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 5,
-          "cells": [
-            [
-              1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
-              2
-            ],
-            [
-              1,
-              1,
-              2
-            ],
-            [
-              2,
-              0,
-              2
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              1,
-              1,
               3
             ],
             [
               2,
-              1,
-              2
-            ],
-            [
-              2,
-              1,
+              0,
               3
             ],
             [
               2,
-              1,
+              0,
               4
             ]
           ]
@@ -13164,22 +13081,127 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
           "cells": [
             [
               1,
               0,
-              3
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
             ],
             [
               2,
               0,
-              3
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
             ],
             [
               2,
               0,
-              4
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
             ]
           ]
         }
@@ -13204,77 +13226,22 @@ window.SOMA_CONTENT = {
       },
       "parts": [
         {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              0
-            ],
-            [
-              0,
-              1,
-              0
-            ],
-            [
-              0,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              1
-            ]
-          ]
-        },
-        {
-          "id": 7,
+          "id": 1,
           "cells": [
             [
               1,
-              1,
-              0
-            ],
-            [
-              2,
               0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              1,
-              0
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "cells": [
-            [
-              0,
-              0,
-              1
+              3
             ],
             [
               1,
-              0,
-              0
-            ],
-            [
               1,
-              0,
-              1
-            ],
-            [
-              1,
-              0,
               2
+            ],
+            [
+              1,
+              1,
+              3
             ]
           ]
         },
@@ -13304,22 +13271,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "cells": [
+            [
+              0,
+              0,
+              1
+            ],
             [
               1,
               0,
-              3
+              0
             ],
             [
               1,
+              0,
+              1
+            ],
+            [
               1,
+              0,
               2
-            ],
-            [
-              1,
-              1,
-              3
             ]
           ]
         },
@@ -13370,6 +13342,56 @@ window.SOMA_CONTENT = {
               2,
               1,
               4
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
             ]
           ]
         }
@@ -13414,52 +13436,27 @@ window.SOMA_CONTENT = {
           ]
         },
         {
-          "id": 7,
+          "id": 2,
           "cells": [
             [
+              2,
               0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
               0
             ],
             [
+              2,
               0,
-              1,
               1
             ],
             [
-              1,
+              2,
+              0,
+              2
+            ],
+            [
+              2,
               1,
               0
-            ]
-          ]
-        },
-        {
-          "id": 6,
-          "cells": [
-            [
-              0,
-              0,
-              2
-            ],
-            [
-              0,
-              1,
-              2
-            ],
-            [
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              2
             ]
           ]
         },
@@ -13485,31 +13482,6 @@ window.SOMA_CONTENT = {
               1,
               0,
               4
-            ]
-          ]
-        },
-        {
-          "id": 2,
-          "cells": [
-            [
-              2,
-              0,
-              0
-            ],
-            [
-              2,
-              0,
-              1
-            ],
-            [
-              2,
-              0,
-              2
-            ],
-            [
-              2,
-              1,
-              0
             ]
           ]
         },
@@ -13560,6 +13532,56 @@ window.SOMA_CONTENT = {
               2,
               1,
               4
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
             ]
           ]
         }
@@ -17948,6 +17970,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-01",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -18119,9 +18143,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-01",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-01-given-3",
@@ -18149,6 +18171,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-01",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -18320,9 +18344,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-01",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-02-given-4",
@@ -18351,6 +18373,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-02",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -18522,9 +18546,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-02",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-02-given-3",
@@ -18552,6 +18574,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-02",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -18723,9 +18747,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-02",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-03-given-4",
@@ -18754,6 +18776,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-03",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -18925,9 +18949,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-03",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-03-given-3",
@@ -18955,6 +18977,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-03",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -19126,9 +19150,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-03",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-04-given-4",
@@ -19157,6 +19179,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-04",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -19328,9 +19352,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-04",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-04-given-3",
@@ -19358,6 +19380,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-04",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -19529,9 +19553,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-04",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-05-given-4",
@@ -19560,6 +19582,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-05",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -19731,9 +19755,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-05",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-05-given-3",
@@ -19761,6 +19783,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-05",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -19932,9 +19956,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-05",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-06-given-4",
@@ -19963,6 +19985,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-06",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -20134,9 +20158,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-06",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-06-given-3",
@@ -20164,6 +20186,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-06",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -20335,9 +20359,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-06",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-07-given-4",
@@ -20366,6 +20388,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-07",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -20537,9 +20561,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-07",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-07-given-3",
@@ -20567,6 +20589,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-07",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -20738,9 +20762,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-07",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-08-given-4",
@@ -20769,6 +20791,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-08",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -20940,9 +20964,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-08",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-08-given-3",
@@ -20970,6 +20992,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-08",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -21141,9 +21165,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-08",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-09-given-4",
@@ -21172,6 +21194,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-09",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -21343,9 +21367,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-09",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-09-given-3",
@@ -21373,6 +21395,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-09",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -21544,9 +21568,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-09",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-10-given-4",
@@ -21575,6 +21597,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-10",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -21746,9 +21770,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-10",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-10-given-3",
@@ -21776,6 +21798,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-10",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -21947,9 +21971,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-10",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-11-given-4",
@@ -21978,6 +22000,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-11",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -22149,9 +22173,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-11",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-11-given-3",
@@ -22179,6 +22201,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-11",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -22350,9 +22374,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-11",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-12-given-4",
@@ -22381,6 +22403,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-12",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -22552,9 +22576,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-12",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-12-given-3",
@@ -22582,6 +22604,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-12",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -22753,9 +22777,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-12",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-13-given-4",
@@ -22784,6 +22806,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-13",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -22955,9 +22979,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-13",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-13-given-3",
@@ -22985,6 +23007,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-13",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -23156,9 +23180,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-13",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-14-given-4",
@@ -23187,6 +23209,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-14",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -23358,9 +23382,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-14",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-14-given-3",
@@ -23388,6 +23410,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-14",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -23559,9 +23583,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-14",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-15-given-4",
@@ -23590,6 +23612,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-15",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -23761,9 +23785,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-15",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-15-given-3",
@@ -23791,6 +23813,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-15",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -23962,9 +23986,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-15",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-16-given-4",
@@ -23993,6 +24015,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-16",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -24164,9 +24188,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-16",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-16-given-3",
@@ -24194,6 +24216,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-16",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -24365,9 +24389,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-16",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-17-given-4",
@@ -24396,6 +24418,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-17",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -24567,9 +24591,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-17",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-17-given-3",
@@ -24597,6 +24619,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-17",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -24768,9 +24792,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-17",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-18-given-4",
@@ -24799,6 +24821,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-18",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -24970,9 +24994,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-18",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-18-given-3",
@@ -25000,6 +25022,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-18",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -25171,9 +25195,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-18",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-19-given-4",
@@ -25202,6 +25224,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-19",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -25373,9 +25397,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-19",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-19-given-3",
@@ -25403,6 +25425,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-19",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -25574,9 +25598,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-19",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-20-given-4",
@@ -25605,6 +25627,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-20",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -25776,9 +25800,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-20",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-20-given-3",
@@ -25806,6 +25828,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-20",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -25977,9 +26001,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-20",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-21-given-4",
@@ -26008,6 +26030,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fekete Z elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-21",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -26179,9 +26203,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-21",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-21-given-3",
@@ -26209,6 +26231,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a fehér Csavar A elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-21",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -26380,9 +26404,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-21",
-      "stageNote": "Haladó 1"
+      ]
     },
     {
       "id": "cube-red-yellow-22-given-4",
@@ -26411,6 +26433,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 3 Soma-elemmel! A 4 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-22",
+      "stageNote": "Kezdő 3",
       "parts": [
         {
           "id": 1,
@@ -26582,9 +26606,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-22",
-      "stageNote": "Kezdő 3"
+      ]
     },
     {
       "id": "cube-red-yellow-22-given-3",
@@ -26612,6 +26634,8 @@ window.SOMA_CONTENT = {
       },
       "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a maradék 4 Soma-elemmel! A 3 megadott elemet hagyd a helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
       "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. Keresd meg, hogyan illeszkedhet a megadott elemek közötti szabad helyre!",
+      "familyId": "cube-red-yellow-22",
+      "stageNote": "Haladó 1",
       "parts": [
         {
           "id": 1,
@@ -26783,9 +26807,7 @@ window.SOMA_CONTENT = {
             ]
           ]
         }
-      ],
-      "familyId": "cube-red-yellow-22",
-      "stageNote": "Haladó 1"
+      ]
     }
   ],
   "series": [
@@ -27168,28 +27190,5 @@ window.SOMA_CONTENT = {
         "cube-red-yellow-02"
       ]
     }
-  ],
-  "legacyProgressKeys": {
-    "orientation/orient-v-01": "orient-v-01",
-    "orientation/orient-l-01": "orient-l-01",
-    "orientation/orient-screw-a-01": "orient-screw-a-01",
-    "copy/copy-t-01": "copy-t-01",
-    "copy/copy-small-01": "copy-small-01",
-    "copy/copy-three-01": "copy-three-01",
-    "layers/layers-small-01": "layers-small-01",
-    "layers/layers-own-02": "layers-own-02",
-    "layers/layers-own-03": "layers-own-03",
-    "layers/layers-own-04": "layers-own-04",
-    "layers/layers-own-05": "layers-own-05",
-    "layers/layers-own-06": "layers-own-06",
-    "layers/layers-own-07": "layers-own-07",
-    "layers/layers-cube-01": "layers-cube-01",
-    "views/views-small-01": "views-small-01",
-    "views/views-three-02": "views-three-02",
-    "views/views-four-03": "views-four-03",
-    "silhouettes/sil-small-01": "sil-small-01",
-    "silhouettes/sil-three-02": "sil-three-02",
-    "packing/pack-small-01": "pack-small-01",
-    "packing/pack-three-02": "pack-three-02"
-  }
+  ]
 };

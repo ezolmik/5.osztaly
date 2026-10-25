@@ -1,0 +1,36 @@
+{
+  "id": "layers-depth-03",
+  "title": "Sűrű kapcsolódások",
+  "type": "layers",
+  "difficulty": "advanced",
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "stageNote": "Haladó 3",
+  "instruction": "Építsd meg a testet a számozott, színezett rétegábrák alapján a megadott hét elemből! Az 1. réteg van legalul, az ábrák tájolása azonos. Az azonos számok ugyanahhoz a fizikai elemhez tartoznak.",
+  "hint": "A középső rétegekben sok különböző elem találkozik. Egy elem összes kockáját azonosítsd, és csak ezután keresd a következő elem helyét!",
+  "goals": {
+    "primary": "layer-integration",
+    "secondary": [
+      "spatial-rotation",
+      "construction"
+    ]
+  },
+  "shapeId": "0083",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

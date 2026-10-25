@@ -1,0 +1,34 @@
+{
+  "id": "layers-own-06",
+  "title": "Öt elem, három réteg",
+  "type": "layers",
+  "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
+  "hint": "Kezdd a(z) 3. elemmel (sárga): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "layer-integration",
+    "secondary": [
+      "image-reading"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0014",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

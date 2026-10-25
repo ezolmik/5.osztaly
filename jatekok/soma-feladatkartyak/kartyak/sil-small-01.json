@@ -1,0 +1,34 @@
+{
+  "id": "sil-small-01",
+  "title": "Csak a körvonal",
+  "type": "silhouettes",
+  "instruction": "A két megadott elemből építs olyan testet, amelynek mindhárom sziluettje egyezik az ábrákkal!",
+  "hint": "A foglalt mező legalább egy kockát jelent az adott vetítősugáron. A felülnézeten az üres mezőben egyik magasságban sem lehet kocka.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "spatial-rotation"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "shapeId": "0008",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

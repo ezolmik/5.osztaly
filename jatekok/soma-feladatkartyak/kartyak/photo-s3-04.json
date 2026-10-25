@@ -1,0 +1,43 @@
+{
+  "id": "photo-s3-04",
+  "title": "S3-04 · Teljes készlet nézetei",
+  "type": "views",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "source": {
+    "label": "S3-04",
+    "series": 3,
+    "cardNumber": 4,
+    "taskPhoto": "soma-3.jpeg",
+    "solutionPhoto": "soma-3.megoldas.jpeg",
+    "projectionConvention": "A=balnézet; B=elölnézet; C=felülnézet; a játék feliratai szerint elöl, bal, felül sorrendben jelenik meg."
+  },
+  "instruction": "A felsorolt elemek mindegyikét felhasználva építs olyan testet, amelynek mindhárom színezett nézete egyezik az ábrákkal! A szín mindig az adott irányból legközelebbi kockáé.",
+  "hint": "Jó kiindulópont lehet a(z) 1. elem (zöld): a három nézetben látható mezői alapján próbáld rögzíteni a helyét!",
+  "shapeId": "0044",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

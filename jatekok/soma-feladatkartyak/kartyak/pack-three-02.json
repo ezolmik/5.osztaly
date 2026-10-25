@@ -1,0 +1,35 @@
+{
+  "id": "pack-three-02",
+  "title": "Három elem, rejtett határok",
+  "type": "packing",
+  "instruction": "A megadott három elemből építsd meg az egyszínű célalakzatot!",
+  "hint": "Próbáld meg a kék L elemet elhelyezni! A sárga T és a fekete Z alakja korlátozza, milyen üreget hagyhatsz nekik.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0020",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

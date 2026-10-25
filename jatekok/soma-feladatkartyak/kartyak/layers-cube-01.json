@@ -1,0 +1,39 @@
+{
+  "id": "layers-cube-01",
+  "title": "A teljes kocka",
+  "type": "layers",
+  "box": [
+    3,
+    3,
+    3
+  ],
+  "instruction": "Építsd meg a 3 × 3 × 3-as kockát a rétegek szerint! Mind a hét elemet használd fel.",
+  "hint": "Előbb kövesd végig, mely elemek nyúlnak át több rétegen. Az alsó rétegen az 1., 4., 5. és 7. elem szerepel.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "layer-integration",
+    "secondary": [
+      "image-reading"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0016",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

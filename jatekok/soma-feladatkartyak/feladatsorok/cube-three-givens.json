@@ -1,0 +1,29 @@
+{
+  "id": "cube-three-givens",
+  "title": "Fejezd be a kockát! — 3 megadott elem",
+  "goal": "Négy hiányzó elem beillesztése, a négyelemes kezdéseknél eggyel kevesebb támpontból.",
+  "cardIds": [
+    "cube-red-yellow-11-given-3",
+    "cube-red-yellow-15-given-3",
+    "cube-red-yellow-21-given-3",
+    "cube-red-yellow-22-given-3",
+    "cube-red-yellow-12-given-3",
+    "cube-red-yellow-16-given-3",
+    "cube-red-yellow-03-given-3",
+    "cube-red-yellow-06-given-3",
+    "cube-red-yellow-13-given-3",
+    "cube-red-yellow-17-given-3",
+    "cube-red-yellow-05-given-3",
+    "cube-red-yellow-08-given-3",
+    "cube-red-yellow-14-given-3",
+    "cube-red-yellow-18-given-3",
+    "cube-red-yellow-04-given-3",
+    "cube-red-yellow-07-given-3",
+    "cube-red-yellow-19-given-3",
+    "cube-red-yellow-20-given-3",
+    "cube-red-yellow-09-given-3",
+    "cube-red-yellow-10-given-3",
+    "cube-red-yellow-01-given-3",
+    "cube-red-yellow-02-given-3"
+  ]
+}

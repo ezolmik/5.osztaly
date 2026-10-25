@@ -1,0 +1,35 @@
+{
+  "id": "copy-three-01",
+  "title": "Három szín együtt",
+  "type": "copy",
+  "instruction": "Építsd meg a képen látható háromelemes építményt!",
+  "hint": "A kék, fekete és piros elem minden kockájának helyet kell találnod. A takart részeknél az elemek ismert alakja segít.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "image-reading",
+    "secondary": [
+      "occlusion",
+      "spatial-rotation"
+    ]
+  },
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "shapeId": "0009",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

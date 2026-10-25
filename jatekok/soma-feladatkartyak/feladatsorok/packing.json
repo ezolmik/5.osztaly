@@ -1,0 +1,10 @@
+{
+  "id": "packing",
+  "title": "Rakd ki az alakzatot!",
+  "goal": "A külső alakzat felbontása a megadott elemekre.",
+  "level": "Haladó",
+  "cardIds": [
+    "pack-small-01",
+    "pack-three-02"
+  ]
+}

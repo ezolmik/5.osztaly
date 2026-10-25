@@ -1,0 +1,36 @@
+{
+  "id": "master-2-01",
+  "title": "Tördelt magaslat",
+  "type": "packing",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 2",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "shape-recognition"
+    ]
+  },
+  "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 6 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+  "hint": "Ebben a készletben nincs háromkockás V elem. Minden elem négy kockát fed le. Ha a maradék tér különálló részekre szakad, mindegyik rész kockaszámának néggyel oszthatónak kell lennie.",
+  "shapeId": "0054",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

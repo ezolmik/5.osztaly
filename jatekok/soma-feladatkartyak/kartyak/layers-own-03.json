@@ -1,0 +1,34 @@
+{
+  "id": "layers-own-03",
+  "title": "Három elem, két réteg",
+  "type": "layers",
+  "instruction": "Építsd meg az alakzatot a színezett rétegek alapján! Az 1. réteg van legalul.",
+  "hint": "Kezdd a(z) 2. elemmel (kék): az építmény 1, 2. rétegében vannak kockái. Kövesd végig az elem összes mezőjét!",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "layer-integration",
+    "secondary": [
+      "image-reading"
+    ]
+  },
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "shapeId": "0011",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "copy-small-01",
+  "title": "Két elem egymáson",
+  "type": "copy",
+  "instruction": "Építsd meg a képen látható színezett építményt! A takart részekhez használd az elemek alakját.",
+  "hint": "Az 1-es elem alkotja az alsó réteget. Az 5-ös elem három kockája kerül fölé.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "image-reading",
+    "secondary": [
+      "occlusion",
+      "spatial-rotation"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0008",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

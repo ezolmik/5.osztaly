@@ -1,0 +1,36 @@
+{
+  "id": "master-1-02",
+  "title": "Emelkedő tömb",
+  "type": "packing",
+  "difficulty": "master",
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 1",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "shape-recognition"
+    ]
+  },
+  "instruction": "Építsd meg a forgatható, színezetlen céltestet a lent megadott 6 elemből! Minden elemet pontosan egyszer használj, kilógó kocka és átfedés nélkül. Bármely, a teljes céltestet pontosan kitöltő összeállítás helyes.",
+  "hint": "Keresd meg a három kocka magas oszlopokat! Próbálj olyan elemet elhelyezni, amely két magassági szintet is összeköt, és nézd meg, mi marad mellette!",
+  "shapeId": "0052",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

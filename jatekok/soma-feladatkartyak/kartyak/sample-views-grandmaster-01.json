@@ -1,0 +1,36 @@
+{
+  "id": "sample-views-grandmaster-01",
+  "title": "A takart sárga elem",
+  "type": "views",
+  "difficulty": "master",
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 1",
+  "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "A sárga T elemet a készlet felsorolja, mégsem látod a három nézeten. Olyan helyet keress neki, ahol más elemek minden megadott irányból eltakarják!",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0073",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

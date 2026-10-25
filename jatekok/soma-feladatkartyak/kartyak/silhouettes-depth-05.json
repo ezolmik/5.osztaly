@@ -1,0 +1,36 @@
+{
+  "id": "silhouettes-depth-05",
+  "title": "Szűkülő lehetőségek",
+  "type": "silhouettes",
+  "difficulty": "master",
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 3",
+  "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Ne rögzítsd túl korán a legkönnyebben beilleszthető elemet! Keress olyan maradó részt, amelyet kevésféle elemmel tudsz kitölteni.",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0079",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

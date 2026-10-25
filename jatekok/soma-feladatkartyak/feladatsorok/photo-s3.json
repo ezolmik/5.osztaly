@@ -1,0 +1,17 @@
+{
+  "id": "photo-s3",
+  "title": "Fotózott 3 · A teljes készlet nézetei",
+  "goal": "Nézetek és takarások értelmezése mind a hét elem felhasználásával.",
+  "cardIds": [
+    "photo-s3-01",
+    "photo-s3-02",
+    "photo-s3-03",
+    "photo-s3-04",
+    "photo-s3-05",
+    "photo-s3-06",
+    "photo-s3-07",
+    "photo-s3-08",
+    "photo-s3-09",
+    "photo-s3-10"
+  ]
+}

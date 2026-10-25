@@ -1,0 +1,36 @@
+{
+  "id": "views-depth-06",
+  "title": "Négy szint három képen",
+  "type": "views",
+  "difficulty": "master",
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 1",
+  "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Az oldalnézetek négy magassági szintet mutatnak. Egy elem helyzetét a felülnézettel is ellenőrizd; az egymás mögötti kockák színe az oldalnézetben eltűnhet!",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0074",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

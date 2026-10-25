@@ -1,0 +1,36 @@
+{
+  "id": "silhouettes-depth-03",
+  "title": "Három körvonal együtt",
+  "type": "silhouettes",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "stageNote": "Mester 2",
+  "instruction": "Építs testet a három színezetlen nézet alapján a megadott hét elemből! A sötét mező azt jelenti, hogy azon a nézési vonalon van legalább egy kocka; a világos mezőn nincs. Mindhárom nézetnek egyszerre kell megfelelned. Bármely ilyen összeállítás helyes. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "A három ábra külön-külön sok lehetőséget enged. Egyetlen elem próbáját is mindig mindhárom ábrával ellenőrizd, mielőtt továbblépsz!",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0077",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

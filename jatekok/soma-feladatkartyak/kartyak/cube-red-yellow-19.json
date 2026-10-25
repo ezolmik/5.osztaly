@@ -1,0 +1,44 @@
+{
+  "id": "cube-red-yellow-19",
+  "title": "Fejezd be a kockát! 19",
+  "type": "completion",
+  "box": [
+    3,
+    3,
+    3
+  ],
+  "fixedPartIds": [
+    3,
+    5
+  ],
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "instruction": "Egészítsd ki a 3 × 3 × 3-as kockát a megmaradt öt Soma-elemmel! A sárga T és a piros Ágas elemet hagyd a megadott helyén. Minden elemet pontosan egyszer használj, hézag és átfedés nélkül. Bármely megfelelő befejezés helyes.",
+  "hint": "Egy lehetséges építési tervben először a lila Csavar B elem kerül be. A két rögzített elemet közben ne mozdítsd el!",
+  "shapeId": "0105",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

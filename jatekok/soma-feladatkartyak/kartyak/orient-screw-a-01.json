@@ -1,0 +1,34 @@
+{
+  "id": "orient-screw-a-01",
+  "title": "A fehér csavar",
+  "type": "orientation",
+  "instruction": "Állítsd a fehér Csavar A elemet a képen látható helyzetbe!",
+  "hint": "A fehér és a lila elem tükörpár. A feladathoz csak a fehér elemet használd; az elemet a kezedben is elfordíthatod.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "spatial-rotation",
+    "secondary": [
+      "shape-recognition"
+    ]
+  },
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "shapeId": "0006",
+  "placement": {
+    "axes": [
+      1,
+      0,
+      2
+    ],
+    "signs": [
+      -1,
+      1,
+      1
+    ],
+    "offset": [
+      1,
+      0,
+      0
+    ]
+  }
+}

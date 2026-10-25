@@ -1,0 +1,13 @@
+{
+  "id": "depth-layers",
+  "title": "Rétegekből magas építmények",
+  "goal": "Négy réteg áttekintésétől az öt rétegen átnyúló elemek összeépítéséig.",
+  "cardIds": [
+    "layers-depth-01",
+    "sample-layers-master-01",
+    "layers-depth-03",
+    "layers-depth-04",
+    "layers-depth-05",
+    "sample-layers-grandmaster-01"
+  ]
+}

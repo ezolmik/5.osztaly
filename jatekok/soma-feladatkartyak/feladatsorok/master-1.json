@@ -1,0 +1,10 @@
+{
+  "id": "master-1",
+  "title": "Mester 1 · Színezetlen építmények",
+  "goal": "A magasságok és a perem tudatos leolvasása; a céltesten kívüli helyek kizárása.",
+  "cardIds": [
+    "master-1-01",
+    "master-1-02",
+    "master-1-03"
+  ]
+}

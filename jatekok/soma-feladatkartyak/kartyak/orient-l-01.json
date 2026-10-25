@@ -1,0 +1,34 @@
+{
+  "id": "orient-l-01",
+  "title": "Az L új helyzetben",
+  "type": "orientation",
+  "instruction": "Vedd kézbe az L elemet, és állítsd a képen látható helyzetbe! A képet rögzített nézőpontból látod.",
+  "hint": "Keresd meg a három kockából álló hosszú szárat: most függőlegesen áll.",
+  "difficulty": "beginner",
+  "goals": {
+    "primary": "spatial-rotation",
+    "secondary": [
+      "shape-recognition"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "shapeId": "0002",
+  "placement": {
+    "axes": [
+      1,
+      2,
+      0
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

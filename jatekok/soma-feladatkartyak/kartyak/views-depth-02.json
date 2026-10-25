@@ -1,0 +1,36 @@
+{
+  "id": "views-depth-02",
+  "title": "Kereszteződő színnyomok",
+  "type": "views",
+  "difficulty": "advanced",
+  "challenge": 3,
+  "classificationStatus": "provisional",
+  "stageNote": "Haladó 3",
+  "instruction": "Építs testet a három színezett nézet alapján a megadott hét elemből! A szín mindig a hozzád legközelebbi kockáé. Minden elemet pontosan egyszer használj; több, az összes nézetnek megfelelő összeállítás is helyes lehet. A kockák lapokon keresztül alkossanak egyetlen összefüggő építményt.",
+  "hint": "Egy szín látható mezőit egyszerre vizsgáld a három ábrán! Egy lehetséges elhelyezést csak akkor tarts meg, ha mindhárom nézeten helyes takarást ad.",
+  "goals": {
+    "primary": "view-integration",
+    "secondary": [
+      "occlusion",
+      "construction"
+    ]
+  },
+  "shapeId": "0070",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

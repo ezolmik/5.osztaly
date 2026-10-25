@@ -1,0 +1,34 @@
+{
+  "id": "pack-small-01",
+  "title": "Rejtett elemhatárok",
+  "type": "packing",
+  "instruction": "A megadott két elemből építsd meg az egyszínű célalakzatot! A belső elemhatárokat neked kell megtalálnod.",
+  "hint": "A célalakzat 7 kis kockából áll. Próbáld meg az 1-es elemet vízszintesen elhelyezni.",
+  "difficulty": "advanced",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation"
+    ]
+  },
+  "challenge": 1,
+  "classificationStatus": "provisional",
+  "shapeId": "0008",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}
