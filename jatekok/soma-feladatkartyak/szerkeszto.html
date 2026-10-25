@@ -361,9 +361,9 @@ function renderTaskPreview(){
   const redraw=()=>drawScene(canvas,card.type==='completion'?card.parts.filter(p=>card.fixedPartIds.includes(p.id)):card.parts,ay,ap,card.type==='packing',card.type==='completion'?card.box:null);
   canvas.style.cursor='grab';canvas.style.touchAction='none';canvas.setAttribute('tabindex','0');
   canvas.onpointerdown=e=>{dragging={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);};
-  canvas.onpointermove=e=>{if(!dragging)return;ay+=(e.clientX-dragging.x)*.012;ap=Math.max(.15,Math.min(1.4,ap+(e.clientY-dragging.y)*.008));dragging={x:e.clientX,y:e.clientY};redraw();};
+  canvas.onpointermove=e=>{if(!dragging)return;ay-=(e.clientX-dragging.x)*.012;ap=Math.max(.15,Math.min(1.4,ap+(e.clientY-dragging.y)*.008));dragging={x:e.clientX,y:e.clientY};redraw();};
   canvas.onpointerup=canvas.onpointercancel=canvas.onlostpointercapture=()=>dragging=null;
-  canvas.onkeydown=e=>{const v={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.1],ArrowDown:[0,-.1]}[e.key];if(v){e.preventDefault();ay+=v[0];ap=Math.max(.15,Math.min(1.4,ap+v[1]));redraw();}};
+  canvas.onkeydown=e=>{const v={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.1],ArrowDown:[0,-.1]}[e.key];if(v){e.preventDefault();ay-=v[0];ap=Math.max(.15,Math.min(1.4,ap+v[1]));redraw();}};
   requestAnimationFrame(redraw);
   if(card.type==='completion')host.append(el('p','subtle','Rögzítve: '+card.fixedPartIds.join(', ')+(card.tabletopStart.ready?'':' · Ehhez a kezdéshez megtámasztás szükséges lehet.')));
  }else taskArt(host,card.parts,card.type==='copy');
@@ -410,9 +410,9 @@ function install(){
  $('file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>256000)throw Error('A fájl túl nagy. Egyetlen kártya vagy alakzat JSON-fájlja szükséges.');const card=C.readCard(JSON.parse(await file.text()));replaceWith(card);message('Betöltve: '+card.title);}catch(error){message('Nem nyitható meg: '+error.message,true);}};
  $('resetCamera').onclick=()=>{yaw=-.72;pitch=.55;zoom=1;schedulePaint();};$('zoomIn').onclick=()=>{zoom=Math.min(2,zoom+.2);schedulePaint();};$('zoomOut').onclick=()=>{zoom=Math.max(.6,zoom-.2);schedulePaint();};
  refs.canvas.onpointerdown=e=>{drag={id:e.pointerId,x:e.clientX,y:e.clientY};refs.canvas.setPointerCapture(e.pointerId);};
- refs.canvas.onpointermove=e=>{if(!drag||drag.id!==e.pointerId)return;yaw+=(e.clientX-drag.x)*.012;pitch=Math.max(.15,Math.min(1.4,pitch+(e.clientY-drag.y)*.008));drag.x=e.clientX;drag.y=e.clientY;schedulePaint();};
+ refs.canvas.onpointermove=e=>{if(!drag||drag.id!==e.pointerId)return;yaw-=(e.clientX-drag.x)*.012;pitch=Math.max(.15,Math.min(1.4,pitch+(e.clientY-drag.y)*.008));drag.x=e.clientX;drag.y=e.clientY;schedulePaint();};
  refs.canvas.onpointerup=refs.canvas.onpointercancel=refs.canvas.onlostpointercapture=()=>drag=null;
- refs.canvas.onkeydown=e=>{const v={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.1],ArrowDown:[0,-.1]}[e.key];if(v){e.preventDefault();yaw+=v[0];pitch=Math.max(.15,Math.min(1.4,pitch+v[1]));schedulePaint();}};
+ refs.canvas.onkeydown=e=>{const v={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.1],ArrowDown:[0,-.1]}[e.key];if(v){e.preventDefault();yaw-=v[0];pitch=Math.max(.15,Math.min(1.4,pitch+v[1]));schedulePaint();}};
  document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();$(e.shiftKey?'redo':'undo').click();}});
  new ResizeObserver(schedulePaint).observe(refs.canvas);
  window.addEventListener?.('resize',renderTaskPreview);

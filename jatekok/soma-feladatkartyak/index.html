@@ -236,10 +236,10 @@ function refreshPaletteView(){
 }
 function wirePalette(){Palette.mount($('paletteControls'),refreshPaletteView,p=>art([{id:p.id,cells:p.cells}],true));refreshPaletteView();}
 
-function turn(a,b){yaw+=a;pitch=Math.max(-1.45,Math.min(1.45,pitch+b));paint();}function reset(){yaw=-.72;pitch=.53;paint();}
+function turn(a,b){yaw-=a;pitch=Math.max(-1.45,Math.min(1.45,pitch+b));paint();}function reset(){yaw=-.72;pitch=.53;paint();}
 $('left').onclick=()=>turn(-Math.PI/2,0);$('right').onclick=()=>turn(Math.PI/2,0);$('up').onclick=()=>{pitch=1.35;paint();};$('down').onclick=()=>{pitch=-1.1;paint();};$('reset').onclick=reset;$('solution').ontoggle=renderSolution;
 let drag=null;canvas.onpointerdown=e=>{drag={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);canvas.focus();};canvas.onpointermove=e=>{if(!drag||drag.id!==e.pointerId)return;turn((e.clientX-drag.x)*.012,(e.clientY-drag.y)*.012);drag.x=e.clientX;drag.y=e.clientY;};canvas.onpointerup=canvas.onpointercancel=canvas.onlostpointercapture=()=>{drag=null;};canvas.onkeydown=e=>{const d={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.12],ArrowDown:[0,-.12]}[e.key];if(d){e.preventDefault();turn(...d);}};new ResizeObserver(()=>paint()).observe(canvas);
-function turnTarget(a,b){targetYaw+=a;targetPitch=Math.max(-1.45,Math.min(1.45,targetPitch+b));paintTarget();}
+function turnTarget(a,b){targetYaw-=a;targetPitch=Math.max(-1.45,Math.min(1.45,targetPitch+b));paintTarget();}
 $('targetLeft').onclick=()=>turnTarget(-Math.PI/2,0);$('targetRight').onclick=()=>turnTarget(Math.PI/2,0);
 $('targetUp').onclick=()=>{targetPitch=1.35;paintTarget();};$('targetDown').onclick=()=>{targetPitch=-1.35;paintTarget();};
 $('targetReset').onclick=()=>{targetYaw=-.72;targetPitch=.53;paintTarget();};
