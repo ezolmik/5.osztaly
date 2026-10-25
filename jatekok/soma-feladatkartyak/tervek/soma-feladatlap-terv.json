@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "title": "Soma — feladatlap",
+  "items": [
+    {
+      "kind": "card",
+      "id": "sample-silhouettes-master-01"
+    },
+    {
+      "kind": "card",
+      "id": "sample-views-grandmaster-01"
+    }
+  ]
+}

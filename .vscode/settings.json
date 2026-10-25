@@ -1,0 +1,79 @@
+{
+  "latex-workshop.message.latexlog.exclude": [
+    "Generic hook 'file/after/tracklang.sty' is deprecated",
+    "Generic hook 'package/after/bidi' is deprecated",
+    "Generic hook 'package/after/luabidi' is deprecated",
+    "Use hook 'file/tracklang.sty/after' instead",
+    "Use hook 'package/bidi/after' instead",
+    "Use hook 'package/luabidi/after' instead"
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-lua",
+      "command": "latexmk",
+      "args": [
+        "-lualatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%DIR%/build",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-pdf",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%DIR%/build",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-xe",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%DIR%/build",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (lualatex)",
+      "tools": ["latexmk-lua"]
+    },
+    {
+      "name": "latexmk (pdflatex)",
+      "tools": ["latexmk-pdf"]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["latexmk-xe"]
+    }
+  ],
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "python-envs.defaultEnvManager": "ms-python.python:venv",
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.xdv",
+    "*.synctex.gz",
+    "*.aux",
+    "*.log",
+    "*.toc",
+    "*.out",
+    "*.fls",
+    "*.fdb_latexmk"
+  ],
+  "latex-workshop.formatting.latex": "latexindent"
+}
