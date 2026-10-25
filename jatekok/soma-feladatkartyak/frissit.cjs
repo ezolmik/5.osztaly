@@ -29,7 +29,7 @@ function build(){
  const outerGroups=new Map(),catalogShapes=[...shapes.values()].map(s=>{const outer=outerKey(s.parts);if(!outerGroups.has(outer))outerGroups.set(outer,[]);outerGroups.get(outer).push(s.id);return {...s,stats:stats(s.parts),outer,cards:sources.filter(c=>c.shapeId===s.id).map(c=>({id:c.id,title:c.title,type:c.type}))};});
  for(const s of catalogShapes){s.sameOuterIds=outerGroups.get(s.outer).filter(id=>id!==s.id);delete s.outer;}
  const f=JSON.stringify(cards.map(c=>({id:c.id,title:c.title,type:c.type,parts:c.parts})));let h=2166136261;for(let i=0;i<f.length;i++)h=Math.imul(h^f.charCodeAt(i),16777619);
- const catalog={version:1,bankFingerprint:(h>>>0).toString(16),outerFormCount:outerGroups.size,bankSha256:crypto.createHash('sha256').update(bytes).digest('hex'),cardCount:cards.length,shapes:catalogShapes};
+ const catalog={version:1,reservedShapeIds:registry.entries.map(e=>e.id),bankFingerprint:(h>>>0).toString(16),outerFormCount:outerGroups.size,bankSha256:crypto.createHash('sha256').update(bytes).digest('hex'),cardCount:cards.length,shapes:catalogShapes};
  return {files:{'cards.js':bytes,'alakzatok/jegyzek.js':'window.SOMA_SHAPES = '+JSON.stringify(catalog,null,2)+';\n','alakzatok/azonositok.json':JSON.stringify(registry,null,2)+'\n'},counts:{cards:cards.length,series:series.length,shapes:shapes.size}};
 }
 function main(args=process.argv.slice(2)){

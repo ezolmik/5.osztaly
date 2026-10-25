@@ -9,7 +9,7 @@
 .palette-settings{margin:0 0 18px;padding:12px 18px}.palette-settings summary{font-size:13px}.palette-toolbar{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:16px 0}.palette-toolbar label{display:flex;flex-direction:column;gap:6px;font-size:12px}.palette-toolbar select{font:inherit;padding:8px;border:1px solid #cad6cd;border-radius:8px;background:white;color:#203735}.palette-toolbar button{font-size:12px}.palette-color-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.palette-color{display:flex;flex-direction:column;gap:7px;align-items:center;padding:10px 4px;border:1px solid #dbe3db;border-radius:10px;min-width:0;background:#fff}.palette-color svg{width:100%;height:65px;display:block}.palette-color strong{font-size:12px;text-align:center}.palette-color small{font-size:10px;overflow-wrap:anywhere;font-weight:400}.palette-color input[type=color]{width:58px;max-width:100%;height:32px;padding:2px;border:1px solid #b6c7ba;border-radius:6px;background:#fff;cursor:pointer}.palette-note{font-size:11px;color:#617269;margin:12px 0 0}@media(max-width:700px){.palette-color-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:400px){.palette-color-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media print{.palette-settings{display:none}}
 
 </style></head><body><main>
-<header><div class="brand"><div class="mark" aria-hidden="true">▦</div><div><p class="eyebrow">Soma · Kártyaműhely</p><h1>Kártyaműhely</h1></div></div><nav aria-label="Fájlműveletek"><button id="demo">Mintatest</button><button id="new">Új test</button><button id="open">Megnyitás</button><button id="tryGame">Kipróbálás a játékban</button><button id="download" class="primary">JSON mentése</button></nav></header>
+<header><div class="brand"><div class="mark" aria-hidden="true">▦</div><div><p class="eyebrow">Soma · Kártyaműhely</p><h1>Kártyaműhely</h1></div></div><nav aria-label="Fájlműveletek"><button id="demo">Mintatest</button><button id="new">Új test</button><button id="open">Megnyitás</button><button id="tryGame">Kipróbálás a játékban</button><button id="download" class="primary">Kártya JSON mentése</button></nav></header>
 <details id="paletteSettings" class="panel palette-settings"><summary>Beállítások · készlet színei</summary><div id="paletteControls"></div></details>
 <div class="mode-tabs" role="group" aria-label="Munkanézet"><button id="buildMode" aria-pressed="true">1. Testépítés</button><button id="metadataMode" aria-pressed="false">2. Feladat</button><button id="taskMode" aria-pressed="false">3. Előnézet</button></div><div class="columns" id="builder">
 <aside class="panel pad"><p class="palette-title">A hét elem</p><div id="palette" class="palette" aria-label="Elemválasztó"></div><div class="history"><button id="undo" title="Ctrl+Z">↶ Vissza</button><button id="redo" title="Ctrl+Shift+Z">↷ Újra</button></div><label class="field">Munkatér<select id="workspace"></select></label><p class="axes-note">x jobbra · y hátra · z felfelé</p></aside>
@@ -33,8 +33,9 @@
 </details><p id="metadataStatus" class="subtle" role="status"></p></section>
 <p id="message" aria-live="polite"></p>
 <section id="taskPreview" class="panel pad" hidden aria-label="Feladat előnézete"><div class="section-head"><h2 id="previewTitle"></h2><span id="previewMeta" class="badge"></span></div><p id="previewInstruction"></p><p id="previewError" class="error" role="status"></p><div id="previewContent"></div><p id="previewNeeded" class="subtle"></p><details id="previewHint"><summary>Segítség</summary><p id="previewHintText"></p></details><details id="previewSolution"><summary>Megoldás megmutatása</summary><div id="solutionContent"></div></details></section>
-<footer><span id="storage"></span><a id="backToGame" href="index.html">← Soma-feladatkártyák</a></footer><input id="file" type="file" accept=".json,application/json" hidden>
+<details class="panel" style="margin:18px 0"><summary>Adatbázis-export</summary><p id="sourceStatus" role="status"></p><p>Új test esetén add meg az alakzat adatait, és mindkét JSON-t mentsd el.</p><label>Új alakzat azonosítója <input id="shapeId" maxlength="4" placeholder="0126"></label> <label>Alakzat neve <input id="shapeName"></label> <button id="downloadShape">Alakzat JSON mentése</button><p>A kártyát a kartyak/, az új alakzatot az alakzatok/ mappába tedd, majd futtasd: node frissit.cjs</p></details><footer><span id="storage"></span><a id="backToGame" href="index.html">← Soma-feladatkártyák</a></footer><input id="file" type="file" accept=".json,application/json" hidden>
 </main>
+<script src="alakzatok/jegyzek.js"></script>
 <script id="modelCore">
 'use strict';
 const TAXONOMY={"levels":{"beginner":"Kezdő","advanced":"Haladó","master":"Mester","grandmaster":"Nagymester"},"types":{"orientation":"Tájolás","copy":"Másolás","layers":"Rétegek","views":"Színezett nézetek","silhouettes":"Sziluettek","packing":"Kirakás","completion":"Kockabefejezés"},"goals":{"shape-recognition":"Alakfelismerés","spatial-rotation":"Térbeli tájolás és forgatás","image-reading":"Ábraolvasás","layer-integration":"Rétegek összeillesztése","view-integration":"Nézetek összehangolása","occlusion":"Takarások kikövetkeztetése","construction":"Konstrukció és keresés"}};
@@ -181,8 +182,28 @@ function validateCard(card){
  validateCatalog({schemaVersion:1,taxonomy:TAXONOMY,cards:[card],series:[{id:'editor-check',title:'Saját kártyák',goal:'Saját feladat',cardIds:[card.id]}]});
  return true;
 }
+function findPlacement(source,target){
+ const sig=parts=>JSON.stringify(parts.map(p=>({id:p.id,cells:p.cells.map(c=>c.join(',')).sort()})).sort((a,b)=>a.id-b.id));
+ const min=parts=>[0,1,2].map(a=>Math.min(...parts.flatMap(p=>p.cells.map(c=>c[a]))));const targetMin=min(target);
+ for(const r of [{p:[0,1,2],s:[1,1,1]},...ROTATIONS]){const parts=source.map(p=>({id:p.id,cells:p.cells.map(c=>r.p.map((a,i)=>r.s[i]*c[a]))})),m=min(parts),offset=m.map((v,i)=>targetMin[i]-v);const moved=parts.map(p=>({id:p.id,cells:p.cells.map(c=>c.map((v,i)=>v+offset[i]))}));if(sig(moved)===sig(target))return {axes:r.p,signs:r.s,offset};}return null;
+}
+function sourceExport(card,newId,newName){
+ validateCard(card);const catalog=window.SOMA_SHAPES;if(!catalog?.shapes?.length)throw Error('Hiányzó alakzatjegyzék. Futtasd: node frissit.cjs, majd töltsd újra a műhelyt!');
+ for(const s of catalog.shapes){const placement=findPlacement(s.parts,card.parts);if(placement){const {parts,...meta}=copy(card);return {card:{...meta,shapeId:s.id,placement},shape:null};}}
+ const reserved=new Set([...(catalog.reservedShapeIds||[]),...catalog.shapes.map(s=>s.id)]);
+ if(!Array.isArray(catalog.reservedShapeIds))throw Error('Frissítsd a generátort a 3. sprint csomagjából, futtasd, majd töltsd újra a műhelyt!');
+ if(!/^\d{4}$/.test(newId)||newId==='0000'||reserved.has(newId))throw Error('Adj új, szabad négyszámjegyű alakzatazonosítót!');if(!text(newName))throw Error('Adj nevet az új alakzatnak!');
+ const {parts,...meta}=copy(card);return {card:{...meta,shapeId:newId,placement:{axes:[0,1,2],signs:[1,1,1],offset:[0,0,0]}},shape:{id:newId,name:newName.trim(),parts}};
+}
+function resolveSource(value){
+ const s=window.SOMA_SHAPES?.shapes?.find(s=>s.id===value.shapeId);if(!s)throw Error('Hiányzó alakzat: '+value.shapeId+'. Frissítsd az alakzatjegyzéket!');
+ const p=value.placement||{axes:[0,1,2],signs:[1,1,1],offset:[0,0,0]};if(!Array.isArray(p.axes)||!Array.isArray(p.signs)||!Array.isArray(p.offset)||p.offset.length!==3||!p.offset.every(Number.isSafeInteger)||!ROTATIONS.some(r=>JSON.stringify(r.p)===JSON.stringify(p.axes)&&JSON.stringify(r.s)===JSON.stringify(p.signs)))throw Error('Hibás vagy tükröző elhelyezés.');
+ const {shapeId,placement,...meta}=copy(value);return {...meta,parts:s.parts.map(part=>({id:part.id,cells:part.cells.map(c=>p.axes.map((a,i)=>p.signs[i]*c[a]+p.offset[i]))}))};
+}
+
 function readCard(value){
  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Egyetlen kártya vagy alakzat JSON-objektumát nyisd meg.');
+ if(Object.hasOwn(value,'shapeId')){if(Object.hasOwn(value,'parts'))throw Error('A forráskártya parts helyett shapeId-t használ.');value=resolveSource(value);}
  checkParts(value.parts);
  // Shape exports contain geometry and a name; task metadata belongs to a new card.
  const shapeKeys=['id','name','parts'];
@@ -198,7 +219,7 @@ function placementCheck(state,edit){
  const candidate={id:edit.id,cells:candidateCells(edit)};
  try{checkParts([...state.parts.filter(p=>p.id!==edit.id),candidate],state.side);return {ok:true,candidate};}catch(e){return {ok:false,message:e.message,candidate};}
 }
-window.SomaBuilderCore={PIECES,ROTATIONS,ORBITS,normalized,signature,connected,checkParts,rotateShape,candidateCells,makeCard,validateCard,readCard,exportCard,placementCheck,copy,MAX_SIDE};
+window.SomaBuilderCore={PIECES,ROTATIONS,ORBITS,normalized,signature,connected,checkParts,rotateShape,candidateCells,makeCard,validateCard,readCard,exportCard,placementCheck,copy,MAX_SIDE,sourceExport,findPlacement};
 
 verifySet();
 </script>
@@ -234,6 +255,7 @@ function status(){
  try{C.exportCard(state);return {ok:true,text:'Érvényes, összefüggő Soma-test.'};}catch(e){return {ok:false,text:e.message.includes('lapösszefüggő')?'A test még nem összefüggő.':e.message};}
 }
 function render(){
+ try{const exported=C.sourceExport(C.exportCard(state),$('shapeId').value.trim(),$('shapeName').value);$('sourceStatus').textContent=exported.shape?'Új alakzat: '+exported.shape.id:'Meglévő alakzat: '+exported.card.shapeId;$('downloadShape').disabled=!exported.shape;}catch(e){$('sourceStatus').textContent=e.message;$('downloadShape').disabled=true;}
  const placement=C.placementCheck(state,edit),existing=state.parts.some(p=>p.id===edit.id),s=status();
  $('pieceName').textContent=`${edit.id}. ${C.PIECES[edit.id-1].name}`;
  $('pieceAction').textContent=existing?'Elhelyezett elem szerkesztése':'Elhelyezendő elem';
@@ -269,8 +291,8 @@ function nudge(axis,dir){const value=Math.max(0,Math.min(state.side-1,edit.ancho
 function restore(next){state=clone(next);layer=0;syncFields();selectPiece(state.parts[0]?.id||1);persist();}
 function replaceWith(card){$('previewSolution').open=false;remember();const n=Math.max(3,...card.parts.flatMap(p=>p.cells.flatMap(c=>c.map(v=>v+1))));state={base:clone(card),parts:clone(card.parts),side:n<=6?6:n<=8?8:12};layer=0;syncFields();selectPiece(card.parts[0].id);persist();}
 function reset(){$('previewSolution').open=false;remember();state={base:C.makeCard(),parts:[],side:6};layer=0;syncFields();selectPiece(1);persist();message('Új, üres test. A Visszavonás visszaállítja az előzőt.');}
-function download(){
- try{if(edit.dirty)throw Error('Előbb helyezd el vagy állítsd vissza a kijelölt elemet.');const card=C.exportCard(state),blob=new Blob([JSON.stringify(card,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download=card.id+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);message('Kártya elmentve JSON-fájlba.');}catch(e){message(e.message,true);}
+function download(kind='card'){
+ try{if(edit.dirty)throw Error('Előbb helyezd el vagy állítsd vissza a kijelölt elemet.');const exported=C.sourceExport(C.exportCard(state),$('shapeId').value.trim(),$('shapeName').value),value=kind==='shape'?exported.shape:exported.card;if(!value)throw Error('Ez a test már létezik; az alakzatot nem kell újra menteni.');const blob=new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download=value.id+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);message(kind==='shape'?'Alakzat elmentve. A kártyát is mentsd a kartyak/ mappába!':'Kártya elmentve. Új test esetén az alakzatot is mentsd!');}catch(e){message(e.message,true);}
 }
 function demo(){replaceWith({id:'sajat-mintatest',title:'Két elem egymáson',type:'copy',parts:[{id:1,cells:[[0,0,0],[1,0,0],[0,1,0]]},{id:5,cells:[[0,0,1],[1,0,1],[0,1,1],[0,0,2]]}],instruction:'Építsd meg a képen látható testet a megadott elemekből!',hint:'',difficulty:'beginner',challenge:1,classificationStatus:'provisional',goals:{primary:'construction',secondary:['image-reading']}});message('Mintatest betöltve.');}
 // Both the canvas camera and the layer grid use x right, y back, z up.
@@ -371,6 +393,8 @@ function loadLinkedCard(){
  catch(e){message('A kapott kártya nem nyitható meg: '+e.message,true);}
 }
 function install(){
+ $('shapeId').oninput=$('shapeName').oninput=render;
+ const known=window.SOMA_SHAPES;if(known){const ids=[...(known.reservedShapeIds||[]),...known.shapes.map(s=>s.id)],next=Math.max(7,...ids.map(Number))+1;$('shapeId').value=next<=9999?String(next).padStart(4,'0'):'';}
  installMetadata();Palette.mount($('paletteControls'),render,p=>art([{id:p.id,cells:p.cells}],true));
  for(const p of C.PIECES){const b=el('button','piece');b.type='button';const swatch=el('span','swatch',p.id);swatch.style.background=p.color;swatch.style.color=ink(p.id);const text=el('span','piece-text'),name=el('strong','',p.name),small=el('small','piece-state','szabad');text.append(name,small);b.append(swatch,text);b.onclick=()=>{selectPiece(p.id);message('');};b.setAttribute('aria-label',`${p.id}. ${p.name}, ${p.colorName}`);refs.palette.append(b);}
  document.querySelectorAll('[data-rotate]').forEach(b=>b.onclick=()=>rotate(Number(b.dataset.rotate),Number(b.dataset.dir)));
@@ -382,7 +406,7 @@ function install(){
  refs.title.oninput=()=>{state.base.title=refs.title.value;persist();render();};refs.cardId.oninput=()=>{state.base.id=refs.cardId.value;persist();render();};
  $('workspace').onchange=()=>{const n=Number($('workspace').value);try{C.checkParts(state.parts,n);remember();state.side=n;layer=Math.min(layer,n-1);edit.anchor=edit.anchor.map(v=>Math.min(v,n-1));buildGrid();persist();render();}catch(e){$('workspace').value=state.side;message('A meglévő test nem fér el ekkora munkatérben.',true);}};
  $('tryGame').onclick=()=>{try{if(edit.dirty)throw Error('Előbb helyezd el vagy állítsd vissza a kijelölt elemet.');const card=C.exportCard(state);persist();window.location.href=Palette.href('index.html',card);}catch(e){message(e.message,true);}};
- $('new').onclick=reset;$('demo').onclick=demo;$('download').onclick=download;$('open').onclick=()=>$('file').click();
+ $('new').onclick=reset;$('demo').onclick=demo;$('download').onclick=()=>download('card');$('downloadShape').onclick=()=>download('shape');$('open').onclick=()=>$('file').click();
  $('file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>256000)throw Error('A fájl túl nagy. Egyetlen kártya vagy alakzat JSON-fájlja szükséges.');const card=C.readCard(JSON.parse(await file.text()));replaceWith(card);message('Betöltve: '+card.title);}catch(error){message('Nem nyitható meg: '+error.message,true);}};
  $('resetCamera').onclick=()=>{yaw=-.72;pitch=.55;zoom=1;schedulePaint();};$('zoomIn').onclick=()=>{zoom=Math.min(2,zoom+.2);schedulePaint();};$('zoomOut').onclick=()=>{zoom=Math.max(.6,zoom-.2);schedulePaint();};
  refs.canvas.onpointerdown=e=>{drag={id:e.pointerId,x:e.clientX,y:e.clientY};refs.canvas.setPointerCapture(e.pointerId);};
