@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet"
+  ],
+  "order": 600,
   "id": "packing",
   "title": "Rakd ki az alakzatot!",
   "goal": "A külső alakzat felbontása a megadott elemekre.",

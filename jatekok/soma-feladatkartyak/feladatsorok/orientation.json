@@ -1,4 +1,11 @@
 {
+  "group": "ismerkedes",
+  "tags": [
+    "forgatas",
+    "csokkentett-keszlet",
+    "bevezeto"
+  ],
+  "order": 100,
   "id": "orientation",
   "title": "Forgasd be!",
   "goal": "Térbeli tájolás és azonosítás.",

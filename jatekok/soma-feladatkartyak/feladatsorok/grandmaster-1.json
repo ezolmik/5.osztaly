@@ -1,4 +1,10 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "teljes-keszlet"
+  ],
+  "order": 400,
   "id": "grandmaster-1",
   "title": "Nagymester 1 · Színezetlen építmények",
   "goal": "Távoli részletek együttes figyelése, több felbontás kipróbálása.",

@@ -1,4 +1,11 @@
 {
+  "group": "kockaepites",
+  "tags": [
+    "kockabefejezes",
+    "teljes-keszlet",
+    "harom-megadott-elem"
+  ],
+  "order": 200,
   "id": "cube-three-givens",
   "title": "Fejezd be a kockát! — 3 megadott elem",
   "goal": "Négy hiányzó elem beillesztése, a négyelemes kezdéseknél eggyel kevesebb támpontból.",

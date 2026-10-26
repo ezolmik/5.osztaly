@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "sziluettek",
+    "teljes-keszlet"
+  ],
+  "order": 1000,
   "id": "depth-silhouettes",
   "title": "Körvonalakból építmény",
   "goal": "Három sziluett közös feltételeitől a teljes tér tudatos kitöltéséig.",

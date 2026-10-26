@@ -1,0 +1,10 @@
+{
+  "id": "silhouettes",
+  "title": "Építs sziluettekből!",
+  "goal": "Térbeli következtetés az elemek határainak ismerete nélkül.",
+  "level": "Haladó",
+  "cardIds": [
+    "sil-small-01",
+    "sil-three-02"
+  ]
+}

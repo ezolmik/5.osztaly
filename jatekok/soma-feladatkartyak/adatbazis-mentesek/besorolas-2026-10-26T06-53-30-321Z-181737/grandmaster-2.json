@@ -1,0 +1,10 @@
+{
+  "id": "grandmaster-2",
+  "title": "Nagymester 2 · Színezetlen építmények",
+  "goal": "A maradó tér vizsgálata és a hibás részmegoldások korai elvetése.",
+  "cardIds": [
+    "grandmaster-2-01",
+    "grandmaster-2-02",
+    "grandmaster-2-03"
+  ]
+}

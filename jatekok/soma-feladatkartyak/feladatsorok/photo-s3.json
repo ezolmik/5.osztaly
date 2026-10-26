@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "szinezett-nezetek",
+    "teljes-keszlet"
+  ],
+  "order": 700,
   "id": "photo-s3",
   "title": "Fotózott 3 · A teljes készlet nézetei",
   "goal": "Nézetek és takarások értelmezése mind a hét elem felhasználásával.",

@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "szinezett-nezetek",
+    "csokkentett-keszlet"
+  ],
+  "order": 400,
   "id": "photo-s2",
   "title": "Fotózott 2 · Kisebb készletek nézetei",
   "goal": "Három színezett nézet összehangolása kisebb elemkészletekkel.",

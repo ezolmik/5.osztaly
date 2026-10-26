@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "sziluettek",
+    "csokkentett-keszlet"
+  ],
+  "order": 500,
   "id": "silhouettes",
   "title": "Építs sziluettekből!",
   "goal": "Térbeli következtetés az elemek határainak ismerete nélkül.",

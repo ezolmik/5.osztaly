@@ -1,4 +1,11 @@
 {
+  "group": "ismerkedes",
+  "tags": [
+    "masolas",
+    "csokkentett-keszlet",
+    "bevezeto"
+  ],
+  "order": 200,
   "id": "copy",
   "title": "Másold le!",
   "goal": "Térbeli ábra és valódi építmény megfeleltetése.",

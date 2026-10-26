@@ -1,4 +1,11 @@
 {
+  "group": "kockaepites",
+  "tags": [
+    "kockabefejezes",
+    "teljes-keszlet",
+    "ket-megadott-elem"
+  ],
+  "order": 300,
   "id": "cube-red-yellow",
   "title": "Fejezd be a kockát! — Piros és sárga",
   "goal": "Rögzített kezdésből a maradó tér tudatos kitöltése. A tükörváltozatok páros összehasonlítása.",

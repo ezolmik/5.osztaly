@@ -1,4 +1,10 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "teljes-keszlet"
+  ],
+  "order": 300,
   "id": "master-3",
   "title": "Mester 3 · Színezetlen építmények",
   "goal": "Rétegek összekapcsolása és a visszalépő peremek vizsgálata.",

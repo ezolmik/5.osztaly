@@ -1,0 +1,17 @@
+{
+  "id": "photo-s2",
+  "title": "Fotózott 2 · Kisebb készletek nézetei",
+  "goal": "Három színezett nézet összehangolása kisebb elemkészletekkel.",
+  "cardIds": [
+    "photo-s2-01",
+    "photo-s2-02",
+    "photo-s2-03",
+    "photo-s2-04",
+    "photo-s2-05",
+    "photo-s2-06",
+    "photo-s2-07",
+    "photo-s2-08",
+    "photo-s2-09",
+    "photo-s2-10"
+  ]
+}

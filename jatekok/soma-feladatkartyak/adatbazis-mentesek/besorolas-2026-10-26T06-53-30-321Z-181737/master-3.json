@@ -1,0 +1,10 @@
+{
+  "id": "master-3",
+  "title": "Mester 3 · Színezetlen építmények",
+  "goal": "Rétegek összekapcsolása és a visszalépő peremek vizsgálata.",
+  "cardIds": [
+    "master-3-01",
+    "master-3-02",
+    "master-3-03"
+  ]
+}

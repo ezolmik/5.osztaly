@@ -1,4 +1,11 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet",
+    "teljes-keszlet"
+  ],
+  "order": 200,
   "id": "master-2",
   "title": "Mester 2 · Színezetlen építmények",
   "goal": "Az elemkészlet és a felső rész feltételeinek összehangolása.",

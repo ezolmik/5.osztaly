@@ -1,4 +1,10 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "teljes-keszlet"
+  ],
+  "order": 500,
   "id": "grandmaster-2",
   "title": "Nagymester 2 · Színezetlen építmények",
   "goal": "A maradó tér vizsgálata és a hibás részmegoldások korai elvetése.",

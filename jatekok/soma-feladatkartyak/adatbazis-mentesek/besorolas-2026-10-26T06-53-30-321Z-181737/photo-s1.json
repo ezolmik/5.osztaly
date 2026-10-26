@@ -1,0 +1,17 @@
+{
+  "id": "photo-s1",
+  "title": "Fotózott 1 · Rétegekből építés",
+  "goal": "Számozott rétegek összeillesztése és az elemek térbeli követése.",
+  "cardIds": [
+    "photo-s1-01",
+    "photo-s1-02",
+    "photo-s1-03",
+    "photo-s1-04",
+    "photo-s1-05",
+    "photo-s1-06",
+    "photo-s1-07",
+    "photo-s1-08",
+    "photo-s1-09",
+    "photo-s1-10"
+  ]
+}

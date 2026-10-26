@@ -1,0 +1,29 @@
+{
+  "id": "cube-red-yellow",
+  "title": "Fejezd be a kockát! — Piros és sárga",
+  "goal": "Rögzített kezdésből a maradó tér tudatos kitöltése. A tükörváltozatok páros összehasonlítása.",
+  "cardIds": [
+    "cube-red-yellow-11",
+    "cube-red-yellow-15",
+    "cube-red-yellow-21",
+    "cube-red-yellow-22",
+    "cube-red-yellow-12",
+    "cube-red-yellow-16",
+    "cube-red-yellow-03",
+    "cube-red-yellow-06",
+    "cube-red-yellow-13",
+    "cube-red-yellow-17",
+    "cube-red-yellow-05",
+    "cube-red-yellow-08",
+    "cube-red-yellow-14",
+    "cube-red-yellow-18",
+    "cube-red-yellow-04",
+    "cube-red-yellow-07",
+    "cube-red-yellow-19",
+    "cube-red-yellow-20",
+    "cube-red-yellow-09",
+    "cube-red-yellow-10",
+    "cube-red-yellow-01",
+    "cube-red-yellow-02"
+  ]
+}

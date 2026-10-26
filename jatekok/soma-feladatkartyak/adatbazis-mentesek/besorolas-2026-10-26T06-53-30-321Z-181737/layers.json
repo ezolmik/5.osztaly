@@ -1,0 +1,16 @@
+{
+  "id": "layers",
+  "title": "Építs rétegekből!",
+  "goal": "Vízszintes metszetek térbeli összeillesztése.",
+  "level": "Kezdő → haladó",
+  "cardIds": [
+    "layers-small-01",
+    "layers-own-02",
+    "layers-own-03",
+    "layers-own-04",
+    "layers-own-05",
+    "layers-own-06",
+    "layers-own-07",
+    "layers-cube-01"
+  ]
+}

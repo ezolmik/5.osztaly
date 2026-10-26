@@ -1,4 +1,10 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "teljes-keszlet"
+  ],
+  "order": 600,
   "id": "grandmaster-3",
   "title": "Nagymester 3 · Színezetlen építmények",
   "goal": "Önálló keresési terv, körbeforgatás és tudatos visszalépés.",

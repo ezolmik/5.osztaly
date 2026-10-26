@@ -1,4 +1,10 @@
 {
+  "group": "mesterkihivasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet"
+  ],
+  "order": 100,
   "id": "master-1",
   "title": "Mester 1 · Színezetlen építmények",
   "goal": "A magasságok és a perem tudatos leolvasása; a céltesten kívüli helyek kizárása.",

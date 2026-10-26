@@ -1,4 +1,11 @@
 {
+  "group": "kockaepites",
+  "tags": [
+    "kockabefejezes",
+    "teljes-keszlet",
+    "negy-megadott-elem"
+  ],
+  "order": 100,
   "id": "cube-four-givens",
   "title": "Fejezd be a kockát! — 4 megadott elem",
   "goal": "Három hiányzó elem beillesztése az asztalon megtámasztott kezdésekbe.",

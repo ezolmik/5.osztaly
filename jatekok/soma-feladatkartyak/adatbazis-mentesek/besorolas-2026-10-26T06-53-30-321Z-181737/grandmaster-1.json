@@ -1,0 +1,10 @@
+{
+  "id": "grandmaster-1",
+  "title": "Nagymester 1 · Színezetlen építmények",
+  "goal": "Távoli részletek együttes figyelése, több felbontás kipróbálása.",
+  "cardIds": [
+    "grandmaster-1-01",
+    "grandmaster-1-02",
+    "grandmaster-1-03"
+  ]
+}

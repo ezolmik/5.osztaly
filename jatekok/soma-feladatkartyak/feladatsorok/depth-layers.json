@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "retegek",
+    "teljes-keszlet"
+  ],
+  "order": 800,
   "id": "depth-layers",
   "title": "Rétegekből magas építmények",
   "goal": "Négy réteg áttekintésétől az öt rétegen átnyúló elemek összeépítéséig.",

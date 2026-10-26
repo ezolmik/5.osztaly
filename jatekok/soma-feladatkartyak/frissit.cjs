@@ -1,5 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const {prepareSeries}=require('./adatbazis-eszkozok/feladatsorok.cjs');
 const root=__dirname,{G,canonical,outerKey,stats}=require('./alakzatok/geometria.cjs'),{validateCatalog}=require('./adatbazis-eszkozok/ellenorzes.cjs');
 const fail=m=>{throw Error(m);},read=p=>{try{return JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));}catch(e){fail(p+': '+e.message);}},safe=id=>typeof id==='string'&&/^[a-z0-9][a-z0-9-]*$/.test(id),text=x=>typeof x==='string'&&x.trim();
 function collection(folder,order){
@@ -24,7 +25,8 @@ function build(){
  if(Object.hasOwn(c,'parts'))fail(c.id+': parts helyett shapeId szükséges.');const s=shapes.get(c.shapeId);if(!s)fail(c.id+': hiányzó alakzat: '+c.shapeId);
  const p=c.placement||{axes:[0,1,2],signs:[1,1,1],offset:[0,0,0]};if(!p||!Array.isArray(p.axes)||!Array.isArray(p.signs)||!Array.isArray(p.offset)||p.offset.length!==3||!p.offset.every(Number.isSafeInteger)||!G.ROTATIONS.some(r=>JSON.stringify(r.p)===JSON.stringify(p.axes)&&JSON.stringify(r.s)===JSON.stringify(p.signs)))fail(c.id+': hibás vagy tükröző elhelyezés.');
  const {shapeId,placement,...meta}=c;return {...meta,parts:s.parts.map(part=>({id:part.id,cells:part.cells.map(cell=>p.axes.map((a,i)=>p.signs[i]*cell[a]+p.offset[i]))}))};});
- const data={...config.content,cards,series};validateCatalog(data);
+ const seriesTaxonomy=read('feladatsor-cimkek.json');const preparedSeries=prepareSeries(series,cards,seriesTaxonomy);
+ const data={...config.content,cards,series:preparedSeries,seriesTaxonomy};validateCatalog(data);
  const bytes='// Generált fájl. Forrás: kartyak/, feladatsorok/, alakzatok/, adatbazis.json.\n// Frissítés: node frissit.cjs\nwindow.SOMA_CONTENT = '+JSON.stringify(data,null,2)+';\n';
  const outerGroups=new Map(),catalogShapes=[...shapes.values()].map(s=>{const outer=outerKey(s.parts);if(!outerGroups.has(outer))outerGroups.set(outer,[]);outerGroups.get(outer).push(s.id);return {...s,stats:stats(s.parts),outer,cards:sources.filter(c=>c.shapeId===s.id).map(c=>({id:c.id,title:c.title,type:c.type}))};});
  for(const s of catalogShapes){s.sameOuterIds=outerGroups.get(s.outer).filter(id=>id!==s.id);delete s.outer;}

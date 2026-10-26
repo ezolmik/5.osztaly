@@ -1,0 +1,190 @@
+{
+  "copy": {
+    "group": "ismerkedes",
+    "tags": [
+      "masolas",
+      "csokkentett-keszlet",
+      "bevezeto"
+    ],
+    "order": 200
+  },
+  "cube-fading-clues": {
+    "group": "kockaepites",
+    "tags": [
+      "kockabefejezes",
+      "teljes-keszlet",
+      "negy-megadott-elem",
+      "harom-megadott-elem",
+      "ket-megadott-elem",
+      "kevesedo-segitseg"
+    ],
+    "order": 400
+  },
+  "cube-four-givens": {
+    "group": "kockaepites",
+    "tags": [
+      "kockabefejezes",
+      "teljes-keszlet",
+      "negy-megadott-elem"
+    ],
+    "order": 100
+  },
+  "cube-red-yellow": {
+    "group": "kockaepites",
+    "tags": [
+      "kockabefejezes",
+      "teljes-keszlet",
+      "ket-megadott-elem"
+    ],
+    "order": 300
+  },
+  "cube-three-givens": {
+    "group": "kockaepites",
+    "tags": [
+      "kockabefejezes",
+      "teljes-keszlet",
+      "harom-megadott-elem"
+    ],
+    "order": 200
+  },
+  "depth-layers": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "retegek",
+      "teljes-keszlet"
+    ],
+    "order": 800
+  },
+  "depth-silhouettes": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "sziluettek",
+      "teljes-keszlet"
+    ],
+    "order": 1000
+  },
+  "depth-views": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "szinezett-nezetek",
+      "teljes-keszlet"
+    ],
+    "order": 900
+  },
+  "grandmaster-1": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "teljes-keszlet"
+    ],
+    "order": 400
+  },
+  "grandmaster-2": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "teljes-keszlet"
+    ],
+    "order": 500
+  },
+  "grandmaster-3": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "teljes-keszlet"
+    ],
+    "order": 600
+  },
+  "layers": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "retegek",
+      "csokkentett-keszlet",
+      "teljes-keszlet"
+    ],
+    "order": 100
+  },
+  "master-1": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "csokkentett-keszlet"
+    ],
+    "order": 100
+  },
+  "master-2": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "csokkentett-keszlet",
+      "teljes-keszlet"
+    ],
+    "order": 200
+  },
+  "master-3": {
+    "group": "mesterkihivasok",
+    "tags": [
+      "kirakas",
+      "teljes-keszlet"
+    ],
+    "order": 300
+  },
+  "orientation": {
+    "group": "ismerkedes",
+    "tags": [
+      "forgatas",
+      "csokkentett-keszlet",
+      "bevezeto"
+    ],
+    "order": 100
+  },
+  "packing": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "kirakas",
+      "csokkentett-keszlet"
+    ],
+    "order": 600
+  },
+  "photo-s1": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "retegek",
+      "csokkentett-keszlet",
+      "teljes-keszlet"
+    ],
+    "order": 200
+  },
+  "photo-s2": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "szinezett-nezetek",
+      "csokkentett-keszlet"
+    ],
+    "order": 400
+  },
+  "photo-s3": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "szinezett-nezetek",
+      "teljes-keszlet"
+    ],
+    "order": 700
+  },
+  "silhouettes": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "sziluettek",
+      "csokkentett-keszlet"
+    ],
+    "order": 500
+  },
+  "views": {
+    "group": "rekonstrukcio",
+    "tags": [
+      "szinezett-nezetek",
+      "csokkentett-keszlet"
+    ],
+    "order": 300
+  }
+}

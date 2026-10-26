@@ -1,0 +1,11 @@
+{
+  "id": "views",
+  "title": "Építs színezett nézetekből!",
+  "goal": "Három nézet összehangolása és takarások felismerése.",
+  "level": "Haladó",
+  "cardIds": [
+    "views-small-01",
+    "views-three-02",
+    "views-four-03"
+  ]
+}

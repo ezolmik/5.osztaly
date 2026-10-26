@@ -1,0 +1,13 @@
+{
+  "id": "depth-views",
+  "title": "Színek és takarások",
+  "goal": "A látható színfoltok összehangolásától a teljesen takart elem következtetéséig.",
+  "cardIds": [
+    "sample-views-master-01",
+    "views-depth-02",
+    "views-depth-03",
+    "views-depth-04",
+    "sample-views-grandmaster-01",
+    "views-depth-06"
+  ]
+}

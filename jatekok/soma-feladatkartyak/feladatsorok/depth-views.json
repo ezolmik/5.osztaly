@@ -1,4 +1,10 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "szinezett-nezetek",
+    "teljes-keszlet"
+  ],
+  "order": 900,
   "id": "depth-views",
   "title": "Színek és takarások",
   "goal": "A látható színfoltok összehangolásától a teljesen takart elem következtetéséig.",

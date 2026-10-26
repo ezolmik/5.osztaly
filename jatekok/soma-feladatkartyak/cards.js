@@ -26812,6 +26812,13 @@ window.SOMA_CONTENT = {
   ],
   "series": [
     {
+      "group": "ismerkedes",
+      "tags": [
+        "forgatas",
+        "csokkentett-keszlet",
+        "bevezeto"
+      ],
+      "order": 100,
       "id": "orientation",
       "title": "Forgasd be!",
       "goal": "Térbeli tájolás és azonosítás.",
@@ -26820,9 +26827,27 @@ window.SOMA_CONTENT = {
         "orient-v-01",
         "orient-l-01",
         "orient-screw-a-01"
-      ]
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "beginner"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "beginner",
+        "types": [
+          "orientation"
+        ]
+      }
     },
     {
+      "group": "ismerkedes",
+      "tags": [
+        "masolas",
+        "csokkentett-keszlet",
+        "bevezeto"
+      ],
+      "order": 200,
       "id": "copy",
       "title": "Másold le!",
       "goal": "Térbeli ábra és valódi építmény megfeleltetése.",
@@ -26831,9 +26856,27 @@ window.SOMA_CONTENT = {
         "copy-t-01",
         "copy-small-01",
         "copy-three-01"
-      ]
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "beginner"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "beginner",
+        "types": [
+          "copy"
+        ]
+      }
     },
     {
+      "group": "rekonstrukcio",
+      "tags": [
+        "retegek",
+        "csokkentett-keszlet",
+        "teljes-keszlet"
+      ],
+      "order": 100,
       "id": "layers",
       "title": "Építs rétegekből!",
       "goal": "Vízszintes metszetek térbeli összeillesztése.",
@@ -26847,40 +26890,28 @@ window.SOMA_CONTENT = {
         "layers-own-06",
         "layers-own-07",
         "layers-cube-01"
-      ]
+      ],
+      "summary": {
+        "cardCount": 8,
+        "levels": [
+          "beginner",
+          "advanced"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "advanced",
+        "types": [
+          "layers"
+        ]
+      }
     },
     {
-      "id": "views",
-      "title": "Építs színezett nézetekből!",
-      "goal": "Három nézet összehangolása és takarások felismerése.",
-      "level": "Haladó",
-      "cardIds": [
-        "views-small-01",
-        "views-three-02",
-        "views-four-03"
-      ]
-    },
-    {
-      "id": "silhouettes",
-      "title": "Építs sziluettekből!",
-      "goal": "Térbeli következtetés az elemek határainak ismerete nélkül.",
-      "level": "Haladó",
-      "cardIds": [
-        "sil-small-01",
-        "sil-three-02"
-      ]
-    },
-    {
-      "id": "packing",
-      "title": "Rakd ki az alakzatot!",
-      "goal": "A külső alakzat felbontása a megadott elemekre.",
-      "level": "Haladó",
-      "cardIds": [
-        "pack-small-01",
-        "pack-three-02"
-      ]
-    },
-    {
+      "group": "rekonstrukcio",
+      "tags": [
+        "retegek",
+        "csokkentett-keszlet",
+        "teljes-keszlet"
+      ],
+      "order": 200,
       "id": "photo-s1",
       "title": "Fotózott 1 · Rétegekből építés",
       "goal": "Számozott rétegek összeillesztése és az elemek térbeli követése.",
@@ -26895,9 +26926,55 @@ window.SOMA_CONTENT = {
         "photo-s1-08",
         "photo-s1-09",
         "photo-s1-10"
-      ]
+      ],
+      "summary": {
+        "cardCount": 10,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "layers"
+        ]
+      }
     },
     {
+      "group": "rekonstrukcio",
+      "tags": [
+        "szinezett-nezetek",
+        "csokkentett-keszlet"
+      ],
+      "order": 300,
+      "id": "views",
+      "title": "Építs színezett nézetekből!",
+      "goal": "Három nézet összehangolása és takarások felismerése.",
+      "level": "Haladó",
+      "cardIds": [
+        "views-small-01",
+        "views-three-02",
+        "views-four-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "beginner",
+          "advanced"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "advanced",
+        "types": [
+          "views"
+        ]
+      }
+    },
+    {
+      "group": "rekonstrukcio",
+      "tags": [
+        "szinezett-nezetek",
+        "csokkentett-keszlet"
+      ],
+      "order": 400,
       "id": "photo-s2",
       "title": "Fotózott 2 · Kisebb készletek nézetei",
       "goal": "Három színezett nézet összehangolása kisebb elemkészletekkel.",
@@ -26912,9 +26989,81 @@ window.SOMA_CONTENT = {
         "photo-s2-08",
         "photo-s2-09",
         "photo-s2-10"
-      ]
+      ],
+      "summary": {
+        "cardCount": 10,
+        "levels": [
+          "beginner",
+          "advanced"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "advanced",
+        "types": [
+          "views"
+        ]
+      }
     },
     {
+      "group": "rekonstrukcio",
+      "tags": [
+        "sziluettek",
+        "csokkentett-keszlet"
+      ],
+      "order": 500,
+      "id": "silhouettes",
+      "title": "Építs sziluettekből!",
+      "goal": "Térbeli következtetés az elemek határainak ismerete nélkül.",
+      "level": "Haladó",
+      "cardIds": [
+        "sil-small-01",
+        "sil-three-02"
+      ],
+      "summary": {
+        "cardCount": 2,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "silhouettes"
+        ]
+      }
+    },
+    {
+      "group": "rekonstrukcio",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet"
+      ],
+      "order": 600,
+      "id": "packing",
+      "title": "Rakd ki az alakzatot!",
+      "goal": "A külső alakzat felbontása a megadott elemekre.",
+      "level": "Haladó",
+      "cardIds": [
+        "pack-small-01",
+        "pack-three-02"
+      ],
+      "summary": {
+        "cardCount": 2,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "rekonstrukcio",
+      "tags": [
+        "szinezett-nezetek",
+        "teljes-keszlet"
+      ],
+      "order": 700,
       "id": "photo-s3",
       "title": "Fotózott 3 · A teljes készlet nézetei",
       "goal": "Nézetek és takarások értelmezése mind a hét elem felhasználásával.",
@@ -26929,95 +27078,26 @@ window.SOMA_CONTENT = {
         "photo-s3-08",
         "photo-s3-09",
         "photo-s3-10"
-      ]
+      ],
+      "summary": {
+        "cardCount": 10,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "views"
+        ]
+      }
     },
     {
-      "id": "master-1",
-      "title": "Mester 1 · Színezetlen építmények",
-      "goal": "A magasságok és a perem tudatos leolvasása; a céltesten kívüli helyek kizárása.",
-      "cardIds": [
-        "master-1-01",
-        "master-1-02",
-        "master-1-03"
-      ]
-    },
-    {
-      "id": "master-2",
-      "title": "Mester 2 · Színezetlen építmények",
-      "goal": "Az elemkészlet és a felső rész feltételeinek összehangolása.",
-      "cardIds": [
-        "master-2-01",
-        "master-2-02",
-        "master-2-03"
-      ]
-    },
-    {
-      "id": "master-3",
-      "title": "Mester 3 · Színezetlen építmények",
-      "goal": "Rétegek összekapcsolása és a visszalépő peremek vizsgálata.",
-      "cardIds": [
-        "master-3-01",
-        "master-3-02",
-        "master-3-03"
-      ]
-    },
-    {
-      "id": "grandmaster-1",
-      "title": "Nagymester 1 · Színezetlen építmények",
-      "goal": "Távoli részletek együttes figyelése, több felbontás kipróbálása.",
-      "cardIds": [
-        "grandmaster-1-01",
-        "grandmaster-1-02",
-        "grandmaster-1-03"
-      ]
-    },
-    {
-      "id": "grandmaster-2",
-      "title": "Nagymester 2 · Színezetlen építmények",
-      "goal": "A maradó tér vizsgálata és a hibás részmegoldások korai elvetése.",
-      "cardIds": [
-        "grandmaster-2-01",
-        "grandmaster-2-02",
-        "grandmaster-2-03"
-      ]
-    },
-    {
-      "id": "grandmaster-3",
-      "title": "Nagymester 3 · Színezetlen építmények",
-      "goal": "Önálló keresési terv, körbeforgatás és tudatos visszalépés.",
-      "cardIds": [
-        "grandmaster-3-01",
-        "grandmaster-3-02",
-        "grandmaster-3-03"
-      ]
-    },
-    {
-      "id": "depth-views",
-      "title": "Színek és takarások",
-      "goal": "A látható színfoltok összehangolásától a teljesen takart elem következtetéséig.",
-      "cardIds": [
-        "sample-views-master-01",
-        "views-depth-02",
-        "views-depth-03",
-        "views-depth-04",
-        "sample-views-grandmaster-01",
-        "views-depth-06"
-      ]
-    },
-    {
-      "id": "depth-silhouettes",
-      "title": "Körvonalakból építmény",
-      "goal": "Három sziluett közös feltételeitől a teljes tér tudatos kitöltéséig.",
-      "cardIds": [
-        "sample-silhouettes-master-01",
-        "silhouettes-depth-02",
-        "silhouettes-depth-03",
-        "silhouettes-depth-04",
-        "silhouettes-depth-05",
-        "sample-silhouettes-grandmaster-01"
-      ]
-    },
-    {
+      "group": "rekonstrukcio",
+      "tags": [
+        "retegek",
+        "teljes-keszlet"
+      ],
+      "order": 800,
       "id": "depth-layers",
       "title": "Rétegekből magas építmények",
       "goal": "Négy réteg áttekintésétől az öt rétegen átnyúló elemek összeépítéséig.",
@@ -27028,38 +27108,90 @@ window.SOMA_CONTENT = {
         "layers-depth-04",
         "layers-depth-05",
         "sample-layers-grandmaster-01"
-      ]
+      ],
+      "summary": {
+        "cardCount": 6,
+        "levels": [
+          "advanced",
+          "master"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "master",
+        "types": [
+          "layers"
+        ]
+      }
     },
     {
-      "id": "cube-red-yellow",
-      "title": "Fejezd be a kockát! — Piros és sárga",
-      "goal": "Rögzített kezdésből a maradó tér tudatos kitöltése. A tükörváltozatok páros összehasonlítása.",
+      "group": "rekonstrukcio",
+      "tags": [
+        "szinezett-nezetek",
+        "teljes-keszlet"
+      ],
+      "order": 900,
+      "id": "depth-views",
+      "title": "Színek és takarások",
+      "goal": "A látható színfoltok összehangolásától a teljesen takart elem következtetéséig.",
       "cardIds": [
-        "cube-red-yellow-11",
-        "cube-red-yellow-15",
-        "cube-red-yellow-21",
-        "cube-red-yellow-22",
-        "cube-red-yellow-12",
-        "cube-red-yellow-16",
-        "cube-red-yellow-03",
-        "cube-red-yellow-06",
-        "cube-red-yellow-13",
-        "cube-red-yellow-17",
-        "cube-red-yellow-05",
-        "cube-red-yellow-08",
-        "cube-red-yellow-14",
-        "cube-red-yellow-18",
-        "cube-red-yellow-04",
-        "cube-red-yellow-07",
-        "cube-red-yellow-19",
-        "cube-red-yellow-20",
-        "cube-red-yellow-09",
-        "cube-red-yellow-10",
-        "cube-red-yellow-01",
-        "cube-red-yellow-02"
-      ]
+        "sample-views-master-01",
+        "views-depth-02",
+        "views-depth-03",
+        "views-depth-04",
+        "sample-views-grandmaster-01",
+        "views-depth-06"
+      ],
+      "summary": {
+        "cardCount": 6,
+        "levels": [
+          "advanced",
+          "master"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "master",
+        "types": [
+          "views"
+        ]
+      }
     },
     {
+      "group": "rekonstrukcio",
+      "tags": [
+        "sziluettek",
+        "teljes-keszlet"
+      ],
+      "order": 1000,
+      "id": "depth-silhouettes",
+      "title": "Körvonalakból építmény",
+      "goal": "Három sziluett közös feltételeitől a teljes tér tudatos kitöltéséig.",
+      "cardIds": [
+        "sample-silhouettes-master-01",
+        "silhouettes-depth-02",
+        "silhouettes-depth-03",
+        "silhouettes-depth-04",
+        "silhouettes-depth-05",
+        "sample-silhouettes-grandmaster-01"
+      ],
+      "summary": {
+        "cardCount": 6,
+        "levels": [
+          "master",
+          "grandmaster"
+        ],
+        "minLevel": "master",
+        "maxLevel": "grandmaster",
+        "types": [
+          "silhouettes"
+        ]
+      }
+    },
+    {
+      "group": "kockaepites",
+      "tags": [
+        "kockabefejezes",
+        "teljes-keszlet",
+        "negy-megadott-elem"
+      ],
+      "order": 100,
       "id": "cube-four-givens",
       "title": "Fejezd be a kockát! — 4 megadott elem",
       "goal": "Három hiányzó elem beillesztése az asztalon megtámasztott kezdésekbe.",
@@ -27086,9 +27218,27 @@ window.SOMA_CONTENT = {
         "cube-red-yellow-10-given-4",
         "cube-red-yellow-01-given-4",
         "cube-red-yellow-02-given-4"
-      ]
+      ],
+      "summary": {
+        "cardCount": 22,
+        "levels": [
+          "beginner"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "beginner",
+        "types": [
+          "completion"
+        ]
+      }
     },
     {
+      "group": "kockaepites",
+      "tags": [
+        "kockabefejezes",
+        "teljes-keszlet",
+        "harom-megadott-elem"
+      ],
+      "order": 200,
       "id": "cube-three-givens",
       "title": "Fejezd be a kockát! — 3 megadott elem",
       "goal": "Négy hiányzó elem beillesztése, a négyelemes kezdéseknél eggyel kevesebb támpontból.",
@@ -27115,9 +27265,77 @@ window.SOMA_CONTENT = {
         "cube-red-yellow-10-given-3",
         "cube-red-yellow-01-given-3",
         "cube-red-yellow-02-given-3"
-      ]
+      ],
+      "summary": {
+        "cardCount": 22,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "completion"
+        ]
+      }
     },
     {
+      "group": "kockaepites",
+      "tags": [
+        "kockabefejezes",
+        "teljes-keszlet",
+        "ket-megadott-elem"
+      ],
+      "order": 300,
+      "id": "cube-red-yellow",
+      "title": "Fejezd be a kockát! — Piros és sárga",
+      "goal": "Rögzített kezdésből a maradó tér tudatos kitöltése. A tükörváltozatok páros összehasonlítása.",
+      "cardIds": [
+        "cube-red-yellow-11",
+        "cube-red-yellow-15",
+        "cube-red-yellow-21",
+        "cube-red-yellow-22",
+        "cube-red-yellow-12",
+        "cube-red-yellow-16",
+        "cube-red-yellow-03",
+        "cube-red-yellow-06",
+        "cube-red-yellow-13",
+        "cube-red-yellow-17",
+        "cube-red-yellow-05",
+        "cube-red-yellow-08",
+        "cube-red-yellow-14",
+        "cube-red-yellow-18",
+        "cube-red-yellow-04",
+        "cube-red-yellow-07",
+        "cube-red-yellow-19",
+        "cube-red-yellow-20",
+        "cube-red-yellow-09",
+        "cube-red-yellow-10",
+        "cube-red-yellow-01",
+        "cube-red-yellow-02"
+      ],
+      "summary": {
+        "cardCount": 22,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "completion"
+        ]
+      }
+    },
+    {
+      "group": "kockaepites",
+      "tags": [
+        "kockabefejezes",
+        "teljes-keszlet",
+        "negy-megadott-elem",
+        "harom-megadott-elem",
+        "ket-megadott-elem",
+        "kevesedo-segitseg"
+      ],
+      "order": 400,
       "id": "cube-fading-clues",
       "title": "Fejezd be a kockát! — Egyre kevesebb segítség",
       "goal": "Családonként 4 → 3 → 2 megadott elem: ugyanahhoz a kezdéshez fokozatosan kevesebb támpontot kapsz. A kocka egészben elfordulhat.",
@@ -27188,7 +27406,229 @@ window.SOMA_CONTENT = {
         "cube-red-yellow-02-given-4",
         "cube-red-yellow-02-given-3",
         "cube-red-yellow-02"
-      ]
+      ],
+      "summary": {
+        "cardCount": 66,
+        "levels": [
+          "beginner",
+          "advanced"
+        ],
+        "minLevel": "beginner",
+        "maxLevel": "advanced",
+        "types": [
+          "completion"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet"
+      ],
+      "order": 100,
+      "id": "master-1",
+      "title": "Mester 1 · Színezetlen építmények",
+      "goal": "A magasságok és a perem tudatos leolvasása; a céltesten kívüli helyek kizárása.",
+      "cardIds": [
+        "master-1-01",
+        "master-1-02",
+        "master-1-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "master"
+        ],
+        "minLevel": "master",
+        "maxLevel": "master",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "teljes-keszlet"
+      ],
+      "order": 200,
+      "id": "master-2",
+      "title": "Mester 2 · Színezetlen építmények",
+      "goal": "Az elemkészlet és a felső rész feltételeinek összehangolása.",
+      "cardIds": [
+        "master-2-01",
+        "master-2-02",
+        "master-2-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "master"
+        ],
+        "minLevel": "master",
+        "maxLevel": "master",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "teljes-keszlet"
+      ],
+      "order": 300,
+      "id": "master-3",
+      "title": "Mester 3 · Színezetlen építmények",
+      "goal": "Rétegek összekapcsolása és a visszalépő peremek vizsgálata.",
+      "cardIds": [
+        "master-3-01",
+        "master-3-02",
+        "master-3-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "master"
+        ],
+        "minLevel": "master",
+        "maxLevel": "master",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "teljes-keszlet"
+      ],
+      "order": 400,
+      "id": "grandmaster-1",
+      "title": "Nagymester 1 · Színezetlen építmények",
+      "goal": "Távoli részletek együttes figyelése, több felbontás kipróbálása.",
+      "cardIds": [
+        "grandmaster-1-01",
+        "grandmaster-1-02",
+        "grandmaster-1-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "grandmaster"
+        ],
+        "minLevel": "grandmaster",
+        "maxLevel": "grandmaster",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "teljes-keszlet"
+      ],
+      "order": 500,
+      "id": "grandmaster-2",
+      "title": "Nagymester 2 · Színezetlen építmények",
+      "goal": "A maradó tér vizsgálata és a hibás részmegoldások korai elvetése.",
+      "cardIds": [
+        "grandmaster-2-01",
+        "grandmaster-2-02",
+        "grandmaster-2-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "grandmaster"
+        ],
+        "minLevel": "grandmaster",
+        "maxLevel": "grandmaster",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "group": "mesterkihivasok",
+      "tags": [
+        "kirakas",
+        "teljes-keszlet"
+      ],
+      "order": 600,
+      "id": "grandmaster-3",
+      "title": "Nagymester 3 · Színezetlen építmények",
+      "goal": "Önálló keresési terv, körbeforgatás és tudatos visszalépés.",
+      "cardIds": [
+        "grandmaster-3-01",
+        "grandmaster-3-02",
+        "grandmaster-3-03"
+      ],
+      "summary": {
+        "cardCount": 3,
+        "levels": [
+          "grandmaster"
+        ],
+        "minLevel": "grandmaster",
+        "maxLevel": "grandmaster",
+        "types": [
+          "packing"
+        ]
+      }
     }
-  ]
+  ],
+  "seriesTaxonomy": {
+    "schemaVersion": 1,
+    "groups": [
+      {
+        "id": "ismerkedes",
+        "label": "Ismerkedés",
+        "order": 100
+      },
+      {
+        "id": "rekonstrukcio",
+        "label": "Rétegek és nézetek",
+        "order": 200
+      },
+      {
+        "id": "kockaepites",
+        "label": "Kockaépítés",
+        "order": 300
+      },
+      {
+        "id": "mesterkihivasok",
+        "label": "Mesterkihívások",
+        "order": 400
+      },
+      {
+        "id": "egyeb",
+        "label": "További feladatsorok",
+        "order": 1000
+      }
+    ],
+    "tags": {
+      "forgatas": "Forgatás",
+      "masolas": "Másolás",
+      "retegek": "Rétegek",
+      "szinezett-nezetek": "Színezett nézetek",
+      "sziluettek": "Sziluettek",
+      "kirakas": "Kirakás",
+      "kockabefejezes": "Kockabefejezés",
+      "csokkentett-keszlet": "Csökkentett készlet",
+      "teljes-keszlet": "Teljes készlet",
+      "vegyes": "Vegyes feladattípusok",
+      "bevezeto": "Bevezető",
+      "negy-megadott-elem": "4 megadott elem",
+      "harom-megadott-elem": "3 megadott elem",
+      "ket-megadott-elem": "2 megadott elem",
+      "kevesedo-segitseg": "Egyre kevesebb segítség"
+    }
+  }
 };

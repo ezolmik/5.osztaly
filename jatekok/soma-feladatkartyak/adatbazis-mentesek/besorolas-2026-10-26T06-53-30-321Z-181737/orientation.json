@@ -1,0 +1,11 @@
+{
+  "id": "orientation",
+  "title": "Forgasd be!",
+  "goal": "Térbeli tájolás és azonosítás.",
+  "level": "Kezdő",
+  "cardIds": [
+    "orient-v-01",
+    "orient-l-01",
+    "orient-screw-a-01"
+  ]
+}

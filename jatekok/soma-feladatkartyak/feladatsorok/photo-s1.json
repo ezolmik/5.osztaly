@@ -1,4 +1,11 @@
 {
+  "group": "rekonstrukcio",
+  "tags": [
+    "retegek",
+    "csokkentett-keszlet",
+    "teljes-keszlet"
+  ],
+  "order": 200,
   "id": "photo-s1",
   "title": "Fotózott 1 · Rétegekből építés",
   "goal": "Számozott rétegek összeillesztése és az elemek térbeli követése.",
