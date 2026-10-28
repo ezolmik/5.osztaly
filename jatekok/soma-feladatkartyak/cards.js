@@ -39112,7 +39112,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "v-t-z",
-        "harom-elem"
+        "harom-elem",
+        "ocycle"
       ],
       "order": 100,
       "cardIds": [
@@ -39153,7 +39154,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "v-l-t",
-        "harom-elem"
+        "harom-elem",
+        "ocycle"
       ],
       "order": 200,
       "cardIds": [
@@ -39194,7 +39196,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "v-l-z",
-        "harom-elem"
+        "harom-elem",
+        "ocycle"
       ],
       "order": 300,
       "cardIds": [
@@ -39235,7 +39238,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "l-t-z",
-        "harom-elem"
+        "harom-elem",
+        "ocycle"
       ],
       "order": 400,
       "cardIds": [
@@ -39276,7 +39280,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "negy-elem",
-        "sikbeli"
+        "sikbeli",
+        "ocycle"
       ],
       "order": 500,
       "cardIds": [
@@ -39320,7 +39325,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "csokkentett-keszlet",
         "negy-elem",
-        "terbeli"
+        "terbeli",
+        "ocycle"
       ],
       "order": 600,
       "cardIds": [
@@ -39368,7 +39374,8 @@ window.SOMA_CONTENT = {
         "kirakas",
         "teljes-keszlet",
         "het-elem",
-        "terbeli"
+        "terbeli",
+        "ocycle"
       ],
       "order": 700,
       "cardIds": [
@@ -39851,7 +39858,8 @@ window.SOMA_CONTENT = {
       "v-t-z": "V–T–Z",
       "v-l-t": "V–L–T",
       "v-l-z": "V–L–Z",
-      "l-t-z": "L–T–Z"
+      "l-t-z": "L–T–Z",
+      "ocycle": "O•cycle"
     }
   }
 };

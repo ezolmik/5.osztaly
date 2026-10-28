@@ -235,7 +235,7 @@ window.SOMA_SHAPES = {
   ],
   "bankFingerprint": "b5c2a040",
   "outerFormCount": 184,
-  "bankSha256": "83d990701c7395d7abedb6ea99d6ea2d01f6f1675537665fd705bda8c626dd3f",
+  "bankSha256": "2932f0af4fc7d21f6c84e414b4716b4aff698285932ff609fed890eab1ce085a",
   "cardCount": 261,
   "shapes": [
     {
