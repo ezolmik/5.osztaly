@@ -1,0 +1,23 @@
+{
+  "id": "magnetic-full",
+  "title": "Hét elem · teljes készlet · 101–108",
+  "goal": "Térbeli testek megépítése mind a hét Soma-elemből.",
+  "group": "kirakasok",
+  "tags": [
+    "kirakas",
+    "teljes-keszlet",
+    "het-elem",
+    "terbeli"
+  ],
+  "order": 700,
+  "cardIds": [
+    "magnetic-101",
+    "magnetic-102",
+    "magnetic-103",
+    "magnetic-104",
+    "magnetic-105",
+    "magnetic-106",
+    "magnetic-107",
+    "magnetic-108"
+  ]
+}

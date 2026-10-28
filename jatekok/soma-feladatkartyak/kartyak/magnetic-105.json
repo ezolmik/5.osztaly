@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-105",
+  "title": "Kirakás 105 · Magas fal két lábbal",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "grandmaster",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 105",
+    "cardNumber": 105,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0228",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

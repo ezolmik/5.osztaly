@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-061",
+  "title": "Kirakás 061 · Lépcsős tömb",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 061",
+    "cardNumber": 61,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0185",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

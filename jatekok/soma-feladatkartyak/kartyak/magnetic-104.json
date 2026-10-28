@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-104",
+  "title": "Kirakás 104 · Kétcsúcsú emelvény",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "grandmaster",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 104",
+    "cardNumber": 104,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0227",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

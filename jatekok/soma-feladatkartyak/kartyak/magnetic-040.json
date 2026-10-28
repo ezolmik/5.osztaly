@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-040",
+  "title": "Kirakás 040 · Lépcsős tömb",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 040",
+    "cardNumber": 40,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0164",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

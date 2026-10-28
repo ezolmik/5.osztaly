@@ -1,0 +1,30 @@
+{
+  "id": "magnetic-l-t-z",
+  "title": "L–T–Z · 046–060",
+  "goal": "A céltest megépítése a megadott Soma-elemekből.",
+  "group": "kirakasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet",
+    "l-t-z",
+    "harom-elem"
+  ],
+  "order": 400,
+  "cardIds": [
+    "magnetic-046",
+    "magnetic-047",
+    "magnetic-048",
+    "magnetic-049",
+    "magnetic-050",
+    "magnetic-051",
+    "magnetic-052",
+    "magnetic-053",
+    "magnetic-054",
+    "magnetic-055",
+    "magnetic-056",
+    "magnetic-057",
+    "magnetic-058",
+    "magnetic-059",
+    "magnetic-060"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "magnetic-flat",
+  "title": "Négy elem · síkbeli alakzatok · 083–100",
+  "goal": "Síkbeli alakzatok felbontása négy Soma-elemre.",
+  "group": "kirakasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet",
+    "negy-elem",
+    "sikbeli"
+  ],
+  "order": 500,
+  "cardIds": [
+    "magnetic-083",
+    "magnetic-084",
+    "magnetic-085",
+    "magnetic-086",
+    "magnetic-087",
+    "magnetic-088",
+    "magnetic-089",
+    "magnetic-090",
+    "magnetic-091",
+    "magnetic-092",
+    "magnetic-093",
+    "magnetic-094",
+    "magnetic-095",
+    "magnetic-096",
+    "magnetic-097",
+    "magnetic-098",
+    "magnetic-099",
+    "magnetic-100"
+  ]
+}

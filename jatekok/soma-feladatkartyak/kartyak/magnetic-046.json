@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-046",
+  "title": "Kirakás 046 · Hosszú pad oldalsó fellépővel",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 046",
+    "cardNumber": 46,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0170",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

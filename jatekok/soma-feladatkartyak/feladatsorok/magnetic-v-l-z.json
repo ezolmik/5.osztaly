@@ -1,0 +1,30 @@
+{
+  "id": "magnetic-v-l-z",
+  "title": "V–L–Z · 031–045",
+  "goal": "A céltest megépítése a megadott Soma-elemekből.",
+  "group": "kirakasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet",
+    "v-l-z",
+    "harom-elem"
+  ],
+  "order": 300,
+  "cardIds": [
+    "magnetic-031",
+    "magnetic-032",
+    "magnetic-033",
+    "magnetic-034",
+    "magnetic-035",
+    "magnetic-036",
+    "magnetic-037",
+    "magnetic-038",
+    "magnetic-039",
+    "magnetic-040",
+    "magnetic-041",
+    "magnetic-042",
+    "magnetic-043",
+    "magnetic-044",
+    "magnetic-045"
+  ]
+}

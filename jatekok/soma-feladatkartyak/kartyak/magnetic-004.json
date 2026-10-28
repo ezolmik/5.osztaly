@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-004",
+  "title": "Kirakás 004 · Hosszú lépcsős test",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 004",
+    "cardNumber": 4,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0129",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

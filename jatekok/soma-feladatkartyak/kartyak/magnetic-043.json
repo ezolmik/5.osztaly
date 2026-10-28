@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-043",
+  "title": "Kirakás 043 · Lépcsős tömb",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "advanced",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 043",
+    "cardNumber": 43,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0167",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-083",
+  "title": "Kirakás 083 · Tagolt síkbeli lap",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 083",
+    "cardNumber": 83,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0207",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

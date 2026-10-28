@@ -25,6 +25,11 @@
       "id": "egyeb",
       "label": "További feladatsorok",
       "order": 1000
+    },
+    {
+      "id": "kirakasok",
+      "label": "Alakzatok kirakása",
+      "order": 250
     }
   ],
   "tags": {
@@ -42,6 +47,15 @@
     "negy-megadott-elem": "4 megadott elem",
     "harom-megadott-elem": "3 megadott elem",
     "ket-megadott-elem": "2 megadott elem",
-    "kevesedo-segitseg": "Egyre kevesebb segítség"
+    "kevesedo-segitseg": "Egyre kevesebb segítség",
+    "harom-elem": "3 elem",
+    "negy-elem": "4 elem",
+    "het-elem": "7 elem",
+    "sikbeli": "Síkbeli",
+    "terbeli": "Térbeli",
+    "v-t-z": "V–T–Z",
+    "v-l-t": "V–L–T",
+    "v-l-z": "V–L–Z",
+    "l-t-z": "L–T–Z"
   }
 }

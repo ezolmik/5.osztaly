@@ -1,0 +1,37 @@
+{
+  "id": "magnetic-spatial",
+  "title": "Négy elem · térbeli alakzatok · 061–082",
+  "goal": "A céltest megépítése a megadott Soma-elemekből.",
+  "group": "kirakasok",
+  "tags": [
+    "kirakas",
+    "csokkentett-keszlet",
+    "negy-elem",
+    "terbeli"
+  ],
+  "order": 600,
+  "cardIds": [
+    "magnetic-061",
+    "magnetic-062",
+    "magnetic-063",
+    "magnetic-064",
+    "magnetic-065",
+    "magnetic-066",
+    "magnetic-067",
+    "magnetic-068",
+    "magnetic-069",
+    "magnetic-070",
+    "magnetic-071",
+    "magnetic-072",
+    "magnetic-073",
+    "magnetic-074",
+    "magnetic-075",
+    "magnetic-076",
+    "magnetic-077",
+    "magnetic-078",
+    "magnetic-079",
+    "magnetic-080",
+    "magnetic-081",
+    "magnetic-082"
+  ]
+}

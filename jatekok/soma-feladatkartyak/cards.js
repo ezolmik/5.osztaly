@@ -26808,6 +26808,11925 @@ window.SOMA_CONTENT = {
           ]
         }
       ]
+    },
+    {
+      "id": "magnetic-001",
+      "title": "Kirakás 001 · Lépcsős pad",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 001",
+        "cardNumber": 1,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-002",
+      "title": "Kirakás 002 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 002",
+        "cardNumber": 2,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-003",
+      "title": "Kirakás 003 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 003",
+        "cardNumber": 3,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-004",
+      "title": "Kirakás 004 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 004",
+        "cardNumber": 4,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-005",
+      "title": "Kirakás 005 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 005",
+        "cardNumber": 5,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-006",
+      "title": "Kirakás 006 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 006",
+        "cardNumber": 6,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-007",
+      "title": "Kirakás 007 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 007",
+        "cardNumber": 7,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-008",
+      "title": "Kirakás 008 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 008",
+        "cardNumber": 8,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-009",
+      "title": "Kirakás 009 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 009",
+        "cardNumber": 9,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-010",
+      "title": "Kirakás 010 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 010",
+        "cardNumber": 10,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-011",
+      "title": "Kirakás 011 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 011",
+        "cardNumber": 11,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-012",
+      "title": "Kirakás 012 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 012",
+        "cardNumber": 12,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-013",
+      "title": "Kirakás 013 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 013",
+        "cardNumber": 13,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-014",
+      "title": "Kirakás 014 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 014",
+        "cardNumber": 14,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-015",
+      "title": "Kirakás 015 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 015",
+        "cardNumber": 15,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-016",
+      "title": "Kirakás 016 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 016",
+        "cardNumber": 16,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-017",
+      "title": "Kirakás 017 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 017",
+        "cardNumber": 17,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-018",
+      "title": "Kirakás 018 · Váltakozó magasítások",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 018",
+        "cardNumber": 18,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-019",
+      "title": "Kirakás 019 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 019",
+        "cardNumber": 19,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-020",
+      "title": "Kirakás 020 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 020",
+        "cardNumber": 20,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-021",
+      "title": "Kirakás 021 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 021",
+        "cardNumber": 21,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-022",
+      "title": "Kirakás 022 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 022",
+        "cardNumber": 22,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-023",
+      "title": "Kirakás 023 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 023",
+        "cardNumber": 23,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-024",
+      "title": "Kirakás 024 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 024",
+        "cardNumber": 24,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-025",
+      "title": "Kirakás 025 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 025",
+        "cardNumber": 25,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-026",
+      "title": "Kirakás 026 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 026",
+        "cardNumber": 26,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-027",
+      "title": "Kirakás 027 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 027",
+        "cardNumber": 27,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-028",
+      "title": "Kirakás 028 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 028",
+        "cardNumber": 28,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-029",
+      "title": "Kirakás 029 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 029",
+        "cardNumber": 29,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-030",
+      "title": "Kirakás 030 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 030",
+        "cardNumber": 30,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-031",
+      "title": "Kirakás 031 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 031",
+        "cardNumber": 31,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-032",
+      "title": "Kirakás 032 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 032",
+        "cardNumber": 32,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-033",
+      "title": "Kirakás 033 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 033",
+        "cardNumber": 33,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-034",
+      "title": "Kirakás 034 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 034",
+        "cardNumber": 34,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-035",
+      "title": "Kirakás 035 · Két magas pad",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 035",
+        "cardNumber": 35,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-036",
+      "title": "Kirakás 036 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 036",
+        "cardNumber": 36,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-037",
+      "title": "Kirakás 037 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 037",
+        "cardNumber": 37,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-038",
+      "title": "Kirakás 038 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 038",
+        "cardNumber": 38,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-039",
+      "title": "Kirakás 039 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 039",
+        "cardNumber": 39,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-040",
+      "title": "Kirakás 040 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 040",
+        "cardNumber": 40,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-041",
+      "title": "Kirakás 041 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 041",
+        "cardNumber": 41,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-042",
+      "title": "Kirakás 042 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 042",
+        "cardNumber": 42,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-043",
+      "title": "Kirakás 043 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 043",
+        "cardNumber": 43,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-044",
+      "title": "Kirakás 044 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 044",
+        "cardNumber": 44,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-045",
+      "title": "Kirakás 045 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 045",
+        "cardNumber": 45,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-046",
+      "title": "Kirakás 046 · Hosszú pad oldalsó fellépővel",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 046",
+        "cardNumber": 46,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-047",
+      "title": "Kirakás 047 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 047",
+        "cardNumber": 47,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              1
+            ],
+            [
+              5,
+              1,
+              0
+            ],
+            [
+              5,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-048",
+      "title": "Kirakás 048 · Könyökös pad",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 048",
+        "cardNumber": 48,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-049",
+      "title": "Kirakás 049 · Pad hátsó kiugrással",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 049",
+        "cardNumber": 49,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-050",
+      "title": "Kirakás 050 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 050",
+        "cardNumber": 50,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-051",
+      "title": "Kirakás 051 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 051",
+        "cardNumber": 51,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-052",
+      "title": "Kirakás 052 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 052",
+        "cardNumber": 52,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-053",
+      "title": "Kirakás 053 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 053",
+        "cardNumber": 53,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-054",
+      "title": "Kirakás 054 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 054",
+        "cardNumber": 54,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-055",
+      "title": "Kirakás 055 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 055",
+        "cardNumber": 55,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-056",
+      "title": "Kirakás 056 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 056",
+        "cardNumber": 56,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-057",
+      "title": "Kirakás 057 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 057",
+        "cardNumber": 57,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-058",
+      "title": "Kirakás 058 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 058",
+        "cardNumber": 58,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-059",
+      "title": "Kirakás 059 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 059",
+        "cardNumber": 59,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-060",
+      "title": "Kirakás 060 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "advanced",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 060",
+        "cardNumber": 60,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-061",
+      "title": "Kirakás 061 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 061",
+        "cardNumber": 61,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-062",
+      "title": "Kirakás 062 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 062",
+        "cardNumber": 62,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-063",
+      "title": "Kirakás 063 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 063",
+        "cardNumber": 63,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-064",
+      "title": "Kirakás 064 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 064",
+        "cardNumber": 64,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-065",
+      "title": "Kirakás 065 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 065",
+        "cardNumber": 65,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-066",
+      "title": "Kirakás 066 · Lépcsős tömb",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 066",
+        "cardNumber": 66,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-067",
+      "title": "Kirakás 067 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 067",
+        "cardNumber": 67,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-068",
+      "title": "Kirakás 068 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 068",
+        "cardNumber": 68,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-069",
+      "title": "Kirakás 069 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 069",
+        "cardNumber": 69,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-070",
+      "title": "Kirakás 070 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 070",
+        "cardNumber": 70,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-071",
+      "title": "Kirakás 071 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 071",
+        "cardNumber": 71,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-072",
+      "title": "Kirakás 072 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 072",
+        "cardNumber": 72,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-073",
+      "title": "Kirakás 073 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 073",
+        "cardNumber": 73,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-074",
+      "title": "Kirakás 074 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 074",
+        "cardNumber": 74,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-075",
+      "title": "Kirakás 075 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 075",
+        "cardNumber": 75,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-076",
+      "title": "Kirakás 076 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 076",
+        "cardNumber": 76,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-077",
+      "title": "Kirakás 077 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 077",
+        "cardNumber": 77,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-078",
+      "title": "Kirakás 078 · Túlnyúló építmény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 078",
+        "cardNumber": 78,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-079",
+      "title": "Kirakás 079 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 079",
+        "cardNumber": 79,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-080",
+      "title": "Kirakás 080 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 080",
+        "cardNumber": 80,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-081",
+      "title": "Kirakás 081 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 081",
+        "cardNumber": 81,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              4,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-082",
+      "title": "Kirakás 082 · Hosszú lépcsős test",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 082",
+        "cardNumber": 82,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-083",
+      "title": "Kirakás 083 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 083",
+        "cardNumber": 83,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              2,
+              0
+            ],
+            [
+              4,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-084",
+      "title": "Kirakás 084 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 084",
+        "cardNumber": 84,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-085",
+      "title": "Kirakás 085 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 085",
+        "cardNumber": 85,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-086",
+      "title": "Kirakás 086 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 086",
+        "cardNumber": 86,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-087",
+      "title": "Kirakás 087 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 087",
+        "cardNumber": 87,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-088",
+      "title": "Kirakás 088 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 088",
+        "cardNumber": 88,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-089",
+      "title": "Kirakás 089 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 089",
+        "cardNumber": 89,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-090",
+      "title": "Kirakás 090 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 090",
+        "cardNumber": 90,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-091",
+      "title": "Kirakás 091 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 091",
+        "cardNumber": 91,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-092",
+      "title": "Kirakás 092 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 092",
+        "cardNumber": 92,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ],
+            [
+              4,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-093",
+      "title": "Kirakás 093 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 093",
+        "cardNumber": 93,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-094",
+      "title": "Kirakás 094 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 094",
+        "cardNumber": 94,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-095",
+      "title": "Kirakás 095 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 095",
+        "cardNumber": 95,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              4,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              4,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-096",
+      "title": "Kirakás 096 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 096",
+        "cardNumber": 96,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-097",
+      "title": "Kirakás 097 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 097",
+        "cardNumber": 97,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-098",
+      "title": "Kirakás 098 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 098",
+        "cardNumber": 98,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-099",
+      "title": "Kirakás 099 · Tagolt síkbeli lap",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 099",
+        "cardNumber": 99,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-100",
+      "title": "Kirakás 100 · Eltolt sorok",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "master",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 100",
+        "cardNumber": 100,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-101",
+      "title": "Kirakás 101 · Tagolt emelvény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 101",
+        "cardNumber": 101,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              5,
+              0
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              2,
+              5,
+              0
+            ],
+            [
+              2,
+              5,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              4,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              5,
+              1
+            ],
+            [
+              1,
+              4,
+              1
+            ],
+            [
+              1,
+              4,
+              2
+            ],
+            [
+              1,
+              5,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-102",
+      "title": "Kirakás 102 · Kétoszlopos torony",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 102",
+        "cardNumber": 102,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              4
+            ],
+            [
+              2,
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-103",
+      "title": "Kirakás 103 · Lépcsős sarok",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 103",
+        "cardNumber": 103,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-104",
+      "title": "Kirakás 104 · Kétcsúcsú emelvény",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 104",
+        "cardNumber": 104,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              3,
+              2
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-105",
+      "title": "Kirakás 105 · Magas fal két lábbal",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 105",
+        "cardNumber": 105,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              2,
+              2,
+              3
+            ],
+            [
+              3,
+              2,
+              2
+            ],
+            [
+              3,
+              2,
+              3
+            ],
+            [
+              4,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              2,
+              0
+            ],
+            [
+              4,
+              2,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-106",
+      "title": "Kirakás 106 · Fal oldalággal",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 106",
+        "cardNumber": 106,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              3,
+              2,
+              2
+            ],
+            [
+              3,
+              2,
+              3
+            ],
+            [
+              3,
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0
+            ],
+            [
+              4,
+              1,
+              1
+            ],
+            [
+              4,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              4,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              2,
+              3,
+              2
+            ],
+            [
+              3,
+              3,
+              2
+            ],
+            [
+              3,
+              4,
+              2
+            ],
+            [
+              3,
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              3,
+              1
+            ],
+            [
+              3,
+              4,
+              0
+            ],
+            [
+              3,
+              4,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-107",
+      "title": "Kirakás 107 · Boltív",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 107",
+        "cardNumber": 107,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              4,
+              1
+            ],
+            [
+              0,
+              4,
+              2
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              1,
+              4,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnetic-108",
+      "title": "Kirakás 108 · Soma-kocka",
+      "type": "packing",
+      "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+      "difficulty": "grandmaster",
+      "challenge": 2,
+      "classificationStatus": "provisional",
+      "goals": {
+        "primary": "construction",
+        "secondary": [
+          "spatial-rotation",
+          "occlusion"
+        ]
+      },
+      "source": {
+        "label": "Magic Magnetic Cube · 108",
+        "cardNumber": 108,
+        "note": "Előzetes nehézségi besorolás."
+      },
+      "parts": [
+        {
+          "id": 1,
+          "cells": [
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "cells": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "cells": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "id": 4,
+          "cells": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "id": 5,
+          "cells": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 6,
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "id": 7,
+          "cells": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ]
     }
   ],
   "series": [
@@ -27181,6 +39100,296 @@ window.SOMA_CONTENT = {
         "maxLevel": "grandmaster",
         "types": [
           "silhouettes"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-v-t-z",
+      "title": "V–T–Z · 001–015",
+      "goal": "A céltest megépítése a megadott Soma-elemekből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "v-t-z",
+        "harom-elem"
+      ],
+      "order": 100,
+      "cardIds": [
+        "magnetic-001",
+        "magnetic-002",
+        "magnetic-003",
+        "magnetic-004",
+        "magnetic-005",
+        "magnetic-006",
+        "magnetic-007",
+        "magnetic-008",
+        "magnetic-009",
+        "magnetic-010",
+        "magnetic-011",
+        "magnetic-012",
+        "magnetic-013",
+        "magnetic-014",
+        "magnetic-015"
+      ],
+      "summary": {
+        "cardCount": 15,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-v-l-t",
+      "title": "V–L–T · 016–030",
+      "goal": "A céltest megépítése a megadott Soma-elemekből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "v-l-t",
+        "harom-elem"
+      ],
+      "order": 200,
+      "cardIds": [
+        "magnetic-016",
+        "magnetic-017",
+        "magnetic-018",
+        "magnetic-019",
+        "magnetic-020",
+        "magnetic-021",
+        "magnetic-022",
+        "magnetic-023",
+        "magnetic-024",
+        "magnetic-025",
+        "magnetic-026",
+        "magnetic-027",
+        "magnetic-028",
+        "magnetic-029",
+        "magnetic-030"
+      ],
+      "summary": {
+        "cardCount": 15,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-v-l-z",
+      "title": "V–L–Z · 031–045",
+      "goal": "A céltest megépítése a megadott Soma-elemekből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "v-l-z",
+        "harom-elem"
+      ],
+      "order": 300,
+      "cardIds": [
+        "magnetic-031",
+        "magnetic-032",
+        "magnetic-033",
+        "magnetic-034",
+        "magnetic-035",
+        "magnetic-036",
+        "magnetic-037",
+        "magnetic-038",
+        "magnetic-039",
+        "magnetic-040",
+        "magnetic-041",
+        "magnetic-042",
+        "magnetic-043",
+        "magnetic-044",
+        "magnetic-045"
+      ],
+      "summary": {
+        "cardCount": 15,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-l-t-z",
+      "title": "L–T–Z · 046–060",
+      "goal": "A céltest megépítése a megadott Soma-elemekből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "l-t-z",
+        "harom-elem"
+      ],
+      "order": 400,
+      "cardIds": [
+        "magnetic-046",
+        "magnetic-047",
+        "magnetic-048",
+        "magnetic-049",
+        "magnetic-050",
+        "magnetic-051",
+        "magnetic-052",
+        "magnetic-053",
+        "magnetic-054",
+        "magnetic-055",
+        "magnetic-056",
+        "magnetic-057",
+        "magnetic-058",
+        "magnetic-059",
+        "magnetic-060"
+      ],
+      "summary": {
+        "cardCount": 15,
+        "levels": [
+          "advanced"
+        ],
+        "minLevel": "advanced",
+        "maxLevel": "advanced",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-flat",
+      "title": "Négy elem · síkbeli alakzatok · 083–100",
+      "goal": "Síkbeli alakzatok felbontása négy Soma-elemre.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "negy-elem",
+        "sikbeli"
+      ],
+      "order": 500,
+      "cardIds": [
+        "magnetic-083",
+        "magnetic-084",
+        "magnetic-085",
+        "magnetic-086",
+        "magnetic-087",
+        "magnetic-088",
+        "magnetic-089",
+        "magnetic-090",
+        "magnetic-091",
+        "magnetic-092",
+        "magnetic-093",
+        "magnetic-094",
+        "magnetic-095",
+        "magnetic-096",
+        "magnetic-097",
+        "magnetic-098",
+        "magnetic-099",
+        "magnetic-100"
+      ],
+      "summary": {
+        "cardCount": 18,
+        "levels": [
+          "master"
+        ],
+        "minLevel": "master",
+        "maxLevel": "master",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-spatial",
+      "title": "Négy elem · térbeli alakzatok · 061–082",
+      "goal": "A céltest megépítése a megadott Soma-elemekből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "csokkentett-keszlet",
+        "negy-elem",
+        "terbeli"
+      ],
+      "order": 600,
+      "cardIds": [
+        "magnetic-061",
+        "magnetic-062",
+        "magnetic-063",
+        "magnetic-064",
+        "magnetic-065",
+        "magnetic-066",
+        "magnetic-067",
+        "magnetic-068",
+        "magnetic-069",
+        "magnetic-070",
+        "magnetic-071",
+        "magnetic-072",
+        "magnetic-073",
+        "magnetic-074",
+        "magnetic-075",
+        "magnetic-076",
+        "magnetic-077",
+        "magnetic-078",
+        "magnetic-079",
+        "magnetic-080",
+        "magnetic-081",
+        "magnetic-082"
+      ],
+      "summary": {
+        "cardCount": 22,
+        "levels": [
+          "master"
+        ],
+        "minLevel": "master",
+        "maxLevel": "master",
+        "types": [
+          "packing"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-full",
+      "title": "Hét elem · teljes készlet · 101–108",
+      "goal": "Térbeli testek megépítése mind a hét Soma-elemből.",
+      "group": "kirakasok",
+      "tags": [
+        "kirakas",
+        "teljes-keszlet",
+        "het-elem",
+        "terbeli"
+      ],
+      "order": 700,
+      "cardIds": [
+        "magnetic-101",
+        "magnetic-102",
+        "magnetic-103",
+        "magnetic-104",
+        "magnetic-105",
+        "magnetic-106",
+        "magnetic-107",
+        "magnetic-108"
+      ],
+      "summary": {
+        "cardCount": 8,
+        "levels": [
+          "grandmaster"
+        ],
+        "minLevel": "grandmaster",
+        "maxLevel": "grandmaster",
+        "types": [
+          "packing"
         ]
       }
     },
@@ -27611,6 +39820,11 @@ window.SOMA_CONTENT = {
         "id": "egyeb",
         "label": "További feladatsorok",
         "order": 1000
+      },
+      {
+        "id": "kirakasok",
+        "label": "Alakzatok kirakása",
+        "order": 250
       }
     ],
     "tags": {
@@ -27628,7 +39842,16 @@ window.SOMA_CONTENT = {
       "negy-megadott-elem": "4 megadott elem",
       "harom-megadott-elem": "3 megadott elem",
       "ket-megadott-elem": "2 megadott elem",
-      "kevesedo-segitseg": "Egyre kevesebb segítség"
+      "kevesedo-segitseg": "Egyre kevesebb segítség",
+      "harom-elem": "3 elem",
+      "negy-elem": "4 elem",
+      "het-elem": "7 elem",
+      "sikbeli": "Síkbeli",
+      "terbeli": "Térbeli",
+      "v-t-z": "V–T–Z",
+      "v-l-t": "V–L–T",
+      "v-l-z": "V–L–Z",
+      "l-t-z": "L–T–Z"
     }
   }
 };

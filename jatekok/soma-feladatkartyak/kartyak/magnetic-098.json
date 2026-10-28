@@ -1,0 +1,39 @@
+{
+  "id": "magnetic-098",
+  "title": "Kirakás 098 · Tagolt síkbeli lap",
+  "type": "packing",
+  "instruction": "Rakd ki a testet a megadott elemek mindegyikével!",
+  "difficulty": "master",
+  "challenge": 2,
+  "classificationStatus": "provisional",
+  "goals": {
+    "primary": "construction",
+    "secondary": [
+      "spatial-rotation",
+      "occlusion"
+    ]
+  },
+  "source": {
+    "label": "Magic Magnetic Cube · 098",
+    "cardNumber": 98,
+    "note": "Előzetes nehézségi besorolás."
+  },
+  "shapeId": "0221",
+  "placement": {
+    "axes": [
+      0,
+      1,
+      2
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  }
+}

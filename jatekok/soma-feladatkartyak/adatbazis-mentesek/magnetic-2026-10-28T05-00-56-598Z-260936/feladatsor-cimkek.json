@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "ismerkedes",
+      "label": "Ismerkedés",
+      "order": 100
+    },
+    {
+      "id": "rekonstrukcio",
+      "label": "Rétegek és nézetek",
+      "order": 200
+    },
+    {
+      "id": "kockaepites",
+      "label": "Kockaépítés",
+      "order": 300
+    },
+    {
+      "id": "mesterkihivasok",
+      "label": "Mesterkihívások",
+      "order": 400
+    },
+    {
+      "id": "egyeb",
+      "label": "További feladatsorok",
+      "order": 1000
+    }
+  ],
+  "tags": {
+    "forgatas": "Forgatás",
+    "masolas": "Másolás",
+    "retegek": "Rétegek",
+    "szinezett-nezetek": "Színezett nézetek",
+    "sziluettek": "Sziluettek",
+    "kirakas": "Kirakás",
+    "kockabefejezes": "Kockabefejezés",
+    "csokkentett-keszlet": "Csökkentett készlet",
+    "teljes-keszlet": "Teljes készlet",
+    "vegyes": "Vegyes feladattípusok",
+    "bevezeto": "Bevezető",
+    "negy-megadott-elem": "4 megadott elem",
+    "harom-megadott-elem": "3 megadott elem",
+    "ket-megadott-elem": "2 megadott elem",
+    "kevesedo-segitseg": "Egyre kevesebb segítség"
+  }
+}
