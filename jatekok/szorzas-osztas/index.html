@@ -34,11 +34,13 @@
 .nb-input.rem-input{letter-spacing:0}
 .notebook-key{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:3px auto 7px;font-size:.8rem;color:var(--muted)}
 .notebook-key b{color:#1d4ed8}
+
+.targeted-start{margin-top:15px;padding:12px 14px;background:#f6f8fc;border:1px solid var(--line);border-radius:12px}.targeted-start .btn{width:100%}#focus-select{display:block;width:100%;border:1.5px solid #cbd7e7;border-radius:11px;background:white;padding:11px;margin-top:6px;font:inherit;color:var(--ink)}.weakness-summary{background:#f6f8fc;padding:13px;border-radius:12px;margin-top:12px}.weakness-summary strong{display:block;margin-bottom:4px}.weakness-summary p{margin:3px 0;font-size:.92rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <main>
-<header><div><h1>✖️ Szorzás–osztás Guru</h1><p>5. osztály · Szorzás és osztás</p></div><span class="label-pill">3.2. sprint</span></header>
+<header><div><h1>✖️ Szorzás–osztás Guru</h1><p>5. osztály · Szorzás és osztás</p></div><span class="label-pill">4. sprint</span></header>
 <section id="setup" class="panel" aria-labelledby="setup-title">
 <h2 id="setup-title">Mit szeretnél gyakorolni?</h2><p class="sub">Válassz feladattípust és nehézséget. Nincs rohanás!</p>
 <div class="type-grid" role="group" aria-label="Feladattípus">
@@ -59,7 +61,8 @@
 <button class="choice" type="button" data-mode="free" aria-pressed="true"><strong>∞ Szabad</strong><small>Időkorlát nélkül</small></button>
 <button class="choice" type="button" data-mode="sprint" aria-pressed="false"><strong>⚡ Villám</strong><small>1 perc</small></button>
 <button class="choice" type="button" data-mode="training" aria-pressed="false"><strong>🎯 Edzés</strong><small>5 perc</small></button>
-<button class="choice" type="button" data-mode="exam" aria-pressed="false"><strong>🏅 Próbavizsga</strong><small>15 perc</small></button></div>
+<button class="choice" type="button" data-mode="exam" aria-pressed="false"><strong>🏅 Próbavizsga</strong><small>10 feladat · 15 perc</small></button></div>
+<div class="targeted-start"><button class="btn secondary" id="targeted-btn" type="button">🎯 Célzott gyakorlás: 10 feladat</button><p class="hint" style="text-align:left;margin:7px 0 0">Válassz egy gyakorolni kívánt feladattípust, vagy indulj az eredményeid alapján!</p><div id="focus-panel" class="hidden"><label for="focus-select" class="group-title" style="display:block">Melyik fejben számolást szeretnéd gyakorolni?</label><select id="focus-select" aria-label="Célzott feladattípus"></select></div></div>
 <div class="actions"><button class="btn" id="start-btn" type="button">Gyakorlás indítása →</button></div>
 <p class="hint">Belépés és internet nélkül is működik. Az eredményeket nem mentjük el.</p>
 </section>
@@ -103,9 +106,9 @@
 <section id="results" class="panel hidden" aria-labelledby="results-title"><h2 id="results-title">Eredményed</h2><p id="result-comment" class="sub"></p>
 <div class="result-summary"><div class="result-item"><strong id="result-correct">0</strong><small>Helyes</small></div><div class="result-item"><strong id="result-total">0</strong><small>Összes</small></div><div class="result-item"><strong id="result-accuracy">–</strong><small>Pontosság</small></div></div>
 <h2 class="review-heading">Nézd át a megoldásaidat!</h2><ul id="review" class="review"></ul>
-<div class="actions"><button class="btn" id="retry-btn" type="button">Új gyakorlás</button><button class="btn secondary hidden" id="mistakes-btn" type="button">Hibáim újragyakorlása</button></div>
+<div id="weakness-summary" class="weakness-summary hidden"></div><div class="actions"><button class="btn" id="retry-btn" type="button">Új gyakorlás</button><button class="btn secondary hidden" id="target-weak-btn" type="button">Gyenge pontom gyakorlása</button><button class="btn secondary hidden" id="mistakes-btn" type="button">Hibáim újragyakorlása</button></div>
 <p class="hint">A kihagyott feladatok is megjelennek az áttekintésben. Nem számítanak helyes megoldásnak.</p></section>
-<p class="footer">Szorzás–osztás Guru · 5. osztály · 3.3. sprint</p><div id="live" aria-live="polite"></div>
+<p class="footer">Szorzás–osztás Guru · 5. osztály · 4. sprint</p><div id="live" aria-live="polite"></div>
 </main>
 <script>
 'use strict';
@@ -114,7 +117,7 @@ const $=id=>document.getElementById(id),rand=(a,b)=>a+Math.floor(Math.random()*(
 const choice={mode:'free',difficulty:1,topic:'mixed',kind:'mental'};
 const durations={sprint:60,training:300,exam:900};
 
-const labels={difficulty:{1:'Alap',2:'Közepes',3:'Kihívás'},topic:{mixed:'Vegyes',multiply:'Szorzás',divide:'Osztás'},mode:{free:'Szabad gyakorlás',sprint:'Villám',training:'Edzés',exam:'Próbavizsga'},kind:{mental:'Fejben', 'written-divide':'Írásbeli osztás',remainder:'Maradékos osztás','written-multiply':'Írásbeli szorzás'}};
+const labels={difficulty:{1:'Alap',2:'Közepes',3:'Kihívás'},topic:{mixed:'Vegyes',multiply:'Szorzás',divide:'Osztás'},mode:{free:'Szabad gyakorlás',sprint:'Villám',training:'Edzés',exam:'Próbavizsga',targeted:'Célzott gyakorlás'},kind:{mental:'Fejben', 'written-divide':'Írásbeli osztás',remainder:'Maradékos osztás','written-multiply':'Írásbeli szorzás'}};
 let game=null,timer=null,finalized=false;
 const show=id=>['setup','game','results'].forEach(n=>$(n).classList.toggle('hidden',n!==id));
 const announce=t=>{$('live').textContent=t};
@@ -157,6 +160,19 @@ function generate(difficulty,topic){
  // Az első sprintben az osztások pontosak. A maradékos, kétjegyű osztós
  // írásbeli algoritmus a 3.2. sprint feladata lesz.
  return pick(families)();
+}
+const mentalFamilies={
+ 1:['Kerek számmal szorzás','Szorzótábla','Osztótábla','Kerek hányados'],
+ 2:['Kerek számmal szorzás','Szorzótábla','Szorzás bontással','Ügyes szorzás','Kerek számok szorzása','Osztótábla','Kerek hányados','Osztás bontással','Kerek számok osztása','Kétjegyű osztó'],
+ 3:['Kerek számmal szorzás','Szorzótábla','Szorzás bontással','Ügyes szorzás','Kerek számok szorzása','Számolási trükk','Összetett szorzás','Osztótábla','Kerek hányados','Osztás bontással','Kerek számok osztása','Kétjegyű osztó','Nagyobb osztás','Osztás számolási trükkel']
+};
+function availableFamilies(){return [...new Set(Array.from({length:300},()=>generate(choice.difficulty,choice.topic).type))].sort((a,b)=>a.localeCompare(b,'hu'));}
+function refreshFocus(){const select=$('focus-select'),old=select.value;select.replaceChildren();for(const type of availableFamilies()){const opt=document.createElement('option');opt.value=type;opt.textContent=type;select.append(opt);}if([...select.options].some(o=>o.value===old))select.value=old;}
+function generateFocused(family,difficulty,topic){
+ // A meglévő generátor feladattípusai közül választunk, de új számokkal.
+ for(let i=0;i<1200;i++){const t=generate(difficulty,topic);if(t.type===family)return t;}
+ // Ha a feladattípus a nehézségváltás miatt már nem létezik, általános feladat készül.
+ return generate(difficulty,topic);
 }
 function generateWritten(difficulty,kind){
  const divisor=difficulty===1?rand(11,29):difficulty===2?rand(12,69):rand(11,99);
@@ -309,7 +325,7 @@ function completeMultiplication(){
  $('multiply-prompt').textContent='Kész a szorzás!';
  $('multiply-explain').textContent=`Ellenőrzés: ${multiplicationText(t)}`;
  $('feedback').textContent=game.assisted?'Megoldottad javítással vagy segítséggel.':'Helyes, minden számjegy a helyére került!';$('feedback').className='feedback '+(game.assisted?'info':'ok');
- $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').focus({preventScroll:true});
+ $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').textContent=game.limit!==null&&game.records.length>=game.limit?'Eredmények →':'Következő feladat →';$('next-btn').focus({preventScroll:true});
 }
 function checkMultiplyStep(e){e.preventDefault();if(!game||game.kind!=='written-multiply'||game.answered||finalized)return;
  const raw=$('multiply-digit')?.value.trim();
@@ -365,7 +381,7 @@ function completeWritten(){
  $('step-prompt').textContent='';$('division-steps').replaceChildren();
  const p=document.createElement('p');p.className='step-solved';p.textContent=`Ellenőrzés: ${t.b} · ${t.answer} + ${t.rem} = ${t.a}`;$('division-steps').append(p);
  $('feedback').textContent=game.assisted?'Megoldottad segítséggel.':'Helyes, minden lépés kész!';$('feedback').className='feedback '+(game.assisted?'info':'ok');
- $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').focus({preventScroll:true});
+ $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').textContent=game.limit!==null&&game.records.length>=game.limit?'Eredmények →':'Következő feladat →';$('next-btn').focus({preventScroll:true});
 }
 function checkStep(e){e.preventDefault();if(!game||game.answered||finalized||game.kind==='mental')return;
  const digit=$('digit-input').value.trim(),rem=$('remainder-input').value.trim();
@@ -384,14 +400,15 @@ function checkStep(e){e.preventDefault();if(!game||game.answered||finalized||gam
 }
 function freshTask(){
  let t;
- for(let k=0;k<80;k++){t=game.kind==='mental'?generate(game.difficulty,game.topic):game.kind==='written-multiply'?generateMultiplication(game.difficulty):generateWritten(game.difficulty,game.kind);if(!game.seen.has(t.key))break;}
+ for(let k=0;k<80;k++){t=game.kind==='mental'?(game.focus?generateFocused(game.focus,game.difficulty,game.topic):generate(game.difficulty,game.topic)):game.kind==='written-multiply'?generateMultiplication(game.difficulty):generateWritten(game.difficulty,game.kind);if(!game.seen.has(t.key))break;}
  game.seen.add(t.key);return t;
 }
 function displayTask(){
+ if(game.limit!==null&&game.records.length>=game.limit){endGame();return;}
  if(game.queue){if(!game.queue.length){endGame();return;}game.current=game.queue.shift();}
  else game.current=freshTask();
  game.answered=false;game.assisted=false;
- $('question-label').textContent=`${game.records.length+1}. feladat`;
+ $('question-label').textContent=`${game.records.length+1}. feladat${game.limit!==null?' / '+game.limit:''}`;
  $('problem-type').textContent=game.current.type;
  $('problem').textContent=`${game.current.a.toLocaleString('hu-HU')} ${game.current.operator} ${game.current.b.toLocaleString('hu-HU')} = ?`;
  const written=game.kind!=='mental',multiply=game.kind==='written-multiply';$('written-area').classList.toggle('hidden',!written||multiply);$('multiply-area').classList.toggle('hidden',!multiply);$('answer-form').classList.toggle('hidden',written);$('mental-hint').classList.toggle('hidden',written);$('problem').classList.toggle('written-problem',written);
@@ -418,7 +435,7 @@ function markAnswer(value,skipped=false){
  $('answer').disabled=true;$('submit-answer').disabled=true;$('answer-form').classList.add('hidden');$('step-form').classList.add('hidden');
  const text=skipped?`Kihagyva. A helyes eredmény: ${game.kind==='mental'?question.answer.toLocaleString('hu-HU'):game.kind==='written-multiply'?multiplicationText(question):writtenText(question)}.`:correct?'Helyes! Ügyes vagy!':`Most nem sikerült. A helyes eredmény: ${question.answer.toLocaleString('hu-HU')}.`;
  $('feedback').textContent=text;$('feedback').className='feedback '+(correct?'ok':skipped?'info':'no');
- $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').focus({preventScroll:true});
+ $('skip-btn').classList.add('hidden');$('next-btn').classList.remove('hidden');$('next-btn').textContent=game.limit!==null&&game.records.length>=game.limit?'Eredmények →':'Következő feladat →';$('next-btn').focus({preventScroll:true});
 }
 function tick(){if(!game||finalized||game.duration===null)return;
  const remain=Math.max(0,Math.ceil((game.endAt-performance.now())/1000));
@@ -427,11 +444,12 @@ function tick(){if(!game||finalized||game.duration===null)return;
  $('time-fill').style.width=pct+'%';$('time-meter').setAttribute('aria-valuenow',String(Math.round(pct)));
  if(remain<=0)endGame();
 }
-function startGame(mistakes=null){clearInterval(timer);finalized=false;
+function startGame(mistakes=null,focus=null){clearInterval(timer);finalized=false;
  const queue=mistakes?mistakes.map(q=>({...q})):null;
- const duration=mistakes?null:(durations[choice.mode]??null);
- game={kind:mistakes?mistakes[0].kind||'mental':choice.kind,difficulty:choice.difficulty,topic:choice.topic,mode:choice.mode,records:[],seen:new Set(),queue,duration,endAt:duration===null?null:performance.now()+duration*1000,answered:false,current:null};
- $('game-title').textContent=mistakes?'Hibák újragyakorlása':labels.mode[choice.mode];
+ const duration=(mistakes||focus)?null:(durations[choice.mode]??null);
+ const limit=mistakes?mistakes.length:(focus||choice.mode==='exam'?10:null);
+ game={kind:mistakes?mistakes[0].kind||'mental':choice.kind,difficulty:choice.difficulty,topic:choice.topic,mode:focus?'targeted':choice.mode,focus,limit,records:[],seen:new Set(),queue,duration,endAt:duration===null?null:performance.now()+duration*1000,answered:false,current:null};
+ $('game-title').textContent=mistakes?'Hibák újragyakorlása':focus?'Célzott gyakorlás: '+focus:labels.mode[choice.mode];
  $('clock-stat').classList.toggle('hidden',duration===null);$('time-meter').classList.toggle('hidden',duration===null);$('stats').classList.toggle('untimed',duration===null);
  $('level-label').textContent=`${labels.difficulty[choice.difficulty]} · ${game.kind==='mental'?labels.topic[choice.topic]:labels.kind[game.kind]}`;
  show('game');updateStats();if(duration!==null){tick();if(finalized)return;timer=setInterval(tick,250);}displayTask();
@@ -439,9 +457,11 @@ function startGame(mistakes=null){clearInterval(timer);finalized=false;
 function endGame(){if(!game||finalized)return;finalized=true;clearInterval(timer);timer=null;
  const records=game.records;
  const right=records.filter(r=>r.correct).length;
- $('result-correct').textContent=right;$('result-total').textContent=records.length;
- $('result-accuracy').textContent=records.length?Math.round(100*right/records.length)+'%':'–';
+ const denominator=game.mode==='exam'?10:records.length;
+ $('result-correct').textContent=right;$('result-total').textContent=denominator;
+ $('result-accuracy').textContent=denominator?Math.round(100*right/denominator)+'%':'–';
  $('result-comment').textContent=records.length?(right===records.length?'Minden megoldott feladatod helyes!':`${right} helyes megoldás ${records.length} feladatból. A hibákat érdemes újra megpróbálni.`):'Most nem született megoldás. Próbáld újra!';
+ if(game.mode==='exam')$('result-comment').textContent=`Próbavizsga: ${right}/10 hibátlan feladat; ${records.length}/10 feladat befejezve.${records.length<10?' A be nem fejezett feladatok is 0 pontot érnek.':''}`; 
  const ul=$('review');ul.replaceChildren();
  const incorrect=records.filter(r=>!r.correct);
  if(!records.length){const p=document.createElement('p');p.className='empty';p.textContent='Még nincs megoldott feladat.';ul.append(p);}
@@ -452,6 +472,17 @@ function endGame(){if(!game||finalized)return;finalized=true;clearInterval(timer
   left.append(small);rightEl.textContent=r.correct?'✓':'✗';rightEl.className=r.correct?'right':'wrong';
   li.append(left,rightEl);ul.append(li);
  });
+ // Az adott alkalom leggyengébb feladattípusát külön is lehet gyakorolni.
+ const groups=new Map();for(const r of records){const key=r.question.type;const g=groups.get(key)||{right:0,total:0};g.total++;if(r.correct)g.right++;groups.set(key,g);}
+ const ranked=[...groups].sort((a,b)=>(a[1].right/a[1].total)-(b[1].right/b[1].total)||b[1].total-a[1].total);
+ const weakest=ranked.find(([key,g])=>g.right<g.total);
+ $('weakness-summary').classList.toggle('hidden',!records.length);
+ $('weakness-summary').replaceChildren();
+ if(records.length){const h=document.createElement('strong');h.textContent='Gyakorlási visszajelzés';$('weakness-summary').append(h);
+ for(const [type,g] of ranked.slice(0,4)){const line=document.createElement('p');line.textContent=`${type}: ${g.right}/${g.total} hibátlan`;$('weakness-summary').append(line);}}
+ const canTarget=game.kind==='mental'&&!!weakest;
+ $('target-weak-btn').classList.toggle('hidden',!canTarget);
+ $('target-weak-btn').onclick=()=>{if(!canTarget)return;choice.kind='mental';choice.topic=weakest[0].includes('szorz')||weakest[0].includes('Szorz')?'multiply':weakest[0].includes('oszt')||weakest[0].includes('Oszt')?'divide':'mixed';startGame(null,weakest[0]);};
  $('mistakes-btn').classList.toggle('hidden',incorrect.length===0);
  $('mistakes-btn').onclick=()=>startGame(incorrect.map(r=>r.question));
  show('results');$('results-title').focus?.();announce('A gyakorlás véget ért.');
@@ -459,7 +490,8 @@ function endGame(){if(!game||finalized)return;finalized=true;clearInterval(timer
 document.querySelectorAll('[data-mode],[data-difficulty],[data-topic],[data-kind]').forEach(el=>{
  el.addEventListener('click',()=>{const key=el.dataset.mode?'mode':el.dataset.difficulty?'difficulty':el.dataset.topic?'topic':'kind';
  const value=el.dataset[key];choice[key]=key==='difficulty'?Number(value):value;
- if(key==='kind'){$('mental-options').classList.toggle('hidden',value!=='mental');}
+ if(key==='kind'){$('mental-options').classList.toggle('hidden',value!=='mental');$('targeted-btn').disabled=value!=='mental';$('focus-panel').classList.toggle('hidden',true);}
+ if(key==='difficulty'||key==='topic')$('focus-panel').classList.add('hidden');
  document.querySelectorAll(`[data-${key}]`).forEach(b=>b.setAttribute('aria-pressed',String(b===el)));
  
  });
@@ -469,6 +501,7 @@ $('multiply-form').addEventListener('submit',checkMultiplyStep);
 $('multiply-help').addEventListener('click',()=>{if(!game||game.kind!=='written-multiply'||game.answered)return;const st=game.steps[game.stepIndex];game.assisted=true;$('multiply-hint').textContent=st.phase==='sum'?`Segítség: ${st.terms.join(' + ')} + ${st.carryIn} = ${st.terms.reduce((a,b)=>a+b,st.carryIn)}. A beírandó számjegy ${st.expected}.`:`Segítség: ${st.extra?'Átvitel':st.aDigit+' · '+st.multiplierDigit+' + '+st.carryIn} → ${st.expected}.`;});
 $('help-btn').addEventListener('click',()=>{if(!game||game.answered||game.kind==='mental'||game.kind==='written-multiply')return;const st=game.steps[game.stepIndex];game.assisted=true;$('written-hint').textContent=`Segítség: ${st.partial} = ${game.current.b} · ${st.digit} + ${st.remainder}. Írd be a két számot!`;});
 $('start-btn').addEventListener('click',()=>startGame());
+$('targeted-btn').addEventListener('click',()=>{if(choice.kind!=='mental')return;if($('focus-panel').classList.contains('hidden')){refreshFocus();$('focus-panel').classList.remove('hidden');$('targeted-btn').textContent='🎯 Célzott gyakorlás indítása →';}else{startGame(null,$('focus-select').value);}});
 $('answer-form').addEventListener('submit',event=>{event.preventDefault();if(!game||game.answered||finalized)return;
  const raw=$('answer').value.trim();if(!/^\d{1,10}$/.test(raw)){ $('feedback').textContent='Csak nemnegatív egész számot írj be!';$('feedback').className='feedback no';return;}
  const value=Number(raw);if(!safeNumber(value))return;markAnswer(value);
